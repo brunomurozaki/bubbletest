@@ -13,12 +13,13 @@ function handleRequest(request, response){
     
     if(request.url.length == 1)
     {
-    	fs.readFile('/index.html', function (err, html) {
+    	fs.readFile('./index.html', function (err, html) {
 		    if (err) {
 		        throw err; 
 		    }
-
+            response.writeHeader(200, {"Content-Type": "text/html"}); 
 		    response.write(html);
+            response.end();
 		});
     }
 
