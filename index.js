@@ -34,4 +34,5 @@ server.listen(process.env.PORT || PORT, function(){
 
     //Callback triggered when server is successfully listening. Hurray!
     console.log("Server listening on: http://localhost:%s", process.env.PORT || PORT);
+    console.log("Verificando........");
 });
