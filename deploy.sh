@@ -1,10 +1,8 @@
 #!/bin/bash
 
-echo "add"
+
 git add .
-
-echo "commit"
 git commit -m"$1"
+git push
 
-echo "push to heroku"
 git push heroku master
