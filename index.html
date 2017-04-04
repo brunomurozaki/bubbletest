@@ -1,6 +1,7 @@
 <hmtl>
 	<head>
 		<title>Bubble Test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 		<script>
 		  window.fbAsyncInit = function() {
@@ -8,7 +9,7 @@
 		      appId      : '241416459655151',
 		      cookie     : true,
 		      xfbml      : true,
-		      version    : 'v2.8'
+		      version    : 'v2.3'
 		    });
 		    FB.AppEvents.logPageView();   
 		  };
@@ -22,7 +23,7 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 		  	function statusChangeCallback(response){
-
+		  		console.log(response);
 		  	}
 
 		  	function checkLoginState(){
@@ -38,7 +39,16 @@
 						var uid = response.authResponse.userID;
 						var accessToken = response.authResponse.accessToken;
 
-						alert(uid + "   " + accessToken);
+						var xhttp = new XMLHttpRequest();
+					    xhttp.onreadystatechange = function() {
+						    if (this.readyState == 4 && this.status == 200) {
+						        document.getElementById("demo").innerHTML = this.responseText;
+						    }
+					    };
+					    xhttp.open("GET", "http://graph.facebook.com/v2.3/" uid + "/photos", true);
+					    xhttp.send();
+
+						//alert(uid + "   " + accessToken);
 					}
 
 				});	
@@ -54,5 +64,8 @@
 		  scope="public_profile,email"
 		  onlogin="checkLoginState();">
 		</fb:login-button>
+
+		<div id="demo">
+		</div>
 	</body>
 </html>
