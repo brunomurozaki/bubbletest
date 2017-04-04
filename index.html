@@ -23,7 +23,11 @@
 		   }(document, 'script', 'facebook-jssdk'));
 
 		  	function loginCallback(e){
-		  		console.log(e);
+		  		
+				FB.api("/me?fields=friends", "get", function(response){
+					console.log(response);
+				});
+
 		  	}
 
 		  	function checkLoginState(){
