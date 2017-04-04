@@ -22,36 +22,12 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 
-		  	function statusChangeCallback(response){
-		  		console.log(response);
+		  	function loginCallback(e){
+		  		console.log(e);
 		  	}
 
 		  	function checkLoginState(){
-		  		FB.getLoginStatus(function(response) {
-		    		statusChangeCallback(response);
-
-		    		if (response.status === 'connected') {
-						// the user is logged in and has authenticated your
-						// app, and response.authResponse supplies
-						// the user's ID, a valid access token, a signed
-						// request, and the time the access token 
-						// and signed request each expire
-						var uid = response.authResponse.userID;
-						var accessToken = response.authResponse.accessToken;
-
-						var xhttp = new XMLHttpRequest();
-					    xhttp.onreadystatechange = function() {
-						    if (this.readyState == 4 && this.status == 200) {
-						        document.getElementById("demo").innerHTML = this.responseText;
-						    }
-					    };
-					    xhttp.open("GET", "https://graph.facebook.com/v2.3/" + uid + "/photos", true);
-					    xhttp.send();
-
-						//alert(uid + "   " + accessToken);
-					}
-
-				});	
+		  		FB.login(loginCallback, {scope: "user_likes,user_posts,user_friends,read_stream"})
 		  	}
 		</script>
 
