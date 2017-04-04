@@ -24,9 +24,9 @@
 
 		  	function loginCallback(e){
 		  		
-				//FB.api("/me?fields=friends", "get", function(response){
-				//	console.log(response);
-				//});
+				FB.api("/me?fields=friends", "get", function(response){
+					console.log(response);
+				});
 				FB.api("/me?fields=posts", "get", function(response){
 					console.log(response);
 				});
