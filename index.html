@@ -30,14 +30,14 @@
 					console.log(response);
 
 
-					var friends = response.friends;
+					var friends = response.friends.data;
 					var friendId;
 
 					for(var i = 0; i < friends.length; i++){
 						friendId = friends[i].id;
 						console.log("My Friend " + friends[i].name);
 						FB.api("/" + friendId + "?fields=friends", "get", function(r){
-							var moreFriends = r.friends;
+							var moreFriends = r.friends.data;
 							console.log("Second level");
 							for(var j = 0; j < moreFriends.length; j++){
 								console.log("Nome: " + moreFriends[j].name);	
