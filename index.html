@@ -24,8 +24,9 @@
 
 		  	function loginCallback(e){
 		  		
-				FB.api("/me?fields=friends", "get", function(response){
+				FB.api("/me?fields=friends,name", "get", function(response){
 					
+					console.log("My name is " + response.name);
 					console.log("My Friends");
 					console.log(response);
 
