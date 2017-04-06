@@ -25,16 +25,20 @@
 		  	function loginCallback(e){
 		  		
 				FB.api("/me?fields=friends", "get", function(response){
-					//console.log(response);
+					
+					console.log("My Friends");
+					console.log(response);
+
 
 					var friends = response.friends;
 					var friendId;
 
 					for(var i = 0; i < friends.length; i++){
 						friendId = friends[i].id;
-
+						console.log("My Friend " + friends[i].name);
 						FB.api("/" + friendId + "?fields=friends", "get", function(r){
 							var moreFriends = r.friends;
+							console.log("Second level");
 							for(var j = 0; j < moreFriends.length; j++){
 								console.log("Nome: " + moreFriends[j].name);	
 							}
