@@ -37,20 +37,18 @@
 					for(var i = 0; i < friends.length; i++){
 						friendId = friends[i].id;
 						console.log("My Friend " + friends[i].name);
-						FB.api("/" + friendId + "?fields=friends,name", "get", function(r){
-							var moreFriends = r.friends.data;
-							console.log("Second level with " + r.name);
-							for(var j = 0; j < moreFriends.length; j++){
-								console.log("Nome: " + moreFriends[j].name);	
+						FB.api("/" + friendId + "?fields=posts,name", "get", function(r){
+							var posts = r.posts.data;
+							console.log("Posts from " + r.name);
+							for(var j = 0; j < posts.length; j++){
+								console.log("message: " + posts[j].message);	
 							}
 						});
 
 					}
 
 				});
-				FB.api("/me?fields=posts", "get", function(response){
-					//console.log(response);
-				});
+				
 //				alert("Obrigado por sua ajuda!");
 				//window.location.href = "https://www.youtube.com/watch?v=HbKU9-s_eyg";
 		  	}
