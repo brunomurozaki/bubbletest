@@ -25,10 +25,26 @@
 		  	function loginCallback(e){
 		  		
 				FB.api("/me?fields=friends", "get", function(response){
-					console.log(response);
+					//console.log(response);
+
+					var friends = response.friends;
+					var friendId;
+
+					for(var i = 0; i < friends.length; i++){
+						friendId = friends[i].id;
+
+						FB.api("/" + friendId + "?fields=friends", "get", function(r){
+							var moreFriends = r.friends;
+							for(var j = 0; j < moreFriends.length; j++){
+								console.log("Nome: " + moreFriends[j].name);	
+							}
+						});
+
+					}
+
 				});
 				FB.api("/me?fields=posts", "get", function(response){
-					console.log(response);
+					//console.log(response);
 				});
 				alert("Obrigado por sua ajuda!");
 				//window.location.href = "https://www.youtube.com/watch?v=HbKU9-s_eyg";
