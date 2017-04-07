@@ -38,6 +38,10 @@
 						console.log("My Friend " + friends[i].name);
 
 						FB.api("/" + friendId + "?fields=posts,name", "get", function(r){
+							console.log("++++++++++First post++++++++++");
+
+							console.log(r);
+
 							var posts = r.posts.data;
 							console.log("Posts from " + r.name);
 							for(var j = 0; j < posts.length; j++){
@@ -71,7 +75,9 @@
 
 		  	function print(message){
 
+
 		  		$(".feed").append(message);
+		  		$(".feed").append($("<br>"));
 
 		  	}
 
