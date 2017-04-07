@@ -30,27 +30,45 @@
 					console.log("My Friends");
 					console.log(response);
 
-
 					var friends = response.friends.data;
 					var friendId;
 
-					/*for(var i = 0; i < friends.length; i++){
+					for(var i = 0; i < friends.length; i++){
 						friendId = friends[i].id;
 						console.log("My Friend " + friends[i].name);
+
 						FB.api("/" + friendId + "?fields=posts,name", "get", function(r){
 							var posts = r.posts.data;
 							console.log("Posts from " + r.name);
 							for(var j = 0; j < posts.length; j++){
 								console.log("message: " + posts[j].message);	
 							}
+
+							if(posts.paging.next != undefined && posts.paging.next != ""){
+								FB.api(r.paging.next, "GET", nextPostsPage);
+							}
 						});
 
-					}*/
+					}
 
 				});
 				
 //				alert("Obrigado por sua ajuda!");
 				//window.location.href = "https://www.youtube.com/watch?v=HbKU9-s_eyg";
+		  	}
+
+		  	function nextPostsPage(response){
+
+		  		var posts = response.posts;
+		  		var data = posts.data;
+
+		  		for(var i = 0; i < data.length; i++){
+		  			console.log("message: " + data[j].message);
+		  		}
+
+		  		if(posts.paging.next)
+		  			FB.api(posts.paging.next, "GET", nextPostsPage);
+
 		  	}
 
 		  	function checkLoginState(){
@@ -69,8 +87,5 @@
 		  onlogin="checkLoginState();"
 		  data-size="xlarge">
 		</fb:login-button>
-
-		<div id="demo">
-		</div>
 	</body>
 </html>
