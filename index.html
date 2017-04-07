@@ -44,7 +44,7 @@
 								console.log("message: " + posts[j].message);	
 							}
 
-							if(posts.paging.next != undefined && posts.paging.next != ""){
+							if(r.paging.next != undefined && r.paging.next != ""){
 								FB.api(r.paging.next, "GET", nextPostsPage);
 							}
 						});
