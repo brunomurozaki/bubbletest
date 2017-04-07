@@ -42,6 +42,9 @@
 
 							console.log(r);
 
+							if(!r.posts)
+								return;
+
 							var posts = r.posts.data;
 							console.log("Posts from " + r.name);
 							for(var j = 0; j < posts.length; j++){
