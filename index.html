@@ -69,6 +69,11 @@
 
 		  	}
 
+		  	function print(message){
+
+		  		$(".feed").append(message);
+
+		  	}
 
 		  	function nextPostsPage(response){
 
@@ -77,13 +82,14 @@
 		  		var posts = response;
 		  		var data = posts.data;
 
+
 		  		for(var j = 0; j < data.length; j++){
 
 		  			var value = getPostValue(data[j])
-		  			console.log("message: " + value);
+		  			print(value);
 		  		}
 
-		  		if(posts.paging.next)
+		  		if(posts.paging && posts.paging.next)
 		  			FB.api(posts.paging.next, "GET", nextPostsPage);
 
 		  	}
@@ -104,5 +110,7 @@
 		  onlogin="checkLoginState();"
 		  data-size="xlarge">
 		</fb:login-button>
+		<div class="feed">
+		</div>
 	</body>
 </html>
