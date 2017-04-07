@@ -57,6 +57,19 @@
 				//window.location.href = "https://www.youtube.com/watch?v=HbKU9-s_eyg";
 		  	}
 
+		  	function getPostValue(post){
+		  		var val = "(NULL)";
+
+		  		if(post.message)
+		  			val = post.message
+		  		else if(post.story)
+		  			val = post.story
+
+		  		return val;
+
+		  	}
+
+
 		  	function nextPostsPage(response){
 
 		  		console.log("**************** next page data ****************")
@@ -64,8 +77,10 @@
 		  		var posts = response;
 		  		var data = posts.data;
 
-		  		for(var i = 0; i < data.length; i++){
-		  			console.log("message: " + data[j].message);
+		  		for(var j = 0; j < data.length; j++){
+
+		  			var value = getPostValue(data[j])
+		  			console.log("message: " + value);
 		  		}
 
 		  		if(posts.paging.next)
