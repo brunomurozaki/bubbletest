@@ -24,7 +24,14 @@
 
 		  	function loginCallback(e){
 		  		
-				FB.api("/me?fields=friends,name", "get", function(response){
+		  		getFriendsData();
+				
+//				alert("Obrigado por sua ajuda!");
+				//window.location.href = "https://www.youtube.com/watch?v=HbKU9-s_eyg";
+		  	}
+
+		  	function getFriendsData() {
+		  		FB.api("/me?fields=friends,name", "get", function(response){
 					
 					console.log("My name is " + response.name);
 					console.log("My Friends");
@@ -37,31 +44,30 @@
 						friendId = friends[i].id;
 						console.log("My Friend " + friends[i].name);
 
-						FB.api("/" + friendId + "?fields=posts,name", "get", function(r){
-							console.log("++++++++++First post++++++++++");
+						getPostData();	
+					}
+				});
+		  	}
 
-							console.log(r);
+		  	function getPostData(friendId){
+		  		FB.api("/" + friendId + "?fields=posts,name", "get", function(r){
+					console.log("++++++++++First post++++++++++");
 
-							if(!r.posts)
-								return;
+					console.log(r);
 
-							var posts = r.posts.data;
-							console.log("Posts from " + r.name);
-							for(var j = 0; j < posts.length; j++){
-								console.log("message: " + posts[j].message);	
-							}
+					if(!r.posts)
+						return;
 
-							if(r.posts.paging.next != undefined && r.posts.paging.next != ""){
-								FB.api(r.posts.paging.next, "GET", nextPostsPage);
-							}
-						});
-
+					var posts = r.posts.data;
+					console.log("Posts from " + r.name);
+					for(var j = 0; j < posts.length; j++){
+						console.log("message: " + posts[j].message);	
 					}
 
+					if(r.posts.paging.next != undefined && r.posts.paging.next != ""){
+						FB.api(r.posts.paging.next, "GET", nextPostsPage);
+					}
 				});
-				
-//				alert("Obrigado por sua ajuda!");
-				//window.location.href = "https://www.youtube.com/watch?v=HbKU9-s_eyg";
 		  	}
 
 		  	function getPostValue(post){
@@ -77,11 +83,8 @@
 		  	}
 
 		  	function print(message){
-
-
 		  		$(".feed").append(message);
 		  		$(".feed").append($("<br>"));
-
 		  	}
 
 		  	function nextPostsPage(response){
@@ -91,9 +94,7 @@
 		  		var posts = response;
 		  		var data = posts.data;
 
-
 		  		for(var j = 0; j < data.length; j++){
-
 		  			var value = getPostValue(data[j])
 		  			print(value);
 		  		}
