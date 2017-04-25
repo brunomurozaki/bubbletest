@@ -23,8 +23,9 @@ function stringfyFriendsData(friendsData){
 	var ret = [];
 
 	for(var i = 0; i < friendsList.length; i++){
-		ret[ret.length] = friendsList[i];
+		ret[ret.length] = friendsList[i].name;
 	}
+	return ret;
 }
 
 (function(d, s, id){
