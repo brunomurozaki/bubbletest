@@ -6,9 +6,11 @@ var likesReference = {};
 var currentFriendID = -1;
 var isFinished = {}; 
 
+var myLikesData = [];
 
 var logged = false;
 
+var isPagingLikes = false;
 
 
 window.fbAsyncInit = function() {
@@ -21,7 +23,8 @@ window.fbAsyncInit = function() {
 	FB.AppEvents.logPageView();   
 };
 
-function stringfyFriendsData(friendsData){
+
+function stringfyData(friendsData){
 	var ret = [];
 
 	for(var i = 0; i < friendsList.length; i++){
@@ -56,11 +59,38 @@ function getAllFriendsPost() {
 
 }
 
+function getMyLikesData(){
+	FB.api("/me?fields=likes", "get", function(response){
+		myLikesData = response.data;
+
+		if(response.paging && response.paging.next){
+			isPagingLikes = true;
+			FB.api(response.paging.next, "GET", nextLikesPage);
+		}		
+
+		while(isPagingLikes)
+			setTimeout(100);
+
+		setStatus("I got my own likes!");		
+		setLikesList(myLikesData);
+	});
+}
+
+function nextLikesPage(response){
+	myLikesData.concat(response.data);
+	if(response.paging && response.paging.next) {
+		FB.api(response.paging.next, "GET", nextLikesPage);
+	} else {
+		isPagingLikes = false;
+	}
+}
+
 function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
 		setStatus("Amigos selecionados");
-		setFriendsList(stringfyFriendsData(friendsList));
+		// TODO: implementar a logia de paging aqui
+		setFriendsList(stringfyData(friendsList));
 	});
 }
 
@@ -95,7 +125,6 @@ function getPostValue(post){
 		val = post.story
 
 	return val;
-
 }
 
 function print(message){
