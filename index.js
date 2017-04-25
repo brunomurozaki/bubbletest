@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/public'));
 // set the home page route
 app.get('/', function(req, res) {
 
-    res.sendFile('index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.listen(port, function() {
