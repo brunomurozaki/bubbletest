@@ -72,7 +72,7 @@ function getMyLikesData(){
 			setTimeout(100);
 
 		setStatus("I got my own likes!");		
-		setLikesList(myLikesData);
+		setLikesList(stringfyData(myLikesData));
 	});
 }
 
