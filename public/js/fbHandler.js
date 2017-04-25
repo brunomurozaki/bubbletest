@@ -7,6 +7,8 @@ var currentFriendID = -1;
 var isFinished = {}; 
 
 
+var logged = false;
+
 
 
 window.fbAsyncInit = function() {
@@ -37,7 +39,10 @@ function stringfyFriendsData(friendsData){
 }(document, 'script', 'facebook-jssdk'));
 
 function loginCallback(e){
-	getFriendsData();
+	if(!logged){
+		getFriendsData();
+		logged = true;
+	}
 }
 
 function getAllFriendsPost() {
