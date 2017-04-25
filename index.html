@@ -2,8 +2,9 @@
 	<head>
 		<title>Bubble Test</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="fbHandler.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script src="js/helpers.js"></script>
+		<script src="js/fbHandler.js"></script>
 	</head>
 
 
@@ -16,8 +17,15 @@
 		  data-size="xlarge">
 		</fb:login-button>
 		<div class="feed">
+			<div id="status">
+				Testando
+			</div>
 			<div id="contentWrapper">
-				blabla
+
+				<select id="friendsList"></select>
+
+				<select id="pagesSelect"></select>
+
 			</div>
 		</div>
 	</body>
