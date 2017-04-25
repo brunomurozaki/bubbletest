@@ -65,7 +65,7 @@ function getMyLikesData(){
 
 		if(response.likes.paging && response.likes.paging.next){
 			isPagingLikes = true;
-			FB.api(response.paging.next, "GET", nextLikesPage);
+			FB.api(response.likes.paging.next, "GET", nextLikesPage);
 		}		
 
 		while(isPagingLikes)
