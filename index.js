@@ -1,38 +1,12 @@
-var tst = 0;
+var express = require('express');
+var app = express();
 
 
-//Lets require/import the HTTP module
-var http = require('http'),
-fs = require('fs');
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
 
-//Lets define a port we want to listen to
-const PORT=8080; 
 
-//We need a function which handles requests and send response
-function handleRequest(request, response){
-    
-    if(request.url.length == 1)
-    {
-    	fs.readFile('./index.html', function (err, html) {
-		    if (err) {
-		        throw err; 
-		    }
-            response.writeHeader(200, {"Content-Type": "text/html"}); 
-		    response.write(html);
-            response.end();
-		});
-    }
-
-    
-}
-
-//Create a server
-var server = http.createServer(handleRequest);
-
-//Lets start our server
-server.listen(process.env.PORT || PORT, function(){
-
-    //Callback triggered when server is successfully listening. Hurray!
-    console.log("Server listening on: http://localhost:%s", process.env.PORT || PORT);
-    console.log("Verificando........");
-});
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+})
