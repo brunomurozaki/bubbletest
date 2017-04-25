@@ -61,9 +61,9 @@ function getAllFriendsPost() {
 
 function getMyLikesData(){
 	FB.api("/me?fields=likes", "get", function(response){
-		myLikesData = response.data;
+		myLikesData = response.likes.data;
 
-		if(response.paging && response.paging.next){
+		if(response.likes.paging && response.likes.paging.next){
 			isPagingLikes = true;
 			FB.api(response.paging.next, "GET", nextLikesPage);
 		}		
