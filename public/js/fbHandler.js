@@ -74,7 +74,7 @@ function getLikesDataByID(id) {
 function nextLikesByIDPage(response){
 	myLikesData = myLikesData.concat(response.data);
 	if(response.paging && response.paging.next) {
-		FB.api(response.paging.next, "GET", nextLikesPage);
+		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
 		setStatus("Lista de likes carregada! Seu amigo possui " + myLikesData.length + " likes");
 		setLikesByIDList(myLikesData);
