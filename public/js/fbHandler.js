@@ -27,8 +27,8 @@ window.fbAsyncInit = function() {
 function stringfyData(friendsData){
 	var ret = [];
 
-	for(var i = 0; i < friendsList.length; i++){
-		ret[ret.length] = friendsList[i].name;
+	for(var i = 0; i < friendsData.length; i++){
+		ret[ret.length] = friendsData[i].name;
 	}
 	return ret;
 }
@@ -71,8 +71,7 @@ function getMyLikesData(){
 		//while(isPagingLikes)
 			//setTimeout(100);
 
-		setStatus("I got my own likes!");		
-		setLikesList(stringfyData(myLikesData));
+		setStatus("Carregando...");
 	});
 }
 
@@ -81,7 +80,7 @@ function nextLikesPage(response){
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesPage);
 	} else {
-		isPagingLikes = false;
+		setLikesList(stringfyData(myLikesData));
 	}
 }
 
