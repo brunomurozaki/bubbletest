@@ -68,8 +68,8 @@ function getMyLikesData(){
 			FB.api(response.likes.paging.next, "GET", nextLikesPage);
 		}		
 
-		while(isPagingLikes)
-			setTimeout(100);
+		//while(isPagingLikes)
+			//setTimeout(100);
 
 		setStatus("I got my own likes!");		
 		setLikesList(stringfyData(myLikesData));
