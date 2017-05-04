@@ -10,14 +10,14 @@ $(function (){
 function setFriendsList(friendsList){
 	var select = $("#friendsList");
 	for(var i = 0; i < friendsList.length; i++) {
-		select.append($("<option>" + friendsList[i] + "</option>"));
+		select.append($("<option value='" + friendsList[i].id + "'>" + friendsList[i].name + "</option>"));
 	}
 }
 
 function setLikesList(likesList){
 	var select = $("#myLikesSelect");
 	for(var i = 0; i < likesList.length; i++) {
-		select.append($("<option>" + likesList[i] + "</option>"));
+		select.append($("<option value='" + likesList[i].id + "'>" + likesList[i].name + "</option>"));
 	}	
 }
 

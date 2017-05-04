@@ -56,7 +56,6 @@ function getAllFriendsPost() {
 
 		getPostData();	
 	}
-
 }
 
 function getMyLikesData(){
@@ -66,10 +65,7 @@ function getMyLikesData(){
 		if(response.likes.paging && response.likes.paging.next){
 			isPagingLikes = true;
 			FB.api(response.likes.paging.next, "GET", nextLikesPage);
-		}		
-
-		//while(isPagingLikes)
-			//setTimeout(100);
+		}
 
 		setStatus("Carregando...");
 	});
@@ -80,7 +76,8 @@ function nextLikesPage(response){
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesPage);
 	} else {
-		setLikesList(stringfyData(myLikesData));
+		setStatus("Lista de likes carregada! Você possui " + myLikesData.length + " likes");
+		setLikesList(myLikesData);
 	}
 }
 
@@ -88,7 +85,6 @@ function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
 		setStatus("Amigos selecionados");
-		// TODO: implementar a logia de paging aqui
 		setFriendsList(stringfyData(friendsList));
 	});
 }
