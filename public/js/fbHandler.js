@@ -76,7 +76,7 @@ function getMyLikesData(){
 }
 
 function nextLikesPage(response){
-	myLikesData.concat(response.data);
+	myLikesData = myLikesData.concat(response.data);
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesPage);
 	} else {
