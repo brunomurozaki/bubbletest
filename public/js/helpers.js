@@ -9,6 +9,7 @@ $(function (){
 
 function setFriendsList(friendsList){
 	var select = $("#friendsList");
+	select.empty();
 	for(var i = 0; i < friendsList.length; i++) {
 		select.append($("<option value='" + friendsList[i].id + "'>" + friendsList[i].name + "</option>"));
 	}
@@ -16,6 +17,7 @@ function setFriendsList(friendsList){
 
 function setLikesList(likesList){
 	var select = $("#myLikesSelect");
+	select.empty();
 	for(var i = 0; i < likesList.length; i++) {
 		select.append($("<option value='" + likesList[i].id + "'>" + likesList[i].name + "</option>"));
 	}	
@@ -23,6 +25,7 @@ function setLikesList(likesList){
 
 function setLikesByIDList(likesList){
 	var select = $("#myFriendsLikesSelect");
+	select.empty();
 	for(var i = 0; i < likesList.length; i++) {
 		select.append($("<option value='" + likesList[i].id + "'>" + likesList[i].name + "</option>"));
 	}	
