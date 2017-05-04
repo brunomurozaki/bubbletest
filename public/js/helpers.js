@@ -21,6 +21,13 @@ function setLikesList(likesList){
 	}	
 }
 
+function setLikesByIDList(likesList){
+	var select = $("#myFriendsLikesSelect");
+	for(var i = 0; i < likesList.length; i++) {
+		select.append($("<option value='" + likesList[i].id + "'>" + likesList[i].name + "</option>"));
+	}	
+}
+
 function setStatus(content){
 	$("#status").html(content);
 }
@@ -34,6 +41,11 @@ function init(){
 
 function bindEvents() {
 	$("#getLikes").on("click", onGetLikesClick);
+	$("#getFriendsLikes").on("click", onGeMyFriendLikes)
+}
+
+function onGeMyFriendLikes(e){
+	getLikesDataByID($("#friendsList").val());
 }
 
 function onGetLikesClick(e){

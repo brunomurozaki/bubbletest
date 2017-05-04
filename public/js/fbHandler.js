@@ -58,12 +58,34 @@ function getAllFriendsPost() {
 	}
 }
 
+function getLikesDataByID(id) {
+	FB.api("/" + id + "?fields=likes", "get", function(response){
+		myLikesData = response.likes.data;
+
+		if(response.likes.paging && response.likes.paging.next){
+			isPagingLikes = true;
+			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
+		}
+
+		setStatus("Carregando...");
+	});
+}
+
+function nextLikesByIDPage(response){
+	myLikesData = myLikesData.concat(response.data);
+	if(response.paging && response.paging.next) {
+		FB.api(response.paging.next, "GET", nextLikesPage);
+	} else {
+		setStatus("Lista de likes carregada! Seu amigo possui " + myLikesData.length + " likes");
+		setLikesByIDList(myLikesData);
+	}
+}
+
 function getMyLikesData(){
 	FB.api("/me?fields=likes", "get", function(response){
 		myLikesData = response.likes.data;
 
 		if(response.likes.paging && response.likes.paging.next){
-			isPagingLikes = true;
 			FB.api(response.likes.paging.next, "GET", nextLikesPage);
 		}
 
