@@ -85,7 +85,7 @@ function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
 		setStatus("Amigos selecionados");
-		setFriendsList(stringfyData(friendsList));
+		setFriendsList(friendsList);
 	});
 }
 
