@@ -58,12 +58,13 @@ function getAllFriendsPost() {
 	}
 }
 
+
+
 function getLikesDataByID(id) {
 	FB.api("/" + id + "?fields=likes", "get", function(response){
 		myLikesData = response.likes.data;
 
 		if(response.likes.paging && response.likes.paging.next){
-			isPagingLikes = true;
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
 		}
 

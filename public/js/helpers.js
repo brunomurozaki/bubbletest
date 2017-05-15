@@ -1,7 +1,5 @@
 /*helpers.js*/
 
-
-
 $(function (){
 	init();
 });
