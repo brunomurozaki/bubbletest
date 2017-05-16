@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
-yaml = require('js-yaml');
-fs   = require('fs');
+var yaml = require('js-yaml');
+var fs   = require('fs');
+var pages = {};
+
 
 
 // set the port of our application
@@ -12,10 +14,14 @@ var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/public'));
 
 // set the home page route
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/match_likes', function (req, res) {
+	
+	
+});
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
@@ -25,8 +31,7 @@ app.listen(port, function() {
 function readImportantPages(){
 // Get document, or throw exception on error
 	try {
-	  var doc = yaml.safeLoad(fs.readFileSync('/app/public/js/feeds.yaml', 'utf8'));
-	  console.log(doc);
+	  pages = yaml.safeLoad(fs.readFileSync('/app/public/js/feeds.yaml', 'utf8'));
 	} catch (e) {
 	  console.log(e);
 	}	

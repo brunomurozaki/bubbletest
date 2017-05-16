@@ -42,6 +42,7 @@ function stringfyData(friendsData){
 }(document, 'script', 'facebook-jssdk'));
 
 function loginCallback(e){
+	console.log("loginCallback");
 	if(!logged){
 		getFriendsData();
 		logged = true;

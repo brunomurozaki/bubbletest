@@ -38,11 +38,14 @@ function init(){
 
 }
 
-
-
 function bindEvents() {
 	$("#getLikes").on("click", onGetLikesClick);
 	$("#getFriendsLikes").on("click", onGeMyFriendLikes)
+	$("#matchLikes").on("click", onMatchLikes)
+}
+
+function onMatchLikes(e){
+	
 }
 
 function onGeMyFriendLikes(e){
