@@ -49,7 +49,7 @@ function loginCallback(e){
 	}
 
 	$(".feed").css({"display": "block"});
-	$('select').selectmenu('refresh', true);
+	$("#friendsList").selectmenu('refresh', true);
 }
 
 function getAllFriendsPost() {
