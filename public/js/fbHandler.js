@@ -47,8 +47,9 @@ function loginCallback(e){
 		getFriendsData();
 		logged = true;
 	}
-	
+
 	$(".feed").css({"display": "block"});
+	$('select').selectmenu('refresh', true);
 }
 
 function getAllFriendsPost() {
