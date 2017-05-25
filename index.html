@@ -35,38 +35,43 @@
 
 
 	<body class='ui-mobile-viewport ui-overlay-a'>
-		Por Favor, clique no botao e digite seus dados do Facebook (Nao, amigos. Nao estou roubando vossas senhas...)
-		<br/>
 
-		<button id="btFB" class="ui-btn fb_login_button">Login on Facebook</button>
+		<div data-role="page">
+			Por Favor, clique no botao e digite seus dados do Facebook (Nao, amigos. Nao estou roubando vossas senhas...)
+			<br/>
 
-		<hr/>
+			<button id="btFB" class="ui-btn fb_login_button">Login on Facebook</button>
 
-		<div class="feed">
+			<hr/>
 
-			<div id="status">
-				
-			</div>
+			<div class="feed">
 
-			<div id="contentWrapper">
-				<form>
-					<button id="getLikes" class="ui-btn fb_login_button">Get Your Likes</button>
+				<div id="status">
 					
-					<div class="ui-field-contain">
-						<select id="myLikesSelect"></select>
-					</div>
+				</div>
 
-					<div class="ui-field-contain">
-						<select id="friendsList"></select>
-					</div>
-					
-					<button id="getFriendsLikes" class="ui-btn fb_login_button">Get Your Friend's Likes</button>
+				<div id="contentWrapper">
+					<form>
+						<button id="getLikes" class="ui-btn fb_login_button">Get Your Likes</button>
+						
+						<div class="ui-field-contain">
+							<select id="myLikesSelect"></select>
+						</div>
 
-					<div class="ui-field-contain">
-						<select id="myFriendsLikesSelect"></select>
-					</div>
-				</form>
+						<div class="ui-field-contain">
+							<select id="friendsList"></select>
+						</div>
+						
+						<button id="getFriendsLikes" class="ui-btn fb_login_button">Get Your Friend's Likes</button>
+
+						<div class="ui-field-contain">
+							<select id="myFriendsLikesSelect"></select>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
+
+		
 	</body>
 </html>
