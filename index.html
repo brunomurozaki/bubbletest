@@ -13,7 +13,7 @@
 
 		            //create an AJAX request for the CSS file
 		            $.ajax({
-		                url     : 'jquery.mobile-1.2.0.min.css',
+		                url     : '/js/jquery.mobile-1.4.5.min.css',
 		                success : function (response) {
 		                    $('head').append('<style>' + response + '</style>');
 		                }
@@ -21,7 +21,7 @@
 
 		            //create an AJAX request for the JS file, setting the dataType to 'script' will have jQuery automatically evaluate the JS code in the global scope
 		            $.ajax({
-		                url      : 'jquery.mobile-1.2.0.min.js',
+		                url      : 'jquery.mobile-1.4.5.min.js',
 		                dataType : 'script'
 		            });
 		        }
