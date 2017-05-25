@@ -173,5 +173,5 @@ function nextPostsPage(response){
 }
 
 function checkLoginState(){
-	FB.login(loginCallback)
+	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends"})
 }
