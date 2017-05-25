@@ -1,2 +1,5 @@
 /*IDs*/
 #contentWrapper{}
+
+/*Classes*/
+.fb_login_button{background-color: blue; color: white}
