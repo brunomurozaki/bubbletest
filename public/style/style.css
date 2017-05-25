@@ -3,5 +3,5 @@
 #status{width: 100%; display: block; padding: 10px; }
 
 /*Classes*/
-.fb_login_button{background-color: blue; color: white}
+.fb_login_button{background-color: blue!important; color: white!important}
 .feed{display: none}
