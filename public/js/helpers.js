@@ -42,6 +42,7 @@ function bindEvents() {
 	$("#getLikes").on("click", onGetLikesClick);
 	$("#getFriendsLikes").on("click", onGeMyFriendLikes)
 	$("#matchLikes").on("click", onMatchLikes)
+	$("#btFB").on("click", checkLoginState);
 }
 
 function onMatchLikes(e){
