@@ -6,3 +6,6 @@
 /*Classes*/
 .fb_login_button{background-color: blue; color: white}
 .feed{display: none}
+
+
+.ui-icon-loading{display: none!important}
