@@ -23,6 +23,49 @@ window.fbAsyncInit = function() {
     FB.AppEvents.logPageView();   
   };
 
+function prepareFriendsData(friendsList){
+	var obj = {};
+
+	for(var i = 0; i < friendsList.length; i++){
+		obj[friendsList[i].id] = {"name": friendsList[i].name};
+	}
+
+	return obj;
+}
+
+
+function prepareFBData() {
+	var object = {"friends_data": prepareFriendsData(friendsList)};
+
+	console.log(object);
+	/* 
+		object sketch
+		{ 
+			"friends_data":{
+				"friend_fb_id1": {
+					"name": "friend's name",
+					"likes": {
+						"fb_page_id1": {
+							"name": "fb_page_name"
+						}, 
+						"fb_page_id2": {
+							"name": "fb_page_name"
+						}
+					},
+					"posts":{
+						"fb_post_id": {
+							"name": "fb_post_name",
+							"likes": [fb_ids_likes]
+						}
+					}
+
+				}
+			}
+		}	
+
+	*/
+
+}
 
 
 function stringfyData(friendsData){
@@ -46,7 +89,9 @@ function loginCallback(e){
 	console.log("loginCallback");
 	
 	if(e.status == "connected"){
+		// Provisorio
 		getFriendsData();
+		setFriendsList(friendsList);
 		$("#tabs_row").css({"display": "block"});
 		$(".btFBWrapper").css({"display": "none"})
 	} else {
@@ -63,8 +108,6 @@ function getAllFriendsPost() {
 		getPostData();	
 	}
 }
-
-
 
 function getLikesDataByID(id) {
 	FB.api("/" + id + "?fields=likes", "get", function(response){

@@ -47,7 +47,7 @@ function bindEvents() {
 }
 
 function onStartTest(e) {
-
+	prepareFBData();
 }
 
 function onMatchLikes(e){
