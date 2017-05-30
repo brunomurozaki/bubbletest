@@ -8,11 +8,8 @@
 
 /*Classes*/
 .button{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; text-decoration: none;}
-.button:hover{background-color: #286090}
+.button:hover{background-color: #286090; text-decoration: none;}
 .button_xlarge{font-size: 20px; padding: 20px;}
-.button_xlarge:hover{}
-
-
 .button_normal{font-size: 14px; padding: 14px;}
 
 .feed{display: none}
