@@ -4,7 +4,7 @@
 #home_header{text-align: center}
 #btFB{}
 #btFB:hover{background-color: #286090}
-#tabs_row{display: block}
+#tabs_row{display: none}
 
 /*Classes*/
 .button{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; text-decoration: none;}

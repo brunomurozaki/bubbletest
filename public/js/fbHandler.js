@@ -44,13 +44,13 @@ function stringfyData(friendsData){
 
 function loginCallback(e){
 	console.log("loginCallback");
-	if(!logged){
+	
+	if(e.status == "connected"){
 		getFriendsData();
-		logged = true;
+		$("#tabs_row").css({"display": "block"});	
+	} else {
+		alert("invalid facebook credentials");
 	}
-
-	$(".feed").css({"display": "block"});
-	$("#friendsList").selectmenu('refresh', true);
 }
 
 function getAllFriendsPost() {
