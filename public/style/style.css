@@ -2,7 +2,7 @@
 #contentWrapper{}
 #status{width: 100%; display: block; padding: 10px; }
 #home_header{text-align: center}
-#btFB{display: inline-block; background-color: #337AB7; border-radius: 25px; color: white; font-weight: bold; font-size: 20px; padding: 20px; text-decoration: none;}
+#btFB{display: inline-block; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; font-size: 20px; padding: 20px; text-decoration: none;}
 
 /*Classes*/
 .fb_login_button{background-color: blue; color: white}
