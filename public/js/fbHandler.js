@@ -177,5 +177,5 @@ function nextPostsPage(response){
 }
 
 function checkLoginState(){
-	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends"})
+	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends", redirect_uri:"https://bubbletestbubui.herokuapp.com"})
 }
