@@ -1,94 +1,116 @@
-<hmtl>
-	<head>
-		<title>Bubble Test</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css">
-		<link rel="stylesheet" type="text/css" href="style/style.css">
-	
-		<script src="js/jquery.min.js"></script>
-		<script src="js/helpers.js"></script>
-		<script src="js/fbHandler.js"></script>
-		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Teste Git</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/fbHandler.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
 
-		<script>
-		    (function ($) {
+<div class="jumbotron text-center">
+  <h1>Bubble Test</h1>
+  <p>Por Favor, clique no botao e digite seus dados do Facebook (Nao, amigos. Nao estou roubando vossas senhas...)</p> 
+</div>
+  
+<div class="container">
 
-		        //check if the browser width is less than or equal to the large dimension of an iPad
-		        if ($(window).width() <= 1024) {
+  <div class="row btFBWrapper">
+    <a id="btFB" class="button button_xlarge">Log In on Facebook!</a>
+  </div>
 
-		            //create an AJAX request for the CSS file
-		            $.ajax({
-		                url     : '/js/jquery.mobile-1.4.5.min.css',
-		                success : function (response) {
-		                    $('head').append('<style>' + response + '</style>');
-		                }
-		            });
+  <div class="row" id="tabs_row">
+    <div id="contentWrapper" class="container">
+      <ul class="nav nav-pills">
+        <li class="active">
+          <a href="#1a" data-toggle="tab">Your data</a>
+        </li>
+        <li>
+          <a href="#2a" data-toggle="tab">Your Friend's data</a>
+        </li>
+        <!--<li>
+          <a href="#3a" data-toggle="tab">Applying clearfix</a>
+        </li>
+        <li>
+          <a href="#4a" data-toggle="tab">Background color</a>
+        </li>-->
+      </ul>
 
-		            //create an AJAX request for the JS file, setting the dataType to 'script' will have jQuery automatically evaluate the JS code in the global scope
-		            $.ajax({
-		                url      : '/js/jquery.mobile-1.4.5.min.js',
-		                dataType : 'script'
-		            });
-		        }
-		    })(jQuery);
-		</script>
-	</head>
+      <div class="tab-content clearfix">
+        <div class="tab-pane active" id="1a">
+          <h3>Get your Facebook data</h3>
+          <div class="tab-description">
+            <a id="getLikes" class="button button_normal">Get Your Likes</a>
+            <div class="form-group">
+              <label for="myLikesSelect">Your Likes</label>
+              <select class="form-control" id="myLikesSelect">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="2a">
+          <h3>Get your Facebook Friend's data</h3>
+          <div class="tab-description">
+            
+            <div class="form-group">
+              <label for="friendsList">Your Friends</label>
+              <select id="friendsList"></select>
+              </select>
+            </div>
+
+            <a id="getLikes" class="button button_normal">Get Your Friend's likes Likes</a>
+
+            <div class="form-group">
+              <label for="myFriendsLikesSelect">Your Friend's likes</label>
+              <select id="myFriendsLikesSelect"></select>
+              </select>
+            </div>
+
+          </div>
+          
+        </div>
+        <!--<div class="tab-pane" id="3a">
+          <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+        </div>
+        <div class="tab-pane" id="4a">
+          <h3>We use css to change the background color of the content to be equal to the tab</h3>
+        </div>-->
+      </div>
 
 
-	<body class='ui-mobile-viewport ui-overlay-a'>
 
-		<div data-role="page" id="homepage">
+      <!--<form>
 
-			<div data-role="header" id="home_header">
-				Bubble Test
-			</div>
 
-			<div data-role="main" id="main_content" class="ui-content">
 
-				Por Favor, clique no botao e digite seus dados do Facebook (Nao, amigos. Nao estou roubando vossas senhas...)
-				<br/>
+        <button id="btFB" class="ui-btn fb_login_button">Login on Facebook</button>
 
-				<button id="btFB" class="ui-btn fb_login_button">Login on Facebook</button>
+        <button id="getLikes" class="ui-btn fb_login_button" data-ajax="false">Get Your Likes</button>
+        
+        <div class="ui-field-contain">
+          <select id="myLikesSelect"></select>
+        </div>
 
-				<hr/>
+        Friends:
 
-				<div class="feed">
+        <div class="ui-field-contain">
+          <select id="friendsList"></select>
+        </div>
+        
+        <button id="getFriendsLikes" class="ui-btn fb_login_button" data-ajax="false">Get Your Friend's Likes</button>
 
-					<div id="status">
-						
-					</div>
+        <div class="ui-field-contain">
+          <select id="myFriendsLikesSelect"></select>
+        </div>
+      </form>-->
+    </div>
+  </div>
+</div>
 
-					<div id="contentWrapper">
-						<form>
-							<button id="getLikes" class="ui-btn fb_login_button" data-ajax="false">Get Your Likes</button>
-							
-							<div class="ui-field-contain">
-								<select id="myLikesSelect"></select>
-							</div>
-
-							Friends:
-
-							<div class="ui-field-contain">
-								<select id="friendsList"></select>
-							</div>
-							
-							<button id="getFriendsLikes" class="ui-btn fb_login_button" data-ajax="false">Get Your Friend's Likes</button>
-
-							<div class="ui-field-contain">
-								<select id="myFriendsLikesSelect"></select>
-							</div>
-						</form>
-					</div>
-				</div>
-
-			</div>
-
-			<div data-role="footer">
-				
-			</div>
-			
-		</div>
-
-		
-	</body>
+</body>
 </html>
