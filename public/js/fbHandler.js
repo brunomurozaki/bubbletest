@@ -1,16 +1,6 @@
 /*fbHandler.js*/
 
-var friendsList = [];
-var postReference = {};
-var likesReference = {};
-var currentFriendID = -1;
-var isFinished = {}; 
 
-var myLikesData = [];
-
-var logged = false;
-
-var isPagingLikes = false;
 
 
 window.fbAsyncInit = function() {
@@ -33,24 +23,6 @@ function prepareFriendsData(friendsList){
 	return obj;
 }
 
-
-function prepareFBData() {
-	var object = {"friends_data": prepareFriendsData(friendsList)};
-	console.log(object);
-	return object;
-	/* 
-		object sketch
-		{ 
-			"friends_data":{
-				"friend_fb_id1": {
-					"name": "friend's name"
-				}
-			}
-		}	
-	*/
-}
-
-
 function stringfyData(friendsData){
 	var ret = [];
 
@@ -68,13 +40,18 @@ function stringfyData(friendsData){
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
+function defaultDataTratment(){
+	// provisorio
+	getFriendsData();
+	setFriendsList(friendsList);
+}
+
 function loginCallback(e){
 	console.log("loginCallback");
 	
 	if(e.status == "connected"){
-		// Provisorio
-		getFriendsData();
-		setFriendsList(friendsList);
+		
+		defaultDataTratment();
 		$("#tabs_row").css({"display": "block"});
 		$(".btFBWrapper").css({"display": "none"})
 	} else {
@@ -138,6 +115,9 @@ function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
 		setStatus("Amigos selecionados");
+		
+		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
+		sendFriendsData();
 	});
 }
 

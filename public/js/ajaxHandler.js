@@ -1,9 +1,50 @@
 /* AJAX HANDLER */
 
-function sendFriendsData(friendsData){
+function sendFriendsData(){
+	var friendsData = prepareFBFriendsData();
+	unansweredGet(FRIENDS_DATA_PATH, friendsData);
+}
 
-	$.get("/friends_data", friendsData, function (e){
+function unansweredGet(path, data){
+	$.get(path, data);
+}
 
-	});
+function answeredGet(path, data, callback){
+	$.get(path, data, callback);
+}
 
+
+function prepareFBFriendsData() {
+	var object = {"friends_data": prepareFriendsData(friendsList)};
+	console.log(object);
+	return object;
+	/* 
+		object sketch
+		{ 
+			"friends_data":{
+				"friend_fb_id1": {
+					"name": "friend's name"
+				}
+			}
+		}	
+	*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function unansweredGet(path, data){
+	$.get(path, data);
 }
