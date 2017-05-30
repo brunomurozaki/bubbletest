@@ -14,14 +14,15 @@ var isPagingLikes = false;
 
 
 window.fbAsyncInit = function() {
-	FB.init({
-		appId      : '241416459655151',
-		cookie     : true,
-		xfbml      : true,
-		version    : 'v2.9'
-	});
-	FB.AppEvents.logPageView();   
-};
+    FB.init({
+      appId      : '241416459655151',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();   
+  };
+
 
 
 function stringfyData(friendsData){
