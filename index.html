@@ -21,7 +21,11 @@
 <div class="container">
 
   <div class="row btFBWrapper">
-    <a id="btFB" class="button button_xlarge">Log In on Facebook!</a>
+    <!--<a id="btFB" class="button button_xlarge">Log In on Facebook!</a>-->
+    <fb:login-button 
+      scope="public_profile,email"
+      onlogin="checkLoginState();">
+    </fb:login-button>
   </div>
 
   <div class="row" id="tabs_row">
