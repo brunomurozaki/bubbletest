@@ -157,7 +157,7 @@ function print(message){
 function nextPostsPage(response){
 
 	if(currentFriendID == -1) {
-		console.log("Nao ha usuario corrente. So execute este metodo quando necessitar de paginacao");
+		console.log("Nao ha usuario corrente. So execute este metodo quando necessitar de paginacao!");
 		return false;
 	}
 
