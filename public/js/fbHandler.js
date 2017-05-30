@@ -47,7 +47,8 @@ function loginCallback(e){
 	
 	if(e.status == "connected"){
 		getFriendsData();
-		$("#tabs_row").css({"display": "block"});	
+		$("#tabs_row").css({"display": "block"});
+		$(".btFBWrapper").css({"display": "none"})
 	} else {
 		alert("invalid facebook credentials");
 	}
