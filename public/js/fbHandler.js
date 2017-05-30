@@ -36,35 +36,18 @@ function prepareFriendsData(friendsList){
 
 function prepareFBData() {
 	var object = {"friends_data": prepareFriendsData(friendsList)};
-
 	console.log(object);
+	return object;
 	/* 
 		object sketch
 		{ 
 			"friends_data":{
 				"friend_fb_id1": {
-					"name": "friend's name",
-					"likes": {
-						"fb_page_id1": {
-							"name": "fb_page_name"
-						}, 
-						"fb_page_id2": {
-							"name": "fb_page_name"
-						}
-					},
-					"posts":{
-						"fb_post_id": {
-							"name": "fb_post_name",
-							"likes": [fb_ids_likes]
-						}
-					}
-
+					"name": "friend's name"
 				}
 			}
 		}	
-
 	*/
-
 }
 
 

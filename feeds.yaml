@@ -35,6 +35,7 @@ Veja:
   - Site
 Veja Augusto Nunes: 
   url: http://feeds2.feedburner.com/augustonunes
+  fb_id: 173785099370015
   tags:
   - Revistas
   - Grande Imprensa
@@ -47,6 +48,7 @@ Veja Radar:
   - Site
 Veja Reinaldo Azevedo:
   url: http://feeds2.feedburner.com/ReinaldoAzevedo
+  fb_id: 102285684838
   tags:
   - Revistas
   - Grande Imprensa
@@ -322,6 +324,7 @@ UOL Política:
   - Site
 UOL Sakamoto:
   url: http://blogdosakamoto.blogosfera.uol.com.br/feed/
+  fb_id: 335237883171442
   tags:
   - Portais
   - Site
@@ -332,11 +335,13 @@ UOL Esplanada:
   - Site
 UOL Josias Souza:
   url: http://josiasdesouza.blogosfera.uol.com.br/feed/
+  fb_id: 295369237256879
   tags:
   - Portais
   - Site
 UOL Fernando Rodrigues:
   url: http://fernandorodrigues.blogosfera.uol.com.br/feed/
+  fb_id: 478713872142575
   tags:
   - Portais
   - Site
@@ -468,8 +473,9 @@ Sul21:
   tags:
   - Esquerda
   - Site
-PassaPalava:
+PassaPalavra:
   url: http://www.passapalavra.info/feed
+  fb_id: 123417721027845
   tags:
   - Esquerda
   - Site

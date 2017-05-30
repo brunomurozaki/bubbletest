@@ -18,8 +18,13 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/friends_data', function (req, res){
+	console.log(req);
+	console.log(req.data);
+});
+
 app.get('/match_likes', function (req, res) {
-	
+
 });
 
 app.listen(port, function() {

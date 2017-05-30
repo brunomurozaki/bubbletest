@@ -47,7 +47,8 @@ function bindEvents() {
 }
 
 function onStartTest(e) {
-	prepareFBData();
+	var obj = prepareFBData();
+	sendFriendsData(obj);
 }
 
 function onMatchLikes(e){
