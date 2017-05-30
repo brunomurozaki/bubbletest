@@ -8,7 +8,8 @@ window.fbAsyncInit = function() {
       appId      : '241416459655151',
       cookie     : true,
       xfbml      : true,
-      version    : 'v2.8'
+      version    : 'v2.8',
+	  redirect_uri: "http://bubbletestbubui.herokuapp.com/"
     });
     FB.AppEvents.logPageView();   
   };
@@ -48,7 +49,7 @@ function defaultDataTratment(){
 
 function getLikesFromFriends(friendsList){
 	
-	for(var i = 0; i < friendsList.length; i++){
+	for(var i = 0; i < friendsList.length; i++) {
 		
 	}
 	
