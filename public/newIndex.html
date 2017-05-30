@@ -6,31 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/jquery.min.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/fbHandler.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
+  <h1>Bubble Test</h1>
+  <p>Por Favor, clique no botao e digite seus dados do Facebook (Nao, amigos. Nao estou roubando vossas senhas...)</p> 
 </div>
   
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div id="contentWrapper">
+      <form>
+        <button id="getLikes" class="ui-btn fb_login_button" data-ajax="false">Get Your Likes</button>
+        
+        <div class="ui-field-contain">
+          <select id="myLikesSelect"></select>
+        </div>
+
+        Friends:
+
+        <div class="ui-field-contain">
+          <select id="friendsList"></select>
+        </div>
+        
+        <button id="getFriendsLikes" class="ui-btn fb_login_button" data-ajax="false">Get Your Friend's Likes</button>
+
+        <div class="ui-field-contain">
+          <select id="myFriendsLikesSelect"></select>
+        </div>
+      </form>
     </div>
   </div>
 </div>
