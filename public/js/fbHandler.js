@@ -113,6 +113,7 @@ function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
 		setStatus("Amigos selecionados");
+		console.log("Am I here?");
 		setFriendsList(friendsList);
 	});
 }
