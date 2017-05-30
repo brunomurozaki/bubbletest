@@ -84,7 +84,6 @@ function nextLikesByIDPage(response){
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
 		setStatus("Lista de likes carregada! Seu amigo possui " + myLikesData.length + " likes");
-		setLikesByIDList(myLikesData);
 	}
 }
 
@@ -106,7 +105,6 @@ function nextLikesPage(response){
 		FB.api(response.paging.next, "GET", nextLikesPage);
 	} else {
 		setStatus("Lista de likes carregada! Você possui " + myLikesData.length + " likes");
-		setLikesList(myLikesData);
 	}
 }
 
@@ -114,8 +112,6 @@ function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
 		setStatus("Amigos selecionados");
-		console.log("Am I here?");
-		setFriendsList(friendsList);
 	});
 }
 

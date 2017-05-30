@@ -43,6 +43,11 @@ function bindEvents() {
 	$("#getFriendsLikes").on("click", onGeMyFriendLikes)
 	$("#matchLikes").on("click", onMatchLikes)
 	$("#btFB").on("click", checkLoginState);
+	$("#startTestButton").on("click", onStartTest);
+}
+
+function onStartTest(e) {
+
 }
 
 function onMatchLikes(e){
@@ -51,8 +56,10 @@ function onMatchLikes(e){
 
 function onGeMyFriendLikes(e){
 	getLikesDataByID($("#friendsList").val());
+	setLikesByIDList(myLikesData);
 }
 
 function onGetLikesClick(e){
 	getMyLikesData();
+	setLikesList(myLikesData);
 }
