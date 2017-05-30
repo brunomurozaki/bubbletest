@@ -6,44 +6,12 @@
 #btFB:hover{background-color: #286090}
 #tabs_row{display: block}
 
-#exTab1 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
-
-#exTab2 h3 {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
-
-/* remove border radius for the tab */
-
-#exTab1 .nav-pills > li > a {
-  border-radius: 0;
-}
-
-/* change border radius for the tab , apply corners on top*/
-
-#exTab3 .nav-pills > li > a {
-  border-radius: 4px 4px 0 0 ;
-}
-
-#exTab3 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
-
-
-
-
 /*Classes*/
 .button{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; text-decoration: none;}
 .button:hover{background-color: #286090}
 .button_xlarge{font-size: 20px; padding: 20px;}
 .button_xlarge:hover{}
+
 
 .button_normal{font-size: 14px; padding: 14px;}
 
@@ -51,3 +19,5 @@
 .btFBWrapper{text-align: center}
 
 .ui-icon-loading{display: none!important}
+
+.tab-description{text-align: center}
