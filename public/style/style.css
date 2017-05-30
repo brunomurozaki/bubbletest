@@ -18,3 +18,10 @@
 .ui-icon-loading{display: none!important}
 
 .tab-description{text-align: center}
+.tab-content{background-color: #eee}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #eee;
+	color: black;
+	font-weight: bold;
+}
