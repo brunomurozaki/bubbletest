@@ -46,6 +46,14 @@ function defaultDataTratment(){
 	setFriendsList(friendsList);
 }
 
+function getLikesFromFriends(friendsList){
+	
+	for(var i = 0; i < friendsList.length; i++){
+		
+	}
+	
+}
+
 function loginCallback(e){
 	console.log("loginCallback");
 	
@@ -118,6 +126,7 @@ function getFriendsData() {
 		
 		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
 		sendFriendsData();
+		
 	});
 }
 
