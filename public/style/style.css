@@ -3,6 +3,8 @@
 #status{width: 100%; display: block; padding: 10px; }
 #home_header{text-align: center}
 
+#btFB{display: block; background-color: blue; color: white; font-weight: bold; font-size: 20px; padding: 20px}
+
 /*Classes*/
 .fb_login_button{background-color: blue; color: white}
 .feed{display: none}
