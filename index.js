@@ -19,7 +19,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/friends_data', function (req, res){
-	console.log(req);
 	console.log(req.data);
 });
 
