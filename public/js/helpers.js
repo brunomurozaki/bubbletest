@@ -11,7 +11,6 @@ function setFriendsList(friendsList){
 	for(var i = 0; i < friendsList.length; i++) {
 		select.append($("<option value='" + friendsList[i].id + "'>" + friendsList[i].name + "</option>"));
 	}
-	select.selectpicker('refresh');
 }
 
 function setLikesList(likesList){
@@ -19,8 +18,7 @@ function setLikesList(likesList){
 	select.empty();
 	for(var i = 0; i < likesList.length; i++) {
 		select.append($("<option value='" + likesList[i].id + "'>" + likesList[i].name + "</option>"));
-	}
-	select.selectpicker('refresh');	
+	}	
 }
 
 function setLikesByIDList(likesList){
@@ -28,8 +26,7 @@ function setLikesByIDList(likesList){
 	select.empty();
 	for(var i = 0; i < likesList.length; i++) {
 		select.append($("<option value='" + likesList[i].id + "'>" + likesList[i].name + "</option>"));
-	}
-	select.selectpicker('refresh');
+	}	
 }
 
 function setStatus(content){
