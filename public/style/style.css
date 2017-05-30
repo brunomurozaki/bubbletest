@@ -2,9 +2,9 @@
 #contentWrapper{}
 #status{width: 100%; display: block; padding: 10px; }
 #home_header{text-align: center}
-#btFB{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; font-size: 20px; padding: 20px; text-decoration: none;}
+#btFB{}
 #btFB:hover{background-color: #286090}
-#tabs_row{display: none}
+#tabs_row{display: block}
 
 #exTab1 .tab-content {
   color : white;
@@ -40,7 +40,13 @@
 
 
 /*Classes*/
-.fb_login_button{background-color: blue; color: white}
+.button{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; text-decoration: none;}
+.button:hover{background-color: #286090}
+.button_xlarge{font-size: 20px; padding: 20px;}
+.button_xlarge:hover{}
+
+.button_normal{font-size: 14px; padding: 14px;}
+
 .feed{display: none}
 .btFBWrapper{text-align: center}
 
