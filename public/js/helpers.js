@@ -78,12 +78,33 @@ function addPageByTag(pageKey, page){
 	}
 }
 
-function mountDataView(){
+function mountDataArray(){
 	var page, pageKey;
 
 	for(var i = 0; i < trackedPagesKeys.length; i++){
 		pageKey = trackedPagesKeys[i];
 		page = trackedPages[trackedPagesKeys[i]];
 		addPageByTag(pageKey, page);
+	}
+
+	separateWingData();
+}
+
+function separateWingData() {
+	var absoluteLeftData = pagesByTags["Esquerda"].concat(pagesByTags["anti-antiPT"]);
+	var absoluteRightData = pagesByTags["Direita"].concat(pagesByTags["anti-PT"]);
+
+	var pageObject;
+
+	// leftData
+	for(var i = 0; i < absoluteLeftData.length; i++){
+		pageObject = absoluteLeftData[i];
+		leftWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};
+	}
+
+	// rightData
+	for(var i = 0; i < absoluteRighData.length; i++){
+		pageObject = absoluteRighData[i];
+		rightWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};	
 	}
 }

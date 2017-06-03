@@ -15,7 +15,7 @@ function getPagesData () {
 		trackedPages = res;
 		trackedPagesKeys = Object.keys(trackedPages);
 
-		mountDataView();
+		mountDataArray();
 	});
 }
 
