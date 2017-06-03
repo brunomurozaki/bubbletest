@@ -5,6 +5,10 @@
 #btFB{}
 #btFB:hover{background-color: #286090}
 #tabs_row{display: none}
+#politicalMap{border: #000000 solid 1px; border-radius: 12px; background-color: white; width: 80%; display: none;}
+#rightWing{background-color: blue; color: white}
+#leftWing{background-color: red; color: white}
+
 
 /*Classes*/
 .button{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; text-decoration: none;}
@@ -20,6 +24,7 @@
 .tab-description{text-align: center; padding: 20px}
 .tab-content{background-color: #eee}
 .tab-pane{padding: 20px;}
+.bubble{float: left; width: 50%;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
 	background-color: #eee;

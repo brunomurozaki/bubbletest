@@ -88,6 +88,7 @@ function mountDataArray(){
 	}
 
 	separateWingData();
+	mountMap();	
 }
 
 function separateWingData() {
@@ -109,4 +110,17 @@ function separateWingData() {
 		if(pageObject.pageData.fb_id)
 			rightWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};	
 	}
+}
+
+function mountMap() {
+	var rightDiv = $("#rightWing");
+	var leftDiv  = $("#leftWing");
+	var map = $("#politicalMap");
+	var rightSize = Object.keys(rightWing).length * 2;
+	var leftSize = Object.keys(leftWing).length * 2;
+
+	rightDiv.css({"width": rightSize + "px", "height": rightSize + "px", "border-radius" : (rightSize / 2) + "px"})
+	leftDiv.css({"width": leftSize + "px", "height": leftSize + "px", "border-radius" : (leftSize / 2) + "px"})
+
+	map.css("display", "block");
 }
