@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/bubui/bubbletest#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.2",
     "js-yaml": "^3.8.4"
   },

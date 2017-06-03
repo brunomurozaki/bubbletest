@@ -2,6 +2,16 @@ var express = require('express');
 var app = express();
 var yaml = require('js-yaml');
 var fs   = require('fs');
+var bodyParser = require('body-parser')
+
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
+app.use(express.json());
+app.use(express.urlencoded());
+
 var pages = {};
 
 var friends_data = {};
@@ -18,9 +28,11 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/friends_likes_data', function (req, res) {
-	var id = req.query.id;
-	var data = req.query.data;
+
+
+app.post('/friends_likes_data', function (req, res) {
+	var id = req.body.id;
+	var data = req.body.data;
 	friends_data[id].likes = data;
 
 	console.log(friends_data);
