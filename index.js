@@ -30,15 +30,10 @@ app.get('/friends_likes_data', function (req, res) {
 	var id = req.query.id;
 	var data = req.query.data;
 	
-
-
-	console.log("ID: " + id);
-	console.log("friendData: " + friends_data[id]);	
-
-	/*if(!friends_data[id].likes)
+	if(!friends_data[id].likes)
 		friends_data[id].likes = data;
 	else 
-		friends_data[id].likes = friends_data[id].likes.concat(data);*/
+		friends_data[id].likes = friends_data[id].likes.concat(data);
 
 	console.log(friends_data);
 });
