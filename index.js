@@ -2,16 +2,12 @@ var express = require('express');
 var app = express();
 var yaml = require('js-yaml');
 var fs   = require('fs');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
-
-app.use(express.json());
-app.use(express.urlencoded());
-
 var pages = {};
 
 var friends_data = {};
