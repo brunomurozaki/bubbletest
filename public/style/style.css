@@ -24,8 +24,12 @@
 .tab-description{text-align: center; padding: 20px}
 .tab-content{background-color: #eee}
 .tab-pane{padding: 20px;}
-.bubbleWrapper{float: left;}
+.bubbleWrapper{}
 .bubbleTitle{text-align: center; font-weight: bold; padding-bottom: 10px; padding-top: 30px}
+
+.floatRight{float: right;}
+.floatLeft{float: left;}
+
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
 	background-color: #eee;
 	color: black;
