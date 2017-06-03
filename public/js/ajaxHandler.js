@@ -7,11 +7,15 @@ function sendFriendsData(){
 
 function sendFriendsLikesData(friendsLikesData, friendId){
 	var obj = {"id": friendId, "data":friendsLikesData};
-	unansweredGet(FRIENDS_LIKES_DATA, obj);
+	unansweredPost(FRIENDS_LIKES_DATA, obj);
 }
 
 function unansweredGet(path, data){
 	$.get(path, data);
+}
+
+function unansweredPost(path, data){
+	$.post(path, data);
 }
 
 function answeredGet(path, data, callback){
