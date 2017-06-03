@@ -116,6 +116,8 @@ function mountMap() {
 	var rightDiv = $("#rightWing");
 	var leftDiv  = $("#leftWing");
 	var map = $("#politicalMap");
+	var startButton = $("#startTestButton");
+
 	var rightSize = Object.keys(rightWing).length;
 	var leftSize = Object.keys(leftWing).length;
 
@@ -123,4 +125,5 @@ function mountMap() {
 	leftDiv.css({"width": leftSize + "px", "height": leftSize + "px", "border-radius" : (leftSize / 2) + "px"})
 
 	map.css("display", "block");
+	startButton.css({"display": none});
 }
