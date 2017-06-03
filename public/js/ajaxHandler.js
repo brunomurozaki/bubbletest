@@ -10,6 +10,12 @@ function sendFriendsLikesData(friendsLikesData, friendId){
 	unansweredGet(FRIENDS_LIKES_DATA, obj);
 }
 
+function getPagesData () {
+	answeredGet(PAGES_DATA, {}, function(res){
+		console.log(res);
+	});
+}
+
 function unansweredGet(path, data){
 	$.get(path, data);
 }

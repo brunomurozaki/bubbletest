@@ -1,8 +1,5 @@
 /*fbHandler.js*/
 
-
-
-
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '241416459655151',
