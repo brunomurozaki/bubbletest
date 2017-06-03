@@ -36,6 +36,7 @@ app.get('/friends_likes_data', function (req, res) {
 		friends_data[id].likes = friends_data[id].likes.concat(data);
 
 	console.log(friends_data);
+	res.sendStatus(200);
 });
 
 app.get('/friends_data', function (req, res) {
