@@ -87,7 +87,7 @@ function nextLikesByIDPage(response){
 		return;
 
 	var superID = getIdByPagingURL(response.paging.previous);
-	friendsLikesData[superID] = friendsLikesData[id].concat(response.data);
+	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
