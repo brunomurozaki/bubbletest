@@ -99,12 +99,14 @@ function separateWingData() {
 	// leftData
 	for(var i = 0; i < absoluteLeftData.length; i++){
 		pageObject = absoluteLeftData[i];
-		leftWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};
+		if(pageObject.pageData.fb_id)
+			leftWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};
 	}
 
 	// rightData
-	for(var i = 0; i < absoluteRighData.length; i++){
-		pageObject = absoluteRighData[i];
-		rightWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};	
+	for(var i = 0; i < absoluteRightData.length; i++){
+		pageObject = absoluteRightData[i];
+		if(pageObject.pageData.fb_id)
+			rightWing[pageObject.pageData.fb_id] = {pageName: pageObject.pageName};	
 	}
 }
