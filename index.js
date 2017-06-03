@@ -36,7 +36,7 @@ app.get('/friends_likes_data', function (req, res) {
 	else 
 		friends_data[id].likes = merge(friends_data[id].likes, data);
 
-	console.log(friends_data);
+	//console.log(friends_data);
 	res.sendStatus(200);
 });
 

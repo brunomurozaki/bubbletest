@@ -73,7 +73,7 @@ function getLikesDataByID(id) {
 		friendsLikesData[id] = response.likes.data;
 
 		if(response.likes.paging && response.likes.paging.next){
-			sendFriendsLikesData(response.likes.data, id);
+			//sendFriendsLikesData(response.likes.data, id);
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
 		}
 
@@ -87,12 +87,10 @@ function nextLikesByIDPage(response){
 		return;
 
 	var superID = getIdByPagingURL(response.paging.previous);
-	sendFriendsLikesData(response.data, superID);
-
+	friendsLikesData[superID] = friendsLikesData[id].concat(response.data);
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
-		
 	}
 }
 
