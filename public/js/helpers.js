@@ -68,11 +68,11 @@ function addPageByTag(pageKey, page){
 	if(!tags)
 		tags = ["untagged"];
 
-	var obj = {pageKey : page};
+	var obj = {pageName: pageKey, pageData: page};
 
 	for(var i = 0; i < tags.length; i++){
 		if(!pagesByTags[tags[i]])
-			pagesByTags[tags[i]] = obj;
+			pagesByTags[tags[i]] = [obj];
 		else
 			pagesByTags[tags[i]] = pagesByTags[tags[i]].concat(obj);
 	}
