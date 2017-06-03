@@ -63,26 +63,27 @@ function onGetLikesClick(e){
 	setLikesList(myLikesData);
 }
 
-function addPageByTag(page){
+function addPageByTag(pageKey, page){
 	var tags = page.tags; 
 	if(!tags)
-		return;
+		tags = ["untagged"];
+
+	var obj = {pageKey : page};
 
 	for(var i = 0; i < tags.length; i++){
 		if(!pagesByTags[tags[i]])
-			pagesByTags[tags[i]] = page;
+			pagesByTags[tags[i]] = obj;
 		else
-			pagesByTags[tags[i]] = pagesByTags[tags[i]].concat(page);
+			pagesByTags[tags[i]] = pagesByTags[tags[i]].concat(obj);
 	}
-
 }
 
 function mountDataView(){
-	var page;
+	var page, pageKey;
 
 	for(var i = 0; i < trackedPagesKeys.length; i++){
+		pageKey = trackedPagesKeys[i];
 		page = trackedPages[trackedPagesKeys[i]];
-
-		addPageByTag(page);
+		addPageByTag(pageKey, page);
 	}
 }
