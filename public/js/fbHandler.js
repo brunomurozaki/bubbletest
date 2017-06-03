@@ -82,8 +82,10 @@ function getLikesDataByID(id) {
 }
 
 function nextLikesByIDPage(response){
+	
 	if(response.paging == undefined)
-		debugger;
+		return;
+
 	var superID = getIdByPagingURL(response.paging.previous);
 	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
 	if(response.paging && response.paging.next) {
