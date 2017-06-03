@@ -5,7 +5,8 @@
 #btFB{}
 #btFB:hover{background-color: #286090}
 #tabs_row{display: none}
-#politicalMap{display: none;}
+#politicalMap{}
+#testWrapper{display: none}
 #rightWing{background-color: blue; color: white; float: right}
 #leftWing{background-color: red; color: white; float: left}
 

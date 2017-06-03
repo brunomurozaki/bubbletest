@@ -115,7 +115,7 @@ function separateWingData() {
 function mountMap() {
 	var rightDiv = $("#rightWing");
 	var leftDiv  = $("#leftWing");
-	var map = $("#politicalMap");
+	var map = $("#testWrapper");
 	var startButton = $("#startTestButton");
 
 	var rightSize = Object.keys(rightWing).length;
