@@ -4,7 +4,7 @@ var yaml = require('js-yaml');
 var fs   = require('fs');
 var pages = {};
 
-
+var friends_data = {};
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -19,7 +19,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/friends_data', function (req, res){
-	console.log(req.query.friends_data);
+	friends_data = req.query.friends_data;
+
+	printObjectData(friends_data);
 });
 
 app.get('/match_likes', function (req, res) {
@@ -30,7 +32,6 @@ app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
 
-
 function readImportantPages(){
 // Get document, or throw exception on error
 	try {
@@ -38,6 +39,10 @@ function readImportantPages(){
 	} catch (e) {
 	  console.log(e);
 	}	
+}
+
+function printObjectData(object){
+	console.log(object);
 }
 
 readImportantPages();

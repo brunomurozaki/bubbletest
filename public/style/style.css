@@ -17,8 +17,9 @@
 
 .ui-icon-loading{display: none!important}
 
-.tab-description{text-align: center}
+.tab-description{text-align: center; padding: 20px}
 .tab-content{background-color: #eee}
+.tab-pane{padding: 20px;}
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
 	background-color: #eee;

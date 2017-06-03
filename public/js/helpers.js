@@ -35,7 +35,6 @@ function setStatus(content){
 
 function init(){
 	bindEvents();
-
 }
 
 function bindEvents() {
