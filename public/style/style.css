@@ -5,9 +5,9 @@
 #btFB{}
 #btFB:hover{background-color: #286090}
 #tabs_row{display: none}
-#politicalMap{border: #000000 solid 1px; border-radius: 12px; background-color: white; width: 80%; display: none;}
-#rightWing{background-color: blue; color: white}
-#leftWing{background-color: red; color: white}
+#politicalMap{display: none;}
+#rightWing{background-color: blue; color: white; float: right}
+#leftWing{background-color: red; color: white; float: left}
 
 
 /*Classes*/
