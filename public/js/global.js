@@ -9,6 +9,8 @@ var logged = false;
 var isPagingLikes = false;
 var friendsLikesData = {};
 
+var trackedPages = {};
+
 /*CONSTANTS*/
 var FRIENDS_DATA_PATH = "friends_data";
 var FRIENDS_LIKES_DATA = "friends_likes_data";

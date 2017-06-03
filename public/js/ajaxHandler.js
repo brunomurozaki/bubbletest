@@ -12,7 +12,7 @@ function sendFriendsLikesData(friendsLikesData, friendId){
 
 function getPagesData () {
 	answeredGet(PAGES_DATA, {}, function(res){
-		console.log(res);
+		trackedPages = res;
 	});
 }
 
@@ -27,7 +27,6 @@ function unansweredPost(path, data){
 function answeredGet(path, data, callback){
 	$.get(path, data, callback);
 }
-
 
 function prepareFBFriendsData() {
 	var object = {"friends_data": prepareFriendsData(friendsList)};
