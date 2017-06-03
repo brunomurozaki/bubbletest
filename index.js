@@ -53,7 +53,7 @@ app.get('/friends_data', function (req, res) {
 
 app.get('/pages_data', function (req, res){
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringfy(pages));
+	res.send(JSON.stringify(pages));
 	res.sendStatus(200);
 });
 
