@@ -18,10 +18,20 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/friends_data', function (req, res){
-	friends_data = req.query.friends_data;
 
-	printObjectData(friends_data);
+app.get('/freinds_likes_data', function (req, res) {
+	
+});
+
+app.get('/friends_data', function (req, res) {
+	console.log(req.query.friends_data);
+	if(req.query.friends_data == undefined){
+		res.sendStatus(400);
+	} else {
+		friends_data = req.query.friends_data;
+		res.sendStatus(200);	
+	}
+
 });
 
 app.get('/match_likes', function (req, res) {

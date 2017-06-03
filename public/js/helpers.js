@@ -46,7 +46,7 @@ function bindEvents() {
 }
 
 function onStartTest(e) {
-	var obj = prepareFBData();
+	var obj = prepareFBFriendsData();
 	sendFriendsData(obj);
 }
 
