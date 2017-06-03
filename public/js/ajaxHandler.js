@@ -5,8 +5,9 @@ function sendFriendsData(){
 	unansweredGet(FRIENDS_DATA_PATH, friendsData);
 }
 
-function sendFriendsLikesData(friendsLikesData){
-	console.log(friendsLikesData);
+function sendFriendsLikesData(friendsLikesData, friendId){
+	var obj = {"id": friendId, "data":friendsLikesData};
+	unansweredGet(FRIENDS_LIKES_DATA, obj);
 }
 
 function unansweredGet(path, data){

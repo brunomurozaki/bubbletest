@@ -18,9 +18,12 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-
 app.get('/friends_likes_data', function (req, res) {
-	
+	var id = req.query.id;
+	var data = req.query.data;
+	friends_data[id].likes = data;
+
+	console.log(friends_data);
 });
 
 app.get('/friends_data', function (req, res) {
