@@ -19,7 +19,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.2",
-    "js-yaml": "^3.8.4"
+    "js-yaml": "^3.8.4",
+    "merge": "^1.2.0"
   },
   "devDependencies": {},
   "description": ""

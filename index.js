@@ -3,6 +3,7 @@ var app = express();
 var yaml = require('js-yaml');
 var fs   = require('fs');
 var bodyParser = require('body-parser');
+var merge = require('merge');
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -33,7 +34,7 @@ app.get('/friends_likes_data', function (req, res) {
 	if(!friends_data[id].likes)
 		friends_data[id].likes = data;
 	else 
-		friends_data[id].likes = friends_data[id].likes.concat(data);
+		friends_data[id].likes = merge(friends_data[id].likes, data);
 
 	console.log(friends_data);
 	res.sendStatus(200);
