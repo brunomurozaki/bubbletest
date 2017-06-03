@@ -5,6 +5,10 @@ function sendFriendsData(){
 	unansweredGet(FRIENDS_DATA_PATH, friendsData);
 }
 
+function sendFriendsLikesData(friendsLikesData){
+	console.log(friendsLikesData);
+}
+
 function unansweredGet(path, data){
 	$.get(path, data);
 }
@@ -18,33 +22,4 @@ function prepareFBFriendsData() {
 	var object = {"friends_data": prepareFriendsData(friendsList)};
 	console.log(object);
 	return object;
-	/* 
-		object sketch
-		{ 
-			"friends_data":{
-				"friend_fb_id1": {
-					"name": "friend's name"
-				}
-			}
-		}	
-	*/
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function unansweredGet(path, data){
-	$.get(path, data);
 }

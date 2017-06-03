@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/freinds_likes_data', function (req, res) {
+app.get('/friends_likes_data', function (req, res) {
 	
 });
 

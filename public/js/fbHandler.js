@@ -8,8 +8,7 @@ window.fbAsyncInit = function() {
       appId      : '241416459655151',
       cookie     : true,
       xfbml      : true,
-      version    : 'v2.8',
-	  redirect_uri: "http://bubbletestbubui.herokuapp.com/"
+      version    : 'v2.8'
     });
     FB.AppEvents.logPageView();   
   };
@@ -48,9 +47,10 @@ function defaultDataTratment(){
 }
 
 function getLikesFromFriends(friendsList){
-	
+	var friendId;
 	for(var i = 0; i < friendsList.length; i++) {
-		
+		friendId = friendsList[i].id;
+		getLikesDataByID(friendId);
 	}
 	
 }
@@ -80,9 +80,10 @@ function getAllFriendsPost() {
 
 function getLikesDataByID(id) {
 	FB.api("/" + id + "?fields=likes", "get", function(response){
-		myLikesData = response.likes.data;
+		friendsLikesData[id] = response.likes.data;
 
 		if(response.likes.paging && response.likes.paging.next){
+			var superID = id;
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
 		}
 
@@ -91,10 +92,12 @@ function getLikesDataByID(id) {
 }
 
 function nextLikesByIDPage(response){
-	myLikesData = myLikesData.concat(response.data);
+	console.log('ID------------' + superID);
+	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
+		sendFriendsLikesData(friendsLikesData[superID]);
 		setStatus("Lista de likes carregada! Seu amigo possui " + myLikesData.length + " likes");
 	}
 }
@@ -123,72 +126,14 @@ function nextLikesPage(response){
 function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
 		friendsList = response.friends.data;
-		sendFriendsData(prepareFriendsData(friendsList));
 		setStatus("Amigos selecionados");
 		
 		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
 		sendFriendsData();
 		
+		getLikesFromFriends();
+
 	});
-}
-
-function getPostData(friendId){
-	FB.api("/" + friendId + "?fields=posts,name", "get", function(r){
-		if(!r.posts)
-			return;
-
-		var posts = r.posts.data;
-
-		for(var j = 0; j < posts.length; j++){
-			if(!postReference[friendId]) {
-				postReference[friendId] = posts[j];	
-			} else {
-				postReference[friendId].concat(posts[j]);
-			}
-		}
-
-		if(r.posts.paging.next != undefined && r.posts.paging.next != ""){
-			currentFriendID = friendId;
-			FB.api(r.posts.paging.next, "GET", nextPostsPage);
-		}
-	});
-}
-
-function getPostValue(post){
-	var val = "(NULL)";
-
-	if(post.message)
-		val = post.message
-	else if(post.story)
-		val = post.story
-
-	return val;
-}
-
-function print(message){
-	$(".feed").append(message);
-	$(".feed").append($("<br>"));
-}
-
-function nextPostsPage(response){
-
-	if(currentFriendID == -1) {
-		console.log("Nao ha usuario corrente. So execute este metodo quando necessitar de paginacao!");
-		return false;
-	}
-
-	var posts = response;
-	var data = posts.data;
-
-	for(var j = 0; j < data.length; j++){
-		postReference[currentFriendID].concat(data[j]);
-	}
-
-	if(posts.paging && posts.paging.next) {
-		FB.api(posts.paging.next, "GET", nextPostsPage);
-	} else {
-		currentFriendID = -1;
-	}
 }
 
 function checkLoginState(){
