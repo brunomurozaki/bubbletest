@@ -68,16 +68,6 @@ function loginCallback(e){
 	}
 }
 
-function getAllFriendsPost() {
-	var friendId;
-
-	for(var i = 0; i < friendsList.length; i++){
-		friendId = friendsList[i].id;
-
-		getPostData();	
-	}
-}
-
 function getLikesDataByID(id) {
 	FB.api("/" + id + "?fields=likes", "get", function(response){
 		friendsLikesData[id] = response.likes.data;
@@ -131,7 +121,7 @@ function getFriendsData() {
 		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
 		sendFriendsData();
 		
-		getLikesFromFriends();
+		getLikesFromFriends(friendsList);
 
 	});
 }
