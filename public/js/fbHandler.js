@@ -118,8 +118,6 @@ function getFriendsData() {
 		setStatus("Amigos selecionados");
 		
 		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
-		sendFriendsData();
-		
 		getLikesFromFriends(friendsList);
 
 	});
@@ -128,9 +126,6 @@ function getFriendsData() {
 function checkLoginState(){
 	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends", redirect_uri:"https://bubbletestbubui.herokuapp.com"})
 }
-
-
-
 
 
 /**

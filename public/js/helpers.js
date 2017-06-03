@@ -62,3 +62,27 @@ function onGetLikesClick(e){
 	getMyLikesData();
 	setLikesList(myLikesData);
 }
+
+function addPageByTag(page){
+	var tags = page.tags; 
+	if(!tags)
+		return;
+
+	for(var i = 0; i < tags.length; i++){
+		if(!pagesByTags[tags[i]])
+			pagesByTags[tags[i]] = page;
+		else
+			pagesByTags[tags[i]] = pagesByTags[tags[i]].concat(page);
+	}
+
+}
+
+function mountDataView(){
+	var page;
+
+	for(var i = 0; i < trackedPagesKeys.length; i++){
+		page = trackedPages[trackedPagesKeys[i]];
+
+		addPageByTag(page);
+	}
+}

@@ -13,6 +13,9 @@ function sendFriendsLikesData(friendsLikesData, friendId){
 function getPagesData () {
 	answeredGet(PAGES_DATA, {}, function(res){
 		trackedPages = res;
+		trackedPagesKeys = Object.keys(trackedPages);
+
+		mountDataView();
 	});
 }
 
