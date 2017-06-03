@@ -10,9 +10,10 @@
 #leftWing{background-color: red; color: white; float: left}
 
 
+
 /*Classes*/
 .button{display: inline-block; cursor: pointer; background-color: #337AB7; border-radius: 12px; color: white; font-weight: bold; text-decoration: none;}
-.button:hover{background-color: #286090; text-decoration: none;}
+.button:hover{background-color: #286090; text-decoration: none; color: white}
 .button_xlarge{font-size: 20px; padding: 20px; text-decoration: none;}
 .button_normal{font-size: 14px; padding: 14px; text-decoration: none;}
 
@@ -24,7 +25,7 @@
 .tab-description{text-align: center; padding: 20px}
 .tab-content{background-color: #eee}
 .tab-pane{padding: 20px;}
-.bubbleWrapper{}
+.bubbleWrapper{padding-bottom: 30px}
 .bubbleTitle{text-align: center; font-weight: bold; padding-bottom: 10px; padding-top: 30px}
 
 .floatRight{float: right;}
