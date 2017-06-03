@@ -27,9 +27,11 @@ app.get('/', function (req, res) {
 
 
 app.get('/friends_likes_data', function (req, res) {
-	var id = req.body.id;
-	var data = req.body.data;
+	var id = req.query.id;
+	var data = req.query.data;
 	
+
+
 	console.log("ID: " + id);
 	console.log("friendData: " + friends_data[id]);	
 
