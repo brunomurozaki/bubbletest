@@ -73,7 +73,7 @@ function getLikesDataByID(id) {
 		friendsLikesData[id] = response.likes.data;
 
 		if(response.likes.paging && response.likes.paging.next){
-			var superID = id;
+			sendFriendsLikesData(response.likes.data, id);
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
 		}
 
@@ -87,12 +87,12 @@ function nextLikesByIDPage(response){
 		return;
 
 	var superID = getIdByPagingURL(response.paging.previous);
-	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
+	sendFriendsLikesData(response.data, superID);
+
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
-		sendFriendsLikesData(friendsLikesData[superID]);
-		setStatus("Lista de likes carregada! Seu amigo possui " + myLikesData.length + " likes");
+		
 	}
 }
 

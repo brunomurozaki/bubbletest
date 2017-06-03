@@ -26,10 +26,13 @@ app.get('/', function (req, res) {
 
 
 
-app.post('/friends_likes_data', function (req, res) {
+app.get('/friends_likes_data', function (req, res) {
 	var id = req.body.id;
 	var data = req.body.data;
-	friends_data[id].likes = data;
+	if(!friends_data[id].likes)
+		friends_data[id].likes = data;
+	else 
+		friends_data[id].likes = friends_data[id].likes.concat(data);
 
 	console.log(friends_data);
 });
