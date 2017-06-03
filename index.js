@@ -29,10 +29,14 @@ app.get('/', function (req, res) {
 app.get('/friends_likes_data', function (req, res) {
 	var id = req.body.id;
 	var data = req.body.data;
-	if(!friends_data[id].likes)
+	
+	console.log("ID: " + id);
+	console.log("friendData: " + friends_data[id]);	
+
+	/*if(!friends_data[id].likes)
 		friends_data[id].likes = data;
 	else 
-		friends_data[id].likes = friends_data[id].likes.concat(data);
+		friends_data[id].likes = friends_data[id].likes.concat(data);*/
 
 	console.log(friends_data);
 });
