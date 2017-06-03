@@ -24,7 +24,7 @@
 .tab-description{text-align: center; padding: 20px}
 .tab-content{background-color: #eee}
 .tab-pane{padding: 20px;}
-.bubble{float: left; width: 50%;}
+.bubbleWrapper{float: left;}
 .bubbleTitle{text-align: center; font-weight: bold; padding-bottom: 10px; padding-top: 30px}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
 	background-color: #eee;
