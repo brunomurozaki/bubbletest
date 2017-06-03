@@ -40,7 +40,7 @@ function stringfyData(friendsData){
 function defaultDataTratment(){
 	// provisorio
 	getFriendsData();
-	setFriendsList(friendsList);
+	getMyLikesData();		
 }
 
 function getLikesFromFriends(friendsList){
@@ -108,7 +108,6 @@ function nextLikesPage(response){
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesPage);
 	} else {
-		setStatus("Lista de likes carregada! Você possui " + myLikesData.length + " likes");
 	}
 }
 
@@ -119,7 +118,6 @@ function getFriendsData() {
 		
 		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
 		getLikesFromFriends(friendsList);
-
 	});
 }
 

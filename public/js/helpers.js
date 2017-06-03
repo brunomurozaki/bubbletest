@@ -43,6 +43,16 @@ function bindEvents() {
 	$("#matchLikes").on("click", onMatchLikes)
 	$("#btFB").on("click", checkLoginState);
 	$("#startTestButton").on("click", onStartTest);
+	$("#byMyLikes").on("click", onMyLikes);
+	$("#byFriendsLikes").on("click", onFriendsLikes);
+}
+
+function onMyLikes(e){
+		
+}
+
+function onFriendsLikes(e){
+	
 }
 
 function onStartTest(e) {
@@ -125,5 +135,5 @@ function mountMap() {
 	leftDiv.css({"width": leftSize + "px", "height": leftSize + "px", "border-radius" : (leftSize / 2) + "px"})
 
 	map.css("display", "block");
-	startButton.css({"display": none});
+	startButton.css({"display": "none"});
 }
