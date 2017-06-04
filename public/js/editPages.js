@@ -84,11 +84,12 @@ function addPageRow(pageKey, page) {
 
 	row.append(rowTitle);
 	rowTitle.append(pageKey);
+	componentsWrapper = $("<div>").addClass("componentsWrapper");
 
 	for(var i = 0; i < itens.length; i++){
 		itemKey = itens[i];
 		item = page[itemKey];
-		componentsWrapper = $("<div>").addClass("componentsWrapper");
+		
 		component = $("<div>").addClass("component");
 		componentTitle = $("<label>").addClass("componentTitle");
 
@@ -108,21 +109,19 @@ function addPageRow(pageKey, page) {
 			componentValue.val(item);	
 			component.append(componentValue);
 		}
-
-		var addAttrWrapper = $("<div>").addClass("addAttrWrapper");
-
-		var addAttrButton = $("<a>")
-			.addClass("glyphicon")
-			.addClass("glyphicon-plus");
-
-		addAttrWrapper.append(addAttrButton)
-
-		componentsWrapper.append(component);
-		componentsWrapper.append(addAttrWrapper);
-
-		row.append(componentsWrapper);
+		componentsWrapper.append(component);	
 	}
 
+	var addAttrWrapper = $("<div>").addClass("addAttrWrapper");
+
+	var addAttrButton = $("<a>")
+		.addClass("glyphicon")
+		.addClass("glyphicon-plus");
+
+	addAttrWrapper.append(addAttrButton)
+	componentsWrapper.append(addAttrWrapper);
+
+	row.append(componentsWrapper);
 	$("#editForm").append(row);
 }
 
