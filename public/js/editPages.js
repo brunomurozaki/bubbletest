@@ -15,10 +15,12 @@ function init(){
 
 function addPageRow(pageKey, page) {
 	var row = $("<div>").addClass("formRow");
-	var rowTitle = $("<h5>").addClass("rowTitle");
+	var rowTitle = $("<a>").addClass("rowTitle");
 	var component, componentTitle, componentValue;
 	var itens = Object.keys(page);
 	var item, itemKey;
+
+	rowTitle.on("click", onClickTitle);
 
 	row.append(rowTitle);
 	rowTitle.append(pageKey);
@@ -49,6 +51,10 @@ function addPageRow(pageKey, page) {
 	}
 
 	$("#editForm").append(row);
+}
+
+function onClickTitle(e){
+	$(this).siblings().toggle();
 }
 
 function mountDataArray() {
