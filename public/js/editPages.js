@@ -116,13 +116,38 @@ function addPageRow(pageKey, page) {
 
 	var addAttrButton = $("<a>")
 		.addClass("glyphicon")
-		.addClass("glyphicon-plus");;
+		.addClass("glyphicon-plus")
+		.addClass("addAttrButton")
+		.on("click", onClickAddAttrButton);
 
 	addAttrWrapper.append(addAttrButton)
 	componentsWrapper.append(addAttrWrapper);
 
 	row.append(componentsWrapper);
 	$("#editForm").append(row);
+}
+
+function onClickAddAttrButton(e){
+	createComponent($(this).parent().parent().parent()); //formRow
+}
+
+function createRow(){
+
+}
+
+function createComponent(row){
+
+	var componentsWrapper = row.find(".componentsWrapper");
+
+	var component = $("<div>").addClass("component");
+	var componentTitle = $("<label>").addClass("componentTitle");
+	var componentValue = $("<input>").addClass("componentValue");
+
+	componentTitle.append("new item");
+	component.append(componentTitle);
+	component.append(componentValue);
+
+	componentsWrapper.append(component);
 }
 
 function fillTagsSelect(){
@@ -134,6 +159,8 @@ function fillTagsSelect(){
 		select.append(option);
 	}
 }
+
+
 
 function onClickTitle(e){
 	$(this).siblings().toggle();
