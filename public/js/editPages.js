@@ -29,13 +29,13 @@ function addPageRow(pageKey, page) {
 
 		component = $("<div>").addClass("component");
 		componentTitle = $("<label>").addClass("componentTitle");
-		
+
 		componentTitle.append(itemKey);
 		component.append(componentTitle);
 
 		if(itemKey == "tags"){
 			for(var j = 0; j < item.length; j++) {
-				componentValue = $("<input>").addClass("componentValue");
+				componentValue = $("<div>").addClass("componentValue").addClass("tag");
 				componentValue.val(item[j]);
 				component.append(componentValue);
 			}
@@ -44,9 +44,6 @@ function addPageRow(pageKey, page) {
 			componentValue.val(item);	
 			component.append(componentValue);
 		}
-
-		
-		
 
 		row.append(component);
 	}

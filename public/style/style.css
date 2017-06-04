@@ -37,3 +37,8 @@
 	color: black;
 	font-weight: bold;
 }
+
+.tag{padding: 5px}
+
+.component>input{margin-left: 10px}
+.componentTitle{width: 50px; text-align: right;}
