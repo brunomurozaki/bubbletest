@@ -52,4 +52,4 @@ input.componentValue{color: black}
 .filterWrapper{display: inline-block;}
 
 .addAttrWrapper{border-top: #FFF solid 1px; clear: both; text-align: center}
-.addAttrWrapper>a{color: greenyellow}
+.addAttrWrapper>a{background: white;padding: 5px;cursor: pointer;text-decoration: none;font-weight: bold; border-radius: 12px; margin-top: 5px;}
