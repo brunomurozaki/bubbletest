@@ -54,9 +54,9 @@ function onMyLikes(e){
 
 	var totalCount = myLikesOnLeft.length + myLikesOnRight.length;
 
-	console.log("I Have " + totalCount + " on political likes");
-	console.log(myLikesOnLeft.length + " on left");
-	console.log(myLikesOnRight.length + " on right");
+	$("#dataInformation").append("Você curtiu " + totalCount + " páginas de teor politico<br/>");
+	$("#dataInformation").append(myLikesOnLeft.length + " a Esquerda<br/>");
+	$("#dataInformation").append(myLikesOnRight.length + " a Direita<br/>");
 }
 
 function getLikesOnLeft() {
