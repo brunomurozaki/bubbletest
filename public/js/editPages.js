@@ -36,7 +36,7 @@ function addPageRow(pageKey, page) {
 		if(itemKey == "tags"){
 			for(var j = 0; j < item.length; j++) {
 				componentValue = $("<input>").addClass("componentValue");
-				componentValue.val(item[i]);
+				componentValue.val(item[j]);
 				component.append(componentValue);
 			}
 		} else {
