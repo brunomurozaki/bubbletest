@@ -61,9 +61,10 @@ function onMyLikes(e){
 
 function getLikesOnLeft() {
 	var retArray = [];
-	var obj;
+	var obj, id;
 
 	for(var i = 0; i < myLikesData.length; i++){
+		id = myLikesData[i].id;
 		obj = leftWing[id];
 		if(obj != undefined){
 			obj = {"pageId": id, "pageName": obj.pageName};
