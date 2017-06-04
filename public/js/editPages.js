@@ -43,7 +43,7 @@ function addPageRow(pageKey, page) {
 			}
 		} else {
 			componentValue = $("<input>").addClass("componentValue");
-			componentValue.val(item);	
+			componentValue.val(item[j]);	
 			component.append(componentValue);
 		}
 

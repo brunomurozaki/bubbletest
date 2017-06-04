@@ -39,9 +39,10 @@
 }
 
 .formRow{border: #FFF solid 1px; padding: 10px; background-color: #337AB7; color: white; border-radius: 15px;}
-.tag{padding: 5px; display: inline-block; border: #000 solid 1px; margin-left: 10px; border-radius: 12px;}
-.rowTitle{text-decoration: none; color: white; font-weight: bold;}
-
+.tag{padding: 5px; display: inline-block; border: #FFF solid 1px; font-weight: bold; margin-left: 10px; border-radius: 12px; cursor: pointer;}
+.tag:hover{background-color: white; color: #337AB7;}
+.rowTitle{text-decoration: none; color: white; font-weight: bold; cursor: pointer;}
+.rowTitle:hover{text-decoration: none; color: white;}
 .component{display: none}
 .component>input{margin-left: 10px}
 .componentTitle{width: 50px; text-align: right;}
