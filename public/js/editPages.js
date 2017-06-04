@@ -34,7 +34,7 @@ function addPageRow(pageKey, page) {
 		component.append(componentTitle);
 
 		if(item.length){
-			for(var j = 0; j < item.length; i++) {
+			for(var j = 0; j < item.length; j++) {
 				componentValue = $("<input>").addClass("componentValue");
 				componentValue.val(item[i]);
 			}
