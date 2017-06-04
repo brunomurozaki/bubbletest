@@ -61,7 +61,7 @@ function changeData(row){
 			}
 
 		} else {
-			obj[compTitle.html()] = comp.find(".componentValue").html();
+			obj[compTitle.html()] = comp.find(".componentValue").val();
 		}
 	}
 
