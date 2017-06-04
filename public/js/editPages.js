@@ -140,10 +140,10 @@ function createComponent(row){
 	var componentsWrapper = row.find(".componentsWrapper");
 
 	var component = $("<div>").addClass("component");
-	var componentTitle = $("<label>").addClass("componentTitle");
+	var componentTitle = $("<label contenteditable='true'>").addClass("componentTitle");
 	var componentValue = $("<input>").addClass("componentValue");
 
-	componentTitle.append("new item");
+	componentTitle.append("attr");
 	component.append(componentTitle);
 	component.append(componentValue);
 
