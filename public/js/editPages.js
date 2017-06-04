@@ -147,7 +147,7 @@ function createComponent(row){
 	component.append(componentTitle);
 	component.append(componentValue);
 
-	componentsWrapper.append(component);
+	component.insertBefore(".addAttrWrapper");
 }
 
 function fillTagsSelect(){
