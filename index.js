@@ -22,6 +22,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pages_data', function (req, res){
+	readImportantPages();	
 	res.setHeader('Content-Type', 'application/json');
 	res.send(JSON.stringify(pages));
 });

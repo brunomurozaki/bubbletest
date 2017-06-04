@@ -28,13 +28,24 @@ function addPageRow(pageKey, page) {
 		item = page[itemKey];
 
 		component = $("<div>").addClass("component");
-		componentTitle = $("<div>").addClass("componentTitle");
-		componentValue = $("<div>").addClass("componentValue");
+		componentTitle = $("<label>").addClass("componentTitle");
 		
 		componentTitle.append(itemKey);
-		componentValue.append(item);
 		component.append(componentTitle);
-		component.append(componentValue);
+
+		if(item.length){
+			for(var j = 0; j < item.length; i++) {
+				componentValue = $("<input>").addClass("componentValue");
+				componentValue.val(item[i]);
+			}
+		} else {
+			componentValue = $("<input>").addClass("componentValue");
+			componentValue.val(item);	
+			component.append(componentValue);
+		}
+
+		
+		
 
 		row.append(component);
 	}
