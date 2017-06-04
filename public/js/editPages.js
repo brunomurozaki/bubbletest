@@ -49,6 +49,12 @@ function changeData(row){
 	var obj = trackedPages[key];
 	var compTitle, compValue;
 
+	if(obj == undefined)
+	{
+		debugger;
+		return;
+	}
+
 	for(var i = 0; i < components.length; i++){
 		comp = $(components[i]);
 		compTitle = comp.find(".componentTitle");
