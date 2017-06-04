@@ -76,7 +76,7 @@ function changeData(row){
 function addPageRow(pageKey, page) {
 	var row = $("<div>").addClass("formRow");
 	var rowTitle = $("<a>").addClass("rowTitle");
-	var component, componentTitle, componentValue;
+	var component, componentTitle, componentValue, componentsWrapper;
 	var itens = Object.keys(page);
 	var item, itemKey;
 
@@ -88,7 +88,7 @@ function addPageRow(pageKey, page) {
 	for(var i = 0; i < itens.length; i++){
 		itemKey = itens[i];
 		item = page[itemKey];
-
+		componentsWrapper = $("<div>").addClass("componentsWrapper");
 		component = $("<div>").addClass("component");
 		componentTitle = $("<label>").addClass("componentTitle");
 
@@ -117,8 +117,10 @@ function addPageRow(pageKey, page) {
 
 		addAttrWrapper.append(addAttrButton)
 
-		row.append(component);
-		row.append(addAttrWrapper);
+		componentsWrapper.append(component);
+		componentsWrapper.append(addAttrWrapper);
+
+		row.append(componentsWrapper);
 	}
 
 	$("#editForm").append(row);
