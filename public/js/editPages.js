@@ -109,12 +109,16 @@ function addPageRow(pageKey, page) {
 			component.append(componentValue);
 		}
 
+		var addAttrWrapper = $("<div>").addClass("addAttrWrapper");
+
 		var addAttrButton = $("<a>")
 			.addClass("glyphicon")
 			.addClass("glyphicon-plus");
 
+		addAttrWrapper.append(addAttrButton)
+
 		row.append(component);
-		row.append(addAttrButton);
+		row.append(addAttrWrapper);
 	}
 
 	$("#editForm").append(row);
