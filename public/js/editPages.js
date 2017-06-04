@@ -167,7 +167,7 @@ function onClickTitle(e){
 
 function mountDataArray(pagesData) {
 	var page, pageKey;
-	$("#editForm").clear();
+	$("#editForm").empty();
 
 	if(pagesData == undefined)
 		pagesData = trackedPagesKeys;
