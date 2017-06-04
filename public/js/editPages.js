@@ -7,7 +7,7 @@ $(function(){
 
 var trackedPages = {};
 var trackedPagesKeys = {};
-
+var PAGES_DATA = "pages_data";
 
 function init(){
 	getPagesData();
