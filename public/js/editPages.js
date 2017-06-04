@@ -4,7 +4,7 @@ $(function(){
 	init();
 });
 
-
+var tags = [];
 var trackedPages = {};
 var trackedPagesKeys = {};
 var PAGES_DATA = "pages_data";
@@ -39,6 +39,8 @@ function addPageRow(pageKey, page) {
 			for(var j = 0; j < item.length; j++) {
 				componentValue = $("<div>").addClass("componentValue").addClass("tag");
 				componentValue.append(item[j]);
+				if(tags.indexOf(item[j]) == -1)
+					tags[tags.length] = item[j];
 				component.append(componentValue);
 			}
 		} else {
@@ -51,6 +53,16 @@ function addPageRow(pageKey, page) {
 	}
 
 	$("#editForm").append(row);
+}
+
+function fillTagsSelect(){
+	var select = $("#tagSelect");
+	var option;
+	for(var i = 0; i < tags.length; i++){
+		option = $("<option>").append(tags[i]);
+		option.val(tags[i]);
+		select.append(option);
+	}
 }
 
 function onClickTitle(e){
@@ -66,6 +78,7 @@ function mountDataArray() {
 		addPageRow(pageKey, page);
 	}
 
+	fillTagsSelect();
 	//separateWingData();
 	//mountMap();	
 }
