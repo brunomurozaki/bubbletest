@@ -11,6 +11,60 @@ var PAGES_DATA = "pages_data";
 
 function init(){
 	getPagesData();
+	bindEvents();
+}
+
+function bindEvents(){
+	$("#saveButton").on("click", onClickSaveButton);
+	$("#downloadButton").on("click", onClickDownloadButton);
+	$("#resetButton").on("click", onClickResetButton);
+
+}
+
+function onClickResetButton(e) {
+
+}
+
+function onClickDownloadButton(e) {
+
+}
+
+function onClickSaveButton(e) {
+	generateJsonData();	
+}
+
+function generateJsonData(){
+	var rows = $(".formRow");
+
+	for(var i = 0; i < rows.length; i++){
+		changeData($(rows[i]));
+	}
+
+	console.log(trackedPages);
+}
+
+function changeData(row){
+	var key = row.find(".rowTitle").html();
+	var components = row.find(".component"), comp;
+	var obj = trackedPages[key];
+	var compTitle, compValue;
+
+	for(var i = 0; i < components.length; i++){
+		comp = $(components[i]);
+		compTitle = comp.find(".componentTitle");
+
+		if(compTitle.html() == "tags") {
+			compValue = comp.find(".componentValue");
+			obj.tags = [];
+			for(var j = 0; j < compValue.length; j++){
+				obj.tags[obj.tags.length] = $(compValue[j]).html();
+			}
+
+		} else {
+			obj[compTitle.html()] = comp.find(".componentValue").html();
+		}
+	}
+
 }
 
 function addPageRow(pageKey, page) {
