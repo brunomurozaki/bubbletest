@@ -111,7 +111,7 @@ function addPageRow(pageKey, page) {
 
 		var addAttrButton = $("<a>")
 			.addClass("glyphicon")
-			.addCLass("glyphicon-plus");
+			.addClass("glyphicon-plus");
 
 		row.append(component);
 		row.append(addAttrButton);
