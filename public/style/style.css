@@ -47,3 +47,5 @@
 .component>input{margin-left: 10px}
 .componentTitle{width: 50px; text-align: right;}
 input.componentValue{color: black}
+
+.filterWrapper{display: inline-block;}
