@@ -46,3 +46,4 @@
 .component{display: none}
 .component>input{margin-left: 10px}
 .componentTitle{width: 50px; text-align: right;}
+.componentValue{color: black}
