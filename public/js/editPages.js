@@ -6,6 +6,7 @@ $(function(){
 
 var tags = [];
 var trackedPages = {};
+var baseTrackedPages = {};
 var trackedPagesKeys = {};
 var PAGES_DATA = "pages_data";
 
@@ -22,7 +23,7 @@ function bindEvents(){
 }
 
 function onClickResetButton(e) {
-
+	mountDataArray(baseTrackedPages);
 }
 
 function onClickDownloadButton(e) {
@@ -160,16 +161,18 @@ function fillTagsSelect(){
 	}
 }
 
-
-
 function onClickTitle(e){
 	$(this).siblings().toggle();
 }
 
-function mountDataArray() {
+function mountDataArray(pagesData) {
 	var page, pageKey;
+	$("#editForm").clear();
 
-	for(var i = 0; i < trackedPagesKeys.length; i++){
+	if(pagesData == undefined)
+		pagesData = trackedPagesKeys;
+
+	for(var i = 0; i < pagesData.length; i++){
 		pageKey = trackedPagesKeys[i];
 		page = trackedPages[trackedPagesKeys[i]];
 		addPageRow(pageKey, page);

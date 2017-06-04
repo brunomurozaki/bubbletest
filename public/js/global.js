@@ -9,6 +9,7 @@ var logged = false;
 var isPagingLikes = false;
 var friendsLikesData = {};
 
+var baseTrackedPages = {};
 var trackedPages = {};
 var trackedPagesKeys = {};
 
