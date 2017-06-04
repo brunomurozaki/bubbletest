@@ -48,7 +48,45 @@ function bindEvents() {
 }
 
 function onMyLikes(e){
-		
+	//var myPosition = $()
+	var myLikesOnLeft = getLikesOnLeft();
+	var myLikesOnRight = getLikesOnRight();
+
+	var totalCount = myLikesOnLeft.length + myLikesOnRight.length;
+
+	console.log("I Have " + totalCount + " on political likes");
+	console.log(myLikesOnLeft.length + " on left");
+	console.log(myLikesOnRight.length + " on right");
+}
+
+function getLikesOnLeft() {
+	var retArray = [];
+	var obj;
+
+	for(var i = 0; i < myLikesData.length; i++){
+		obj = leftWing[id];
+		if(obj != undefined){
+			obj = {"pageId": id, "pageName": obj.pageName};
+			retArray = retArray.concat(obj);
+		}
+	}
+
+	return retArray;
+}
+
+function getLikesOnRight () {
+	var retArray = [];
+	var obj;
+
+	for(var i = 0; i < myLikesData.length; i++){
+		obj = rightWing[id];
+		if(obj != undefined){
+			obj = {"pageId": id, "pageName": obj.pageName};
+			retArray = retArray.concat(obj);
+		}
+	}
+
+	return retArray;	
 }
 
 function onFriendsLikes(e){
