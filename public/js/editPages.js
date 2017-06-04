@@ -14,7 +14,7 @@ function init(){
 }
 
 function addPageRow(pageKey, page) {
-	var row = $("<div>"),addClass("formRow");
+	var row = $("<div>").addClass("formRow");
 	var rowTitle = $("<h5>").addClass("rowTitle");
 	var component, componentTitle, componentValue;
 	var itens = Object.keys(page);
