@@ -132,10 +132,11 @@ function nextLikesPage(response){
 
 function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
-		var listData = response.friends.data;
+		var listData = response.friends.data, data;
 		
 		for(var i = 0; i < listData.length; i++) {
-			friendsList[listData.id] = {"name": listData.name};			
+			data = listData[i];
+			friendsList[data.id] = {"name": data.name};			
 		}
 		
 		setStatus("Amigos selecionados");
