@@ -20,15 +20,6 @@ function prepareFriendsData(friendsList){
 	return obj;
 }
 
-function stringfyData(friendsData){
-	var ret = [];
-
-	for(var i = 0; i < friendsData.length; i++){
-		ret[ret.length] = friendsData[i].name;
-	}
-	return ret;
-}
-
 (function(d, s, id){
  var js, fjs = d.getElementsByTagName(s)[0];
  if (d.getElementById(id)) {return;}
@@ -41,6 +32,17 @@ function defaultDataTratment(){
 	// provisorio
 	getFriendsData();
 	getMyLikesData();		
+}
+
+function finishFriendsDataPreparation(){
+	var friend, friendLikeData;
+
+	for(var i = 0; i < friendsList.length; i++){
+		friend = friendsList[i];
+		friendLikeData = friendsLikesData[friend.id];
+
+		friendLikeData["name"] = friend.name;
+	}
 }
 
 function getLikesFromFriends(friendsList){
@@ -88,6 +90,7 @@ function nextLikesByIDPage(response){
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
+		finishFriendsDataPreparation();
 	}
 }
 
