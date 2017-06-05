@@ -65,7 +65,7 @@ function getMatchedLikes(){
 		likes = friendData.likes;
 		likesKeys = Object.keys(likes);
 		
-		for(var j = 0; j < likesKeys.left; j++){
+		for(var j = 0; j < likesKeys.length; j++){
 			likeKey = likesKeys[j];
 			// Match on left
 			if(leftWing[likeKey] != undefined) {
