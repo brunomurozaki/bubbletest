@@ -9,7 +9,7 @@
 #testWrapper{display: none}
 #rightWing{background-color: blue; color: white; float: right}
 #leftWing{background-color: red; color: white; float: left}
-
+#dataInformation{clear: both;}
 
 
 /*Classes*/
@@ -53,3 +53,5 @@ input.componentValue{color: black}
 
 .addAttrWrapper{border-top: #FFF solid 1px; clear: both; text-align: center}
 .addAttrWrapper>a{background: white;padding: 5px;cursor: pointer;text-decoration: none;font-weight: bold; border-radius: 12px; margin-top: 5px;}
+.dataInformationContent{width: 50%; display: inline-block;}
+.dataInformationContent>label{clear: both}

@@ -23,7 +23,7 @@ function bindEvents(){
 }
 
 function onClickResetButton(e) {
-	mountDataArray(baseTrackedPages);
+
 }
 
 function onClickDownloadButton(e) {
@@ -165,14 +165,10 @@ function onClickTitle(e){
 	$(this).siblings().toggle();
 }
 
-function mountDataArray(pagesData) {
+function mountDataArray() {
 	var page, pageKey;
-	$("#editForm").empty();
 
-	if(pagesData == undefined)
-		pagesData = trackedPagesKeys;
-
-	for(var i = 0; i < pagesData.length; i++){
+	for(var i = 0; i < trackedPagesKeys.length; i++){
 		pageKey = trackedPagesKeys[i];
 		page = trackedPages[trackedPagesKeys[i]];
 		addPageRow(pageKey, page);
