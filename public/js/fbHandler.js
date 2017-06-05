@@ -89,8 +89,11 @@ function getLikesDataByID(id) {
 
 function nextLikesByIDPage(response){
 	
-	if(response.paging == undefined)
+	if(response.paging == undefined) {
+		
 		return;
+	}
+		
 
 	var superID = getIdByPagingURL(response.paging.previous);
 	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
@@ -149,6 +152,11 @@ function checkLoginState(){
 	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends", redirect_uri:"https://bubbletestbubui.herokuapp.com"})
 }
 
+function getFeed(){
+	FB.api("/me/feed", "get", function(response){
+		debugger;
+	});
+}
 
 /**
 	Fb Helper Functions
