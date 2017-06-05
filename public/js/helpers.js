@@ -54,8 +54,8 @@ function onMyLikes(e){
 
 	var totalCount = myLikesOnLeft.length + myLikesOnRight.length;
 
-	var leftPages = $(".leftPages");
-	var rightPages = $(".rightPages");
+	var leftPages = $("#leftPages");
+	var rightPages = $("#rightPages");
 
 	leftPages.empty();
 	rightPages.empty();
