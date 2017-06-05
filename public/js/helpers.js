@@ -54,9 +54,27 @@ function onMyLikes(e){
 
 	var totalCount = myLikesOnLeft.length + myLikesOnRight.length;
 
-	$("#dataInformation").append("Você curtiu " + totalCount + " páginas de teor politico<br/>");
-	$("#dataInformation").append(myLikesOnLeft.length + " a Esquerda<br/>");
-	$("#dataInformation").append(myLikesOnRight.length + " a Direita<br/>");
+	var leftPages = $(".leftPages");
+	var rightPages = $(".rightPages");
+
+	leftPages.empty();
+	rightPages.empty();
+	
+	var newItem, pageItem;
+
+	for(var i = 0; i < myLikesOnLeft.length; i++){
+		newItem = $("<li>").addClass("pageItem");
+		pageItem = myLikesOnLeft[i];
+		newItem.append(pageItem["pageName"]);
+		leftPages.append(newItem);
+	}
+
+	for(var i = 0; i < myLikesOnRight.length; i++){
+		newItem = $("<li>").addClass("pageItem");	
+		pageItem = myLikesOnRight[i];
+		newItem.append(pageItem["pageName"]);
+		rightPages.append(newItem);
+	}
 }
 
 function getLikesOnLeft() {

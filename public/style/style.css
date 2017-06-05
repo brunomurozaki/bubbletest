@@ -53,5 +53,6 @@ input.componentValue{color: black}
 
 .addAttrWrapper{border-top: #FFF solid 1px; clear: both; text-align: center}
 .addAttrWrapper>a{background: white;padding: 5px;cursor: pointer;text-decoration: none;font-weight: bold; border-radius: 12px; margin-top: 5px;}
-.dataInformationContent{width: 50%; display: inline-block;}
-.dataInformationContent>label{clear: both}
+.dataInformationContent{width: 45%; display: inline-block;}
+.dataInformationContent>label{clear: both; text-align: left;}
+.rightInformation{margin-left: 9%; text-align: right;}
