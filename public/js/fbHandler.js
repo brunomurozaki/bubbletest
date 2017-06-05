@@ -76,7 +76,7 @@ function getLikesDataByID(id) {
 	FB.api("/" + id + "?fields=likes.summary(true)", "get", function(response){
 		friendsLikesData[id] = response.likes.data;
 
-		if(response.summary){
+		if(response.likes.summary){
 			debugger;
 			likesCount[id] = summary.total_count;
 		}
@@ -94,11 +94,9 @@ function getLikesDataByID(id) {
 
 function nextLikesByIDPage(response){
 	
-	if(response.paging == undefined) {
-		
+	if(response.paging == undefined) {	
 		return;
 	}
-		
 
 	var superID = getIdByPagingURL(response.paging.previous);
 	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
