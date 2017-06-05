@@ -47,6 +47,50 @@ function bindEvents() {
 	$("#byFriendsLikes").on("click", onFriendsLikes);
 }
 
+function onFriendsLikes(e) {
+	var matchedLikes = getMatchedLikes();
+
+	console.log(matchedLikes);
+}
+
+function getMatchedLikes(){
+	var friendsIds = Object.keys(friendsList);
+	var id, friendData, likes, likesKeys, likeKey;
+	var matches = {"left": {}, "right": {}};
+	
+	
+	for(var i = 0; i < friendsIds.length; i++){
+		id = friendsIds[i];
+		friendData = friendsList[id];
+		likes = friendData.likes;
+		likesKeys = Object.keys(likes);
+		
+		for(var j = 0; j < likesKeys.left; j++){
+			likeKey = likesKeys[j];
+			// Match on left
+			if(leftWing[likeKey] != undefined) {
+				if(matches.left[likeKey])
+					matches.left[likeKey]++;
+				else 
+					matches.left[likeKey] = 1;
+				
+				continue;
+			}
+			
+			if(rightWing[likeKey] != undefined) {
+				if(matches.right[likeKey])
+					matches.right[likeKey]++;
+				else 
+					matches.right[likeKey] = 1;
+				
+				continue;
+			}
+		}
+	}	
+	
+	return matches;
+}
+
 function onMyLikes(e){
 	//var myPosition = $()
 	var myLikesOnLeft = getLikesOnLeft();

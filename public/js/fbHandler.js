@@ -72,9 +72,7 @@ function getLikesDataByID(id) {
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
 		} else {
 			
-		}
-
-		setStatus("Carregando...");
+		}		
 	});
 }
 
