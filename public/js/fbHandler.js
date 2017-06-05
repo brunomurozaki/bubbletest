@@ -73,9 +73,14 @@ function loginCallback(e){
 }
 
 function getLikesDataByID(id) {
-	FB.api("/" + id + "?fields=likes", "get", function(response){
+	FB.api("/" + id + "?fields=likes.summary(true)", "get", function(response){
 		friendsLikesData[id] = response.likes.data;
 
+		if(response.summary){
+			debugger;
+			likesCount[id] = summary.total_count;
+		}
+		
 		if(response.likes.paging && response.likes.paging.next){
 			//sendFriendsLikesData(response.likes.data, id);
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
@@ -97,7 +102,7 @@ function nextLikesByIDPage(response){
 
 	var superID = getIdByPagingURL(response.paging.previous);
 	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
-	if(response.paging && response.paging.next) {
+	if(response.paging && response.paging.next && friendsLikesData[superID].length != likesCount[superID]) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
 		likesFlags[superID] = true;
