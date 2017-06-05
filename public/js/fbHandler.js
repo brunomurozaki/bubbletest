@@ -35,6 +35,9 @@ function defaultDataTratment(){
 }
 
 function finishFriendsDataPreparation(){
+	
+	$(".statusBar").html("Ready!");
+	
 	var friend, friendLikeData;
 
 	for(var i = 0; i < friendsList.length; i++){
@@ -47,8 +50,10 @@ function finishFriendsDataPreparation(){
 
 function getLikesFromFriends(friendsList){
 	var friendId;
+	initializeEndLikesFlags();
 	for(var i = 0; i < friendsList.length; i++) {
 		friendId = friendsList[i].id;
+		likesFlags [friendId] = false;
 		getLikesDataByID(friendId);
 	}
 	
@@ -74,6 +79,8 @@ function getLikesDataByID(id) {
 		if(response.likes.paging && response.likes.paging.next){
 			//sendFriendsLikesData(response.likes.data, id);
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
+		} else {
+			likesFlags[id] = true;
 		}
 
 		setStatus("Carregando...");
@@ -90,8 +97,22 @@ function nextLikesByIDPage(response){
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
-		//finishFriendsDataPreparation();
+		likesFlags[superID] = true;
+		
+		if(isLikesDataReady())
+			finishFriendsDataPreparation();
 	}
+}
+
+function isLikesDataReady(){
+	var keys = Object.keys(likesFlags);
+	
+	for(var i = 0; i < keys.length; i++) {
+		if(!likesFlags[keys[i]])
+			return false;
+	}
+	
+	return true;
 }
 
 function getMyLikesData(){
