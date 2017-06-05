@@ -90,7 +90,7 @@ function nextLikesByIDPage(response){
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
-		finishFriendsDataPreparation();
+		//finishFriendsDataPreparation();
 	}
 }
 
