@@ -50,7 +50,7 @@ function finishFriendsDataPreparation(){
 
 function getLikesFromFriends(friendsList){
 	var friendId;
-	initializeEndLikesFlags();
+	
 	for(var i = 0; i < friendsList.length; i++) {
 		friendId = friendsList[i].id;
 		likesFlags [friendId] = false;
