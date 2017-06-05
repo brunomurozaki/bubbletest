@@ -92,7 +92,7 @@ function nextLikesByIDPage(response){
 		friendsList[superID].likes[data.id] = {"name": data.name, "created_time": data.created_time};
 	}
 	
-	if(response.paging && response.paging.next && friendsLikesData[superID].length != likesCount[superID]) {
+	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
 		
