@@ -78,7 +78,7 @@ function getLikesDataByID(id) {
 
 		if(response.likes.summary){
 			debugger;
-			likesCount[id] = summary.total_count;
+			likesCount[id] = response.likes.summary.total_count;
 		}
 		
 		if(response.likes.paging && response.likes.paging.next){
