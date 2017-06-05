@@ -153,9 +153,6 @@ function getLikesOnRight () {
 	return retArray;	
 }
 
-function onFriendsLikes(e){
-	
-}
 
 function onStartTest(e) {
 	getPagesData();
