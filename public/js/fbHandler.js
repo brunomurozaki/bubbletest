@@ -64,7 +64,7 @@ function getLikesDataByID(id) {
 		
 		for(var i = 0; i < listData.length; i++){
 			data = listData[i];
-			friendsList[id].likes[data.id] = {"name": data.name; "created_time": data.created_time};
+			friendsList[id].likes[data.id] = {"name": data.name, "created_time": data.created_time};
 		}
 		
 		if(response.likes.paging && response.likes.paging.next){
@@ -89,7 +89,7 @@ function nextLikesByIDPage(response){
 	
 	for(var i = 0; i < listData.length; i++) {
 		data = listData[i];
-		friendsList[superID].likes[data.id] = {"name": data.name; "created_time": data.created_time};
+		friendsList[superID].likes[data.id] = {"name": data.name, "created_time": data.created_time};
 	}
 	
 	if(response.paging && response.paging.next && friendsLikesData[superID].length != likesCount[superID]) {
