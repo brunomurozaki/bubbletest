@@ -34,27 +34,11 @@ function defaultDataTratment(){
 	getMyLikesData();		
 }
 
-function finishFriendsDataPreparation(){
+function getLikesFromFriends(){
+	var friendIds = Object.keys(friendsList);
 	
-	$(".statusBar").html("Ready!");
-	
-	var friend, friendLikeData;
-
-	for(var i = 0; i < friendsList.length; i++){
-		friend = friendsList[i];
-		friendLikeData = friendsLikesData[friend.id];
-
-		friendLikeData["name"] = friend.name;
-	}
-}
-
-function getLikesFromFriends(friendsList){
-	var friendId;
-	
-	for(var i = 0; i < friendsList.length; i++) {
-		friendId = friendsList[i].id;
-		likesFlags [friendId] = false;
-		getLikesDataByID(friendId);
+	for(var i = 0; i < friendIds.length; i++) {
+		getLikesDataByID(friendIds[i]);
 	}
 	
 }
@@ -73,19 +57,21 @@ function loginCallback(e){
 }
 
 function getLikesDataByID(id) {
-	FB.api("/" + id + "?fields=likes.summary(true)", "get", function(response){
-		friendsLikesData[id] = response.likes.data;
-
-		if(response.likes.summary){
-			debugger;
-			likesCount[id] = response.likes.summary.total_count;
+	FB.api("/" + id + "?fields=likes", "get", function(response){
+		//friendsLikesData[id] = response.likes.data;
+		var listData = response.likes.data, data;
+		friendsList[id].likes = {};
+		
+		for(var i = 0; i < listData.length; i++){
+			data = listData[i];
+			friendsList[id].likes[data.id] = {"name": data.name; "created_time": data.created_time};
 		}
 		
 		if(response.likes.paging && response.likes.paging.next){
 			//sendFriendsLikesData(response.likes.data, id);
 			FB.api(response.likes.paging.next, "GET", nextLikesByIDPage);
 		} else {
-			likesFlags[id] = true;
+			
 		}
 
 		setStatus("Carregando...");
@@ -97,16 +83,19 @@ function nextLikesByIDPage(response){
 	if(response.paging == undefined) {	
 		return;
 	}
-
+	
+	var listData = response.data, data;
 	var superID = getIdByPagingURL(response.paging.previous);
-	friendsLikesData[superID] = friendsLikesData[superID].concat(response.data);
+	
+	for(var i = 0; i < listData.length; i++) {
+		data = listData[i];
+		friendsList[superID].likes[data.id] = {"name": data.name; "created_time": data.created_time};
+	}
+	
 	if(response.paging && response.paging.next && friendsLikesData[superID].length != likesCount[superID]) {
 		FB.api(response.paging.next, "GET", nextLikesByIDPage);
 	} else {
-		likesFlags[superID] = true;
 		
-		if(isLikesDataReady())
-			finishFriendsDataPreparation();
 	}
 }
 
@@ -143,11 +132,16 @@ function nextLikesPage(response){
 
 function getFriendsData() {
 	FB.api("/me?fields=friends,name", "get", function(response){
-		friendsList = response.friends.data;
+		var listData = response.friends.data;
+		
+		for(var i = 0; i < listData.length; i++) {
+			friendsList[listData.id] = {"name": listData.name};			
+		}
+		
 		setStatus("Amigos selecionados");
 		
 		//Quando fizer pagination em friends, favor inserir este trecho de codigo ao fim
-		getLikesFromFriends(friendsList);
+		getLikesFromFriends();
 	});
 }
 
