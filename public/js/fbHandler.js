@@ -153,7 +153,7 @@ function checkLoginState(){
 }
 
 function getFeed(){
-	FB.api("/me/feed", "get", function(response){
+	FB.api("/me/home", "get", function(response){
 		debugger;
 	});
 }
