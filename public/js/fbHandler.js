@@ -34,6 +34,7 @@ function defaultDataTratment(){
 	// TODO retirar isto!
 	alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
 
+	createPageList();
 	getFriendsData();
 	getMyLikesData();		
 }
@@ -54,7 +55,7 @@ function loginCallback(e){
 		myID = e.authResponse.userID;
 
 		addUser(myID);
-
+		
 		$("#tabs_row").css({"display": "block"});
 		$(".btFBWrapper").css({"display": "none"})
 	} else {

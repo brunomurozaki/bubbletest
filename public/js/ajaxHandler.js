@@ -15,8 +15,6 @@ function getPagesData () {
 		trackedPages = res;
 		trackedPagesKeys = Object.keys(trackedPages);
 		baseTrackedPages = jQuery.extend(true, {}, trackedPages);
-
-		mountDataArray();
 	});
 }
 

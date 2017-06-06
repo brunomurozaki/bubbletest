@@ -37,6 +37,17 @@ function init(){
 	bindEvents();
 }
 
+function createPageList(){
+	var ul = $("#importantPageList");
+	var li;
+
+	for(var i = 0; i < trackedPagesKeys.length; i++){
+		li = $("<li>").addClass("list-group-item");
+		li.append(trackedPagesKeys[i]);
+		ul.append(li);
+	}
+}
+
 function bindEvents() {
 	$("#getLikes").on("click", onGetLikesClick);
 	$("#getFriendsLikes").on("click", onGeMyFriendLikes)
@@ -45,6 +56,7 @@ function bindEvents() {
 	$("#startTestButton").on("click", onStartTest);
 	$("#byMyLikes").on("click", onMyLikes);
 	$("#byFriendsLikes").on("click", onFriendsLikes);
+	getPagesData();
 }
 
 function onFriendsLikes(e) {
@@ -151,7 +163,7 @@ function getLikesOnRight () {
 
 
 function onStartTest(e) {
-	getPagesData();
+	mountDataArray();
 }
 
 function onMatchLikes(e){
