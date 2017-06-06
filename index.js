@@ -4,6 +4,7 @@ var yaml = require('js-yaml');
 var fs   = require('fs');
 var bodyParser = require('body-parser');
 var merge = require('merge');
+var pg = require('pg');
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -41,3 +42,17 @@ function readImportantPages(){
 }
 
 readImportantPages();
+
+
+
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
+
+  client
+    .query('SELECT table_schema,table_name FROM information_schema.tables;')
+    .on('row', function(row) {
+      console.log(JSON.stringify(row));
+    });
+});
