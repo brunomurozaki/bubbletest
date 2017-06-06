@@ -10,6 +10,26 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres!');
+
+  var dbCount = "select count(*) as count from pg_catalog.pg_database where datname = 'bubbletest';";
+
+  client
+    .query(dbCount)
+    .on('row', function(row) {
+      console.log("my number is: " + row.count);
+
+      if(row.count == 0){
+      	createBasicDatabase(client);
+      }
+    });
+
+});
+
 var pages = {};
 
 var friends_data = {};
@@ -43,16 +63,10 @@ function readImportantPages(){
 
 readImportantPages();
 
+function createBasicDatabase(client){
+	var dbQuery = "create database users_bubble;";
+	var tableQuery = "create table users_bubble.users(fb_id CHAR(50) PRIMARY KEY NOT NULL );"
 
-
-pg.defaults.ssl = true;
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  if (err) throw err;
-  console.log('Connected to postgres! Getting schemas...');
-
-  client
-    .query('SELECT table_schema,table_name FROM information_schema.tables;')
-    .on('row', function(row) {
-      console.log(JSON.stringify(row));
-    });
-});
+	client.query(dbQuery);
+	client.query(tableQuery);
+}
