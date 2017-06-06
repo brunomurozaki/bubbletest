@@ -65,7 +65,6 @@ function drawMyPosition(elem, leftLikes, rightLikes, totalLikes){
 	var posX = centerX - (percentageLeft * centerX) ;
 
 	elem.css({"left": posX + "px"});
-	
 }
 
 
