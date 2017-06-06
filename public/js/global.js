@@ -8,6 +8,7 @@ var myLikesData = [];
 var logged = false;
 var isPagingLikes = false;
 var friendsLikesData = {};
+var myID = "";
 
 var baseTrackedPages = {};
 var trackedPages = {};
