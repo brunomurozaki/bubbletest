@@ -20,6 +20,22 @@ function getPagesData () {
 	});
 }
 
+function getAllUsers(){
+	answeredGet(ALL_USERS, {}, function(res){
+		console.log(res);
+		allServerUsers = res;
+	});
+}
+
+function addUser(fb_id){
+	unansweredGet(ADD_USER, {"fb_id": fb_id}});	
+}
+
+function delUser(fb_id){
+	unansweredGet(DEL_USER, {"fb_id": fb_id}});		
+}
+
+
 function unansweredGet(path, data){
 	$.get(path, data);
 }
