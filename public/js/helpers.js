@@ -91,8 +91,28 @@ function getMatchedLikes(){
 	return matches;
 }
 
+function createMyPosition() {
+
+	var politicalMap = $("#politicalMap");
+	var bubbles = $(".bubbleWrapper");
+
+	var x = $(bubbles[0]).width();
+	var y = $(bubbles[1]).width();
+	var z = politicalMap.width();
+	var h = z - (x + y);
+
+	var pos0 = h/2; 
+
+	var me = $("<div id='me'>").addClass("point");
+
+	politicalMap.append(me);
+}
+
 function onMyLikes(e){
 	//var myPosition = $()
+
+	createMyPosition();
+
 	var myLikesOnLeft = getLikesOnLeft();
 	var myLikesOnRight = getLikesOnRight();
 

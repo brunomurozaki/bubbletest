@@ -43,8 +43,7 @@ function getLikesFromFriends(){
 	
 	for(var i = 0; i < friendIds.length; i++) {
 		getLikesDataByID(friendIds[i]);
-	}
-	
+	}	
 }
 
 function loginCallback(e){

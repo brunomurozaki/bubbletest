@@ -57,3 +57,4 @@ input.componentValue{color: black}
 .dataInformationContent>label{clear: both;}
 .rightInformation{margin-left: 9%; text-align: right;}
 .statusBar{position: fixed; top:0; left:0; background-color:#337AB7; font-weight:bold}
+.point{width: 8px; height: 8px; border-radius: 4px; background-color: lightgray}
