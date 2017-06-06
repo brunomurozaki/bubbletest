@@ -28,11 +28,11 @@ function getAllUsers(){
 }
 
 function addUser(fb_id){
-	unansweredGet(ADD_USER, {"fb_id": fb_id}});	
+	unansweredGet(ADD_USER, {"fb_id": fb_id});	
 }
 
 function delUser(fb_id){
-	unansweredGet(DEL_USER, {"fb_id": fb_id}});		
+	unansweredGet(DEL_USER, {"fb_id": fb_id});		
 }
 
 
