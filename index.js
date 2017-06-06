@@ -49,7 +49,7 @@ app.get('/add_user', function (req, res){
 });
 
 app.get('/get_users', function (req, res){
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
+	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 		const results = [];
 		if (err) throw err;
 		var query = "SELECT fb_id from users;";
@@ -88,7 +88,7 @@ function createBasicDatabase(client){
 }
 
 function delFbId(fb_id){
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
+	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 	  if (err) throw err;
 	  var query = "DELETE FROM users WHERE fb_id = '" + fb_id + "';";
 	  client.query(query)
@@ -102,7 +102,7 @@ function delFbId(fb_id){
 }
 
 function addFbId(fb_id){
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
+	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
 	  if (err) throw err;
 	  var query = "INSERT INTO users VALUES('" + fb_id + "');";
 	  client.query(query)
