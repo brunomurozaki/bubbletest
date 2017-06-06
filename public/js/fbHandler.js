@@ -30,6 +30,10 @@ function prepareFriendsData(friendsList){
 
 function defaultDataTratment(){
 	// provisorio
+
+	// TODO retirar isto!
+	alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
+
 	getFriendsData();
 	getMyLikesData();		
 }
