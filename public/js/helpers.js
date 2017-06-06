@@ -56,7 +56,14 @@ function bindEvents() {
 	$("#startTestButton").on("click", onStartTest);
 	$("#byMyLikes").on("click", onMyLikes);
 	$("#byFriendsLikes").on("click", onFriendsLikes);
+	$("#pressCheck").on("change", onChangePress);
 	getPagesData();
+}
+
+function onChangePress(e){
+	if($(this).is(":checked")){
+		
+	}
 }
 
 function onFriendsLikes(e) {
