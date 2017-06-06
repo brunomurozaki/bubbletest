@@ -5,7 +5,6 @@ var fs   = require('fs');
 var bodyParser = require('body-parser');
 var merge = require('merge');
 var pg = require('pg');
-var client = pg.
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
