@@ -94,18 +94,21 @@ function getMatchedLikes(){
 function createMyPosition() {
 
 	var politicalMap = $("#politicalMap");
-	var bubbles = $(".bubbleWrapper");
+	var bubblesWrapper = $(".bubbleWrapper");
+	var bubblesUnity = $(".bubble");
 
-	var x = $(bubbles[0]).width();
-	var y = $(bubbles[1]).width();
+	var x = $(bubblesWrapper[0]).width();
+	var y = $(bubblesWrapper[1]).width();
 	var z = politicalMap.width();
 	var h = z - (x + y);
 
-	var pos0 = h/2; 
+	var posX = h/2; 
+	var posY = (max($(bubblesUnity[0]).width(), $(bubblesUnity[1]).width()) + $(".bubbleTitle").outerHeight()) / 2;
 
 	var me = $("<div id='me'>").addClass("point");
+	me.css({"left": posX + "px", "top": posY + "px"});
 
-	politicalMap.append(me);
+	me.insertBefore($("#dataInformation"));
 }
 
 function onMyLikes(e){
@@ -255,4 +258,12 @@ function mountMap() {
 
 	map.css("display", "block");
 	startButton.css({"display": "none"});
+}
+
+/*normal Helpers*/
+
+function max(i, j){
+	if (i > j) 
+		return i;
+	return j;
 }
