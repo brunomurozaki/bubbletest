@@ -65,6 +65,10 @@ function drawMyPosition(elem, leftLikes, rightLikes, totalLikes){
 	var posX = centerX - (percentageLeft * centerX) ;
 
 	elem.css({"left": posX + "px"});
+
+	// TODO melhorar isso pra qualquer tipo de bubble
+	$(".floatRight").find("span").html((100 - percentageLeft) + "%");
+	$(".floatLeft").find("span").html((percentageLeft) + "%"); 
 }
 
 

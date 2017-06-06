@@ -29,6 +29,8 @@
 .bubbleWrapper{padding-bottom: 30px}
 .bubbleTitle{text-align: center; font-weight: bold; padding-bottom: 10px; padding-top: 30px}
 
+.bubble{display: table}
+
 .floatRight{float: right;}
 .floatLeft{float: left;}
 
@@ -58,3 +60,5 @@ input.componentValue{color: black}
 .rightInformation{margin-left: 9%; text-align: right;}
 .statusBar{position: fixed; top:0; left:0; background-color:#337AB7; font-weight:bold}
 .point{width: 25px; height: 25px; border-radius: 25px; background-color: black; position: relative; display: block; float: left;}
+
+.bubblePercentage{font-weight: bold; display: table-cell; vertical-align: middle;}
