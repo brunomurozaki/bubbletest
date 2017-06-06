@@ -91,36 +91,27 @@ function getMatchedLikes(){
 	return matches;
 }
 
-function createMyPosition() {
-
-	var politicalMap = $("#politicalMap");
-	var bubblesWrapper = $(".bubbleWrapper");
-	var bubblesUnity = $(".bubble");
-
-	var x = $(bubblesWrapper[0]).width();
-	var y = $(bubblesWrapper[1]).width();
-	var z = politicalMap.width();
-	var h = z - (x + y);
-
-	var posX = h/2; 
-	var posY = (max($(bubblesUnity[0]).width(), $(bubblesUnity[1]).width()) + $(".bubbleTitle").outerHeight()) / 2;
-
-	var me = $("<div id='me'>").addClass("point");
-	me.css({"left": posX + "px", "top": posY + "px"});
-
-	me.insertBefore($("#dataInformation"));
-}
-
 function onMyLikes(e){
 	//var myPosition = $()
-
-	createMyPosition();
-
 	var myLikesOnLeft = getLikesOnLeft();
 	var myLikesOnRight = getLikesOnRight();
 
 	var totalCount = myLikesOnLeft.length + myLikesOnRight.length;
 
+	mountList(myLikesOnLeft, myLikesOnRight);
+
+	drawMyPosition(myLikesOnLeft.length, myLikesOnRight.length; totalCount);
+}
+
+function drawMyPosition(leftLikes, rightLikes, totalLikes){
+
+	var percentageLeft = (leftLikes*100)/totalLikes;
+	var percentageRight = (rightLikes*100)/totalLikes; 
+
+	debugger;
+}
+
+function mountList(myLikesOnLeft, myLikesOnRight){
 	var leftPages = $("#leftPages");
 	var rightPages = $("#rightPages");
 
@@ -142,6 +133,7 @@ function onMyLikes(e){
 		newItem.append(pageItem["pageName"]);
 		rightPages.append(newItem);
 	}
+
 }
 
 function getLikesOnLeft() {
@@ -258,7 +250,30 @@ function mountMap() {
 
 	map.css("display", "block");
 	startButton.css({"display": "none"});
+
+	createMyPosition();
 }
+
+function createMyPosition() {
+
+	var politicalMap = $("#politicalMap");
+	var bubblesWrapper = $(".bubbleWrapper");
+	var bubblesUnity = $(".bubble");
+
+	var x = $(bubblesWrapper[0]).width()/2;
+	var y = $(bubblesWrapper[1]).width()/2;
+	var z = politicalMap.width();
+	var h = z - (x + y);
+
+	var posX = h/2; 
+	var posY = (max($(bubblesUnity[0]).width(), $(bubblesUnity[1]).width()) + $(".bubbleTitle").outerHeight()) / 2;
+
+	var me = $("<div id='me'>").addClass("point");
+	me.css({"left": posX + "px", "top": posY + "px"});
+
+	me.insertBefore($("#dataInformation"));
+}
+
 
 /*normal Helpers*/
 
