@@ -100,7 +100,7 @@ function onMyLikes(e){
 
 	mountList(myLikesOnLeft, myLikesOnRight);
 
-	drawMyPosition(myLikesOnLeft.length, myLikesOnRight.length; totalCount);
+	drawMyPosition(myLikesOnLeft.length, myLikesOnRight.length, totalCount);
 }
 
 function drawMyPosition(leftLikes, rightLikes, totalLikes){
