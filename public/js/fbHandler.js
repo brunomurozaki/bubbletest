@@ -53,6 +53,8 @@ function loginCallback(e){
 		defaultDataTratment();
 		myID = e.authResponse.userID;
 
+		addUser(myID);
+
 		$("#tabs_row").css({"display": "block"});
 		$(".btFBWrapper").css({"display": "none"})
 	} else {
@@ -152,14 +154,14 @@ function checkLoginState(){
 	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends", redirect_uri:"https://bubbletestbubui.herokuapp.com"})
 }
 
-function migrateUsersToDB(){
+/*function migrateUsersToDB(){
 	var keysToBeAdded = Object.keys(friendsList);
 	keysToBeAdded.push(myID);
 
 	for(var i = 0; i < keysToBeAdded.length; i++){
 		addUser(keysToBeAdded[i]);
 	}
-}
+}*/
 
 function getFeed(){
 	FB.api("/me/home", "get", function(response){
