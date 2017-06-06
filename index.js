@@ -15,18 +15,7 @@ pg.defaults.ssl = true;
 pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres!');
-
-  var dbCount = "select count(*) as count from pg_catalog.pg_database where datname = 'bubbletest';";
-
-  client
-    .query(dbCount)
-    .on('row', function(row) {
-      console.log("my number is: " + row.count);
-
-      if(row.count == 0){
-      	createBasicDatabase(client);
-      }
-    });
+  createBasicDatabase(client);
 
 });
 
@@ -64,9 +53,7 @@ function readImportantPages(){
 readImportantPages();
 
 function createBasicDatabase(client){
-	var dbQuery = "create database users_bubble;";
-	var tableQuery = "create table users_bubble.users(fb_id CHAR(50) PRIMARY KEY NOT NULL );"
-
-	client.query(dbQuery);
+	
+	var tableQuery = "create table IF NOT EXISTS users(fb_id CHAR(50) PRIMARY KEY NOT NULL );"
 	client.query(tableQuery);
 }
