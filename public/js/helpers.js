@@ -50,7 +50,21 @@ function bindEvents() {
 function onFriendsLikes(e) {
 	var matchedLikes = getMatchedLikes();
 
-	console.log(matchedLikes);
+	var leftKeys = Object.keys(matchedLikes.left);
+	var rightKeys = Object.keys(matchedLikes.right); 
+
+	var leftLikes = 0;
+	var rightLikes = 0;
+
+	for(var i = 0; i < leftKeys.length; i++){
+		leftLikes += matchedLikes.left[leftKeys[i]];
+	}
+
+	for(var i = 0; i < rightKeys.length; i++){
+		rightLikes += matchedLikes.right[rightKeys[i]];	
+	}
+
+	drawMyPosition($("#me"), leftLikes, rightLikes, leftLikes + rightLikes);
 }
 
 function getMatchedLikes(){
