@@ -62,8 +62,17 @@ function bindEvents() {
 
 function onChangePress(e){
 	if($(this).is(":checked")){
-		
+
 	}
+}
+
+function createBubble(type){
+	var bubble = $("<div>");
+
+	bubble.addClass(type)
+		.addClass("bubble");
+
+	
 }
 
 function onFriendsLikes(e) {
