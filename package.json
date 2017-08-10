@@ -21,7 +21,8 @@
     "express": "^4.15.2",
     "js-yaml": "^3.8.4",
     "merge": "^1.2.0",
-    "pg": "6.2.3"
+    "pg": "6.2.3",
+    "sequelize": "^4.4.2"
   },
   "devDependencies": {},
   "description": ""
