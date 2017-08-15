@@ -9,9 +9,9 @@ var pg = require('pg');
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 
-pg.defaults.ssl = true;
+pg.defaults.ssl = false;
 pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres!');
@@ -31,7 +31,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pages_data', function (req, res){
-	//readImportantPages();	
+	//readImportantPages();
 	res.setHeader('Content-Type', 'application/json');
 	res.send(JSON.stringify(pages));
 });
@@ -63,7 +63,7 @@ app.get('/get_users', function (req, res){
 			.on("end", function(){
 				done();
 				return res.json(results);
-		  	}); 
+		  	});
 	});
 });
 
@@ -77,7 +77,7 @@ function readImportantPages(){
 	  pages = yaml.safeLoad(fs.readFileSync('/app/public/js/feeds.yaml', 'utf8'));
 	} catch (e) {
 	  console.log(e);
-	}	
+	}
 }
 
 readImportantPages();
@@ -97,7 +97,7 @@ function delFbId(fb_id){
 	  	})
 	  	.on("end", function(){
 	  		done();
-	  	}); 
+	  	});
 	});
 }
 
@@ -111,6 +111,6 @@ function addFbId(fb_id){
 	  	})
 	  	.on("end", function(){
 	  		done();
-	  	}); 
+	  	});
 	});
 }
