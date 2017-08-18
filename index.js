@@ -22,6 +22,7 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
 var pages = {};
 var friends_data = {};
 var port = process.env.PORT || 8080;
+var host = process.env.HOST || '0.0.0.0';
 var allFbIds = [];
 
 app.use(express.static(__dirname + '/public'));
@@ -67,8 +68,8 @@ app.get('/get_users', function (req, res){
 	});
 });
 
-app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
+app.listen(port, host, function() {
+    console.log('Our app is running on http://' + host + ':' + port);
 });
 
 function readImportantPages(){
