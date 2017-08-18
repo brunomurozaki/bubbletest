@@ -1,0 +1,28 @@
+# Este arquivo é usado apenas para desenvolvimento local da plataforma
+version: "3"
+volumes:
+  db_data: {}
+services:
+  app:
+    image: bubui/bubbletest:app-dev
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: bash -c "npm install && node index.js"
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: 'postgres://bubui:senha@db/bubbletest'
+      PORT: 8080
+    depends_on:
+      - db
+  db:
+    image: postgres:9.6
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: 'bubui'
+      POSTGRES_PASSWORD: 'senha'
+      POSTGRES_DB: 'bubbletest'
