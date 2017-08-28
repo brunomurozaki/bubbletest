@@ -41,14 +41,14 @@ function mountList(myLikesOnLeft, myLikesOnRight){
 	var newItem, pageItem;
 
 	for(var i = 0; i < myLikesOnLeft.length; i++){
-		newItem = $("<li>").addClass("pageItem");
+		newItem = $("<li>").addClass("pageItem").addClass("list-group-item");
 		pageItem = myLikesOnLeft[i];
 		newItem.append(pageItem["pageName"]);
 		leftPages.append(newItem);
 	}
 
 	for(var i = 0; i < myLikesOnRight.length; i++){
-		newItem = $("<li>").addClass("pageItem");	
+		newItem = $("<li>").addClass("pageItem").addClass("list-group-item");	
 		pageItem = myLikesOnRight[i];
 		newItem.append(pageItem["pageName"]);
 		rightPages.append(newItem);
