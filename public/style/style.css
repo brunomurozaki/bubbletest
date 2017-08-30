@@ -57,6 +57,7 @@ input.componentValue{color: black}
 .addAttrWrapper>a{background: white;padding: 5px;cursor: pointer;text-decoration: none;font-weight: bold; border-radius: 12px; margin-top: 5px;}
 .dataInformationContent{width: 45%; display: inline-block;text-align: left;}
 .dataInformationContent>label{clear: both;}
+.leftInformation{float:left}
 .rightInformation{margin-left: 9%; text-align: right;}
 .statusBar{position: fixed; top:0; left:0; background-color:#337AB7; font-weight:bold}
 .point{width: 25px; height: 25px; border-radius: 25px; background-color: black; position: relative; display: block; float: left;}
