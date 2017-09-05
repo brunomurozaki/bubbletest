@@ -32,7 +32,7 @@ function defaultDataTratment(){
 	// provisorio
 
 	// TODO retirar isto!
-	alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
+	//alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
 
 	createPageList();
 	getFriendsData();
