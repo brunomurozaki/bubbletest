@@ -50,6 +50,8 @@ function getLikesFromFriends(){
 function loginCallback(e){
 	console.log("loginCallback");
 	
+	console.log(e);
+	
 	if(e.status == "connected"){
 		defaultDataTratment();
 		myID = e.authResponse.userID;
