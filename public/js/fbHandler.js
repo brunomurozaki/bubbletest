@@ -137,8 +137,22 @@ function nextLikesPage(response){
 	}
 }
 
+function getMyData(){
+	FB.api("/me?fields=name,hometown,birthday,location,religion,political", "get", function(response){
+		var name = response.name,
+		hometown = response.hometown,
+		birthday = response.birthday,
+		location = response.location,
+		religion = response.religion,
+		political = response.political;
+		
+		
+		
+	});
+}
+
 function getFriendsData() {
-	FB.api("/me?fields=friends,name", "get", function(response){
+	FB.api("/me?fields=friends", "get", function(response){
 		var listData = response.friends.data, data;
 		
 		for(var i = 0; i < listData.length; i++) {
@@ -154,7 +168,7 @@ function getFriendsData() {
 }
 
 function checkLoginState(){
-	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends,user_birthday,user_hometown,user_location,user_religion_politics,user_religion_politics"});
+	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends,user_birthday,user_hometown,user_location,user_religion_politics"});
 }
 
 /*function migrateUsersToDB(){
