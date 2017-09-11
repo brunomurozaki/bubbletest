@@ -1,5 +1,6 @@
-const todos = require('./users');
+const users = require('./users');
+const locations = require('./locations');
 
 module.exports = {
-  users,
+  users, locations
 };

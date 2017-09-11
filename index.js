@@ -27,6 +27,9 @@ var allFbIds = [];
 
 app.use(express.static(__dirname + '/public'));
 
+require('./server/routes')(app);
+
+
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });

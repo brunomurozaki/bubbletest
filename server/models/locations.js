@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var Location = sequelize.define('Location', {
+  var Locations = sequelize.define('Locations', {
     id: {
 		type: DataTypes.STRING,
 		allowNull: false,
@@ -14,5 +14,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return Location;
+  return Locations;
 };
