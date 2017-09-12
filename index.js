@@ -31,6 +31,7 @@ require('./server/routes')(app);
 
 
 app.get('/', function (req, res) {
+	console.log("Sending HTML");
     res.sendFile(__dirname + '/index.html');
 });
 
