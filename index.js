@@ -74,6 +74,7 @@ app.get('/get_users', function (req, res){
 app.listen(port, host, function() {
     console.log('Our app is running on http://' + host + ':' + port);
 	console.log("is it really running?");
+	console.log("really really really running?");
 });
 
 function readImportantPages(){
