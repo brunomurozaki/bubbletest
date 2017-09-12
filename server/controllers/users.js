@@ -31,7 +31,7 @@ function verifyLocation(data, req, res){
 		id: req.body.id,
 		name: req.body.name
 	})
-	.then(loc => createUser(req, res, loc)
+	.then(loc => createUser(req, res, loc))
 	.catch(error => errorHandle(error, res));
 }
 
