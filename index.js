@@ -27,7 +27,7 @@ var allFbIds = [];
 
 app.use(express.static(__dirname + '/public'));
 
-//require('./server/routes')(app);
+require('./server/routes')(app);
 
 
 app.get('/', function (req, res) {
@@ -73,6 +73,7 @@ app.get('/get_users', function (req, res){
 
 app.listen(port, host, function() {
     console.log('Our app is running on http://' + host + ':' + port);
+	console.log("is it really running?");
 });
 
 function readImportantPages(){
