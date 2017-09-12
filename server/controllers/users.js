@@ -1,5 +1,5 @@
 const User = require('../models').Users;
-const Location = require('../models').Location;
+const Location = require('../models').Locations;
 
 module.exports = {
   create(req, res) {
