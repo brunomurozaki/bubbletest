@@ -28,6 +28,7 @@ module.exports = {
 	
   },
   list(req, res) {
+	console.log("GET");
 	return User.all()
 	.then(list => res.send(list))
 	.catch(error => errorHandle(error, res));
