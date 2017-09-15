@@ -3,17 +3,29 @@ const Location = require('../models').Locations;
 
 module.exports = {
   create(req, res) {
-	var location_id = req.body.location.id;
-	return Location.findOne({where: 
-		{
-			$eq: 
+	
+	if(req.body.location)
+	{
+		var location_id = req.body.location.id;
+	
+		console.log("Creating...");
+		return Location.findOne({where: 
 			{
-				id: location_id
+				$eq: 
+				{
+					id: location_id
+				}
 			}
-		}
-	})
-	.then(data => verifyLocation(data, params, res))
-	.catch(error => errorHandle(error, res));	
+		})
+		.then(data => verifyLocation(data, params, res))
+		.catch(error => errorHandle(error, res));	
+	} 
+	else 
+	{
+		return createUser(req, res);
+	}
+	
+	
   },
   list(req, res) {
 	return User.all()
@@ -23,6 +35,7 @@ module.exports = {
 };
 
 function verifyLocation(data, req, res){
+	console.log("Verifying...");
 	if(data != null){
 		return createUser(req, res, data);
 	}
@@ -36,6 +49,7 @@ function verifyLocation(data, req, res){
 }
 
 function createUser(req, res, locationInfo){
+	console.log("Finishing...");
 	return User
       .create({
         fb_id: req.body.fb_id,
