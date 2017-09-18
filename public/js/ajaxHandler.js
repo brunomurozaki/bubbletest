@@ -25,7 +25,7 @@ function getAllUsers(){
 	});
 }
 
-function addUser(fb_id){
+function addUser(fb_id, name){
 	unansweredGet(ADD_USER, {"fb_id": fb_id});	
 }
 

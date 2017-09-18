@@ -21,7 +21,7 @@ module.exports = {
 	} 
 	else 
 	{
-		return createUser(req, res);
+		return createUser(req, res, null);
 	}
   },
   list(req, res) {
@@ -35,7 +35,7 @@ module.exports = {
 function verifyLocation(data, req, res){
 	console.log("Verifying...");
 	if(data != null){
-		return createUser(req, res, data);
+		return createUser(req, res, data.id);
 	}
 	
 	console.log(req.body);
@@ -44,7 +44,7 @@ function verifyLocation(data, req, res){
 		id: req.body.location.id,
 		name: req.body.location.name
 	})
-	.then(loc => createUser(req, res, loc))
+	.then(loc => createUser(req, res, loc.id))
 	.catch(error => errorHandle(error, res));
 }
 
@@ -57,7 +57,7 @@ function createUser(req, res, locationInfo){
 		name: req.body.name,
 		birthday: req.body.birthday,
 		hometown: null,
-		location: locationInfo.id,
+		location: locationInfo,
 		religion: req.body.religion,
 		politicalStand: req.body.politicalStand
       })
