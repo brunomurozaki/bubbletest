@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     birthday: DataTypes.DATEONLY,
     hometown: {
 	  type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'Location',
         key: 'id'
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
 	},
     location: {
 	  type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'Location',
         key: 'id'
