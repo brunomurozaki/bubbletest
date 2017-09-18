@@ -38,6 +38,8 @@ function verifyLocation(data, req, res){
 		return createUser(req, res, data);
 	}
 	
+	console.log(req.body);
+	
 	return Location.create({
 		id: req.body.id,
 		name: req.body.name
