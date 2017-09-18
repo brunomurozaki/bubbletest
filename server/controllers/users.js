@@ -41,8 +41,8 @@ function verifyLocation(data, req, res){
 	console.log(req.body);
 	
 	return Location.create({
-		id: req.body.id,
-		name: req.body.name
+		id: req.body.location.id,
+		name: req.body.location.name
 	})
 	.then(loc => createUser(req, res, loc))
 	.catch(error => errorHandle(error, res));
@@ -56,7 +56,7 @@ function createUser(req, res, locationInfo){
 		fb_token: req.body.fb_token,
 		name: req.body.name,
 		birthday: req.body.birthday,
-		hometown: req.body.hometown,
+		hometown: null,
 		location: req.body.location,
 		religion: req.body.religion,
 		politicalStand: req.body.politicalStand
