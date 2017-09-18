@@ -55,14 +55,22 @@ function loginCallback(e){
 	if(e.status == "connected"){
 		defaultDataTratment();
 		myID = e.authResponse.userID;
+		accsessToken = e.authResponse.accessToken;
 
-		addUser(myID);
+		getUserData(myID, accessToken);
 		
 		$("#tabs_row").css({"display": "block"});
 		$(".btFBWrapper").css({"display": "none"})
 	} else {
 		alert("invalid facebook credentials");
 	}
+}
+
+function getUserData(id, accessToken){
+	FB.api("/me", "get", function(response){
+		var name = response.name;
+		addUser(id, accessToken, name);
+	});
 }
 
 function getLikesDataByID(id) {
