@@ -57,7 +57,7 @@ function createUser(req, res, locationInfo){
 		name: req.body.name,
 		birthday: req.body.birthday,
 		hometown: null,
-		location: req.body.location.id,
+		location: locationInfo.id,
 		religion: req.body.religion,
 		politicalStand: req.body.politicalStand
       })
