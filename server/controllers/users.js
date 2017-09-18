@@ -16,7 +16,7 @@ module.exports = {
 				id: location_id
 			}
 		})
-		.then(data => verifyLocation(data, params, res))
+		.then(data => verifyLocation(data, req, res))
 		.catch(error => errorHandle(error, res));	
 	} 
 	else 
