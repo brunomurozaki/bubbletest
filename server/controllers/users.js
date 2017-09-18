@@ -63,3 +63,10 @@ function createUser(req, res, locationInfo){
       .then(user => res.status(201).send(user))
       .catch(error => res.status(400).send(error));
 }
+
+
+function errorHandle(error, res){
+	console.error(error);
+	
+	res.status(500).send(error);
+}
