@@ -58,8 +58,13 @@ function mountList(myLikesOnLeft, myLikesOnRight){
 
 function drawMyPosition(elem, leftLikes, rightLikes, totalLikes){
 
-	var percentageLeft = ((leftLikes*100)/totalLikes)/100;
-	//var percentageRight = (rightLikes*100)/totalLikes; 
+	var percentageLeft = 0;
+	
+	if(totalLikes == 0) {
+		percentageLeft = 50; 
+	} else {
+		percentageLeft = ((leftLikes*100)/totalLikes)/100;
+	}
 
 	var centerX = getMapCenterX();
 	var posX = centerX - (percentageLeft * centerX) ;
