@@ -55,7 +55,7 @@ function loginCallback(e){
 	if(e.status == "connected"){
 		defaultDataTratment();
 		myID = e.authResponse.userID;
-		accsessToken = e.authResponse.accessToken;
+		accessToken = e.authResponse.accessToken;
 
 		getUserData(myID, accessToken);
 		
