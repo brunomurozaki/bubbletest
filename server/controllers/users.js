@@ -24,8 +24,6 @@ module.exports = {
 	{
 		return createUser(req, res);
 	}
-	
-	
   },
   list(req, res) {
 	console.log("GET");
