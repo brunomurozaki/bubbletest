@@ -9,12 +9,11 @@ module.exports = {
 		var location_id = req.body.location.id;
 	
 		console.log("Creating...");
-		return Location.findOne({where: 
+		return Location.findOne(
+		{
+			where: 
 			{
-				$eq: 
-				{
-					id: location_id
-				}
+				id: location_id
 			}
 		})
 		.then(data => verifyLocation(data, params, res))
