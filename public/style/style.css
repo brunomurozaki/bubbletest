@@ -64,3 +64,5 @@ input.componentValue{color: black}
 
 .bubblePercentage{font-weight: bold; display: table-cell; vertical-align: middle;}
 .listWrapper{overflow: auto; height: 20em}
+
+.visible{display: block!important}

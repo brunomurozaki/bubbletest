@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Teste Filtro-Bolha</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="public/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="public/style/style.css">
+  
+  
+  
+  <script src="public/js/jquery.min.js"></script>
+  <script src="public/js/global.js"></script>
+  <script src="public/js/helpers.js"></script>
+  <script src="public/js/mapFunctions.js"></script>
+  <script src="public/js/fbHandler.js"></script>
+  <script src="public/js/ajaxHandler.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  
+  <script>
+  
+	function generateObjects(count){
+		var ret = [];
+		for(var i = 0; i < count; i++){
+			ret = ret.concat({pageData: {fb_id: {}}});
+		}
+		
+		return ret;
+	}
+	
+	var leftObjs = generateObjects(29),
+	rightObjs = generateObjects(18),
+	antiAntiPt = generateObjects(118),
+	antiPt = generateObjects(154);
+	
+	pagesByTags["Esquerda"] = leftObjs;
+	pagesByTags["Direita"] = rightObjs;
+	pagesByTags["anti-antiPT"] = antiAntiPt;
+	pagesByTags["anti-PT"] = antiPt;
+	
+  </script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Teste Filtro-Bolha</h1>
+</div>
+  
+<div class="container">
+  <!-- <div class="row btFBWrapper"> -->
+    <!-- <a id="btFB" class="button button_xlarge">Entre com o Facebook!</a> -->
+  <!-- </div> -->
+
+  <div class="row visible" id="tabs_row">
+    <div id="contentWrapper" class="container">
+      <ul class="nav nav-pills">
+        <li class="active">
+          <a href="#1a" data-toggle="tab">Motivação</a>
+        </li>
+        <li>
+          <a href="#2a" data-toggle="tab">Principais páginas</a>
+        </li>
+        <li>
+          <a href="#4a" data-toggle="tab">Teste</a>
+        </li>
+      </ul>
+
+      <div class="tab-content clearfix">
+        <div class="tab-pane active" id="1a">
+          <h3>O que é o Filtro-Bolha?</h3>
+          <p>
+            Filtro Bolha é o termo criado por Eli Parisier que representa a maneira como interagimos com a Internet hoje. Em seu livro<sup>1</sup>, Parisier mostra como nossas ações do dia-a-dia na Internet são cada vez mais direcionadas a nossos gostos, devido ao fenômeno que ele chama de "Personalização da WEB".
+          </p>
+          <p>
+            Um dos efeitos deste Filtro Bolha está diretamente relacionado à Política. Muitas vezes, é navegando em nosso Facebook que nos informamos dos acontecimentos do dia-a-dia, temos acesso a opiniões e pontos de vista. O problema é que estes Filtros impostos pelas próprias redes sociais acabam por nos isolar para termos acesso apenas a notícias e pontos de vista dos quais gostamos e concordamos. Ou seja, ficamos dentro de nossa própria bolha de informação.
+          </p>
+		  <h3>Como isto ocorre?</h3>
+          <p>
+            A rede que analisamos é o Facebook, portanto vamos utilizá-lo como exemplo. Suponha que você tenha acesso em seu "feed" de noticias, duas opiniões distintas sobre a temática de Privatização: uma a favor e outra contra. Você leu a opinião sobre como privatizações são benéficas e "curte" o post. A outra postagem, de temática contra a privatização, você simplesmente ignora, e segue observando as demais informações em seu "feed". O Facebook entende que seu interesse remete a postagens que são a favor da privatização, portanto trará mais postagens deste tipo para você, e consequentemente esconderá postagens de outra temática. E ai ocorre este isolamento de informações.
+          </p>
+          <p>
+            Neste breve teste, analisamos a temática da polarização do cenário político nacional. O teste baseia-se no número de "curtir" em páginas que possuem claramente um posicionamento politico estabelecido. Estas páginas foram pré-selecionadas como as mais influentes no cenário político do Facebook. Vale lembrar que este teste é meramente ilustrativo! Mas traz em seu resultado a ideia geral de qual tipo de informação você tem mais acesso, se são informações mais ao lado da direita ou esquerda do espectro político. 
+          </p>
+          
+		  <p>
+			<sub>[1] - PARISIER, Eli. The Filter Bubble: How the New Personalized Web Is Changing What We Read and How We Think. Penguin Books. 2012</sub>
+		  </p>
+        </div>
+        <div class="tab-pane" id="2a">
+          <h3>Principais páginas</h3>
+          <p>Aqui temos a lista de páginas analisadas. Estas páginas foram separadas pelo Professor Márcio Moretto, e foram selecionadas através de um processo de análise de relevância dentro da Rede Social Facebook.</p>
+
+          <div class="listWrapper">
+            <ul id="importantPageList" class="list-group">
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane" id="4a">
+          
+          <div class="tab-description">
+            <a id="startTestButton" class="button button_normal">Iniciar Teste!</a>
+            
+            <div id="testWrapper">
+              <div class="mapOptionsWrapper">
+                <a id="byMyLikes" class="button button_normal">Meus Likes</a>
+                <a id="byFriendsLikes" class="button button_normal">Likes dos Amigos</a>
+                <!--<input type="checkbox" id="pressCheck" class="form-check-input">
+                Imprensa-->
+              </div>
+              <div id="politicalMap">
+
+                <div class="bubbleWrapper floatRight">
+                  <div class="bubbleTitle">
+                    Direita
+                  </div>
+                  <div id="rightWing" class="bubble">
+                    <span class="bubblePercentage">50%</span>
+                  </div>
+                </div>
+                <div class="bubbleWrapper floatLeft">
+                  <div class="bubbleTitle">
+                    Esquerda
+                  </div>
+                  <div id="leftWing" class="bubble">
+                    <span class="bubblePercentage">50%</span>
+                  </div>
+                </div>
+                <div id="dataInformation">
+                  <div class="dataInformationContent leftInformation">
+                    <label>Paginas a Esquerda</label>
+                    <ul id="leftPages" class="list-group"></ul>
+                  </div>
+                  <div class="dataInformationContent rightInformation">
+                    <label>Paginas a Direita</label>
+                    <ul id="rightPages" class="list-group"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
