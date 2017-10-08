@@ -57,7 +57,7 @@ function bindEvents() {
 	$("#byMyLikes").on("click", onMyLikes);
 	$("#byFriendsLikes").on("click", onFriendsLikes);
 	$("#pressCheck").on("change", onChangePress);
-	$("#friendsSelectWrapper").on("change", onChangeFriendsSelect);
+	$("#friendSelect").on("change", onChangeFriendsSelect);
 	getPagesData();
 }
 
@@ -106,7 +106,7 @@ function onFriendsLikes(e) {
 function fillFriendsSelect(){
 	var id, name, option,
 	keys = Object.keys(friendsList),
-	select = $("#friendsSelectWrapper");
+	select = $("#friendSelect");
 
 	for(var i = 0; i < keys.length; i++){
 		id = keys[i];
