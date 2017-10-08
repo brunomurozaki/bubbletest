@@ -61,7 +61,7 @@ function drawMyPosition(elem, leftLikes, rightLikes, totalLikes){
 	var percentageLeft = 0;
 	
 	if(totalLikes == 0) {
-		percentageLeft = 50; 
+		percentageLeft = 0.5; 
 	} else {
 		percentageLeft = ((leftLikes*100)/totalLikes)/100;
 	}
