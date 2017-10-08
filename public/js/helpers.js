@@ -78,15 +78,16 @@ function createBubble(type){
 
 function onChangeFriendsSelect(e){
 	var value = $(this).val();
+	var matches;
 	if(value == 0)
-		getMatchedLikes(Object.keys(friendsList));
+		matches = getMatchedLikes(Object.keys(friendsList));
 	else
-		getMatchedLikes([value]);
+		matches = getMatchedLikes([value]);
+	
+	redrawPosition(matches);
 }
 
-function onFriendsLikes(e) {
-	var matchedLikes = getMatchedLikes(Object.keys(friendsList));
-
+function redrawPosition(matchedLikes){
 	var leftKeys = Object.keys(matchedLikes.left);
 	var rightKeys = Object.keys(matchedLikes.right); 
 
@@ -100,10 +101,18 @@ function onFriendsLikes(e) {
 	for(var i = 0; i < rightKeys.length; i++){
 		rightLikes += matchedLikes.right[rightKeys[i]];	
 	}
+	
+	drawMyPosition($("#me"), leftLikes, rightLikes, leftLikes + rightLikes);	
+}
+
+function onFriendsLikes(e) {
+	var matchedLikes = getMatchedLikes(Object.keys(friendsList));
+
 	$("#friendsSelectWrapper").css("display", "block");
 	$("#dataInformation").css("display", "none");
 	fillFriendsSelect();
-	drawMyPosition($("#me"), leftLikes, rightLikes, leftLikes + rightLikes);
+
+	redrawPosition(matchedLikes);
 }
 
 function fillFriendsSelect(){
