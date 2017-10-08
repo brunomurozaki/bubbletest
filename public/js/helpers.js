@@ -78,7 +78,10 @@ function createBubble(type){
 
 function onChangeFriendsSelect(e){
 	var value = $(this).val();
-	getMatchedLikes([value]);
+	if(value == 0)
+		getMatchedLikes(Object.keys(friendsList));
+	else
+		getMatchedLikes([value]);
 }
 
 function onFriendsLikes(e) {
