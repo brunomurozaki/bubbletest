@@ -10,6 +10,7 @@
 #rightWing{background-color: blue; color: white; float: right}
 #leftWing{background-color: red; color: white; float: left}
 #dataInformation{clear: both;}
+#friendsSelectWrapper{margin-top: 20px; display: none}
 
 
 /*Classes*/

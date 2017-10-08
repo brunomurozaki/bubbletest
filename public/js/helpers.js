@@ -57,6 +57,7 @@ function bindEvents() {
 	$("#byMyLikes").on("click", onMyLikes);
 	$("#byFriendsLikes").on("click", onFriendsLikes);
 	$("#pressCheck").on("change", onChangePress);
+	$("#friendsSelectWrapper").on("change", onChangeFriendsSelect);
 	getPagesData();
 }
 
@@ -75,6 +76,12 @@ function createBubble(type){
 	
 }
 
+function onChangeFriendsSelect(e){
+	var value = $(this).val();
+	
+	alert(value);
+}
+
 function onFriendsLikes(e) {
 	var matchedLikes = getMatchedLikes();
 
@@ -91,8 +98,24 @@ function onFriendsLikes(e) {
 	for(var i = 0; i < rightKeys.length; i++){
 		rightLikes += matchedLikes.right[rightKeys[i]];	
 	}
-
+	$("#friendsSelectWrapper").css("display", "block");
+	fillFriendsSelect();
 	drawMyPosition($("#me"), leftLikes, rightLikes, leftLikes + rightLikes);
+}
+
+function fillFriendsSelect(){
+	var id, name, option,
+	keys = Object.keys(friendsList),
+	select = $("#friendsSelectWrapper");
+
+	for(var i = 0; i < keys.length; i++){
+		id = keys[i];
+		name = friendsList[id].name;
+		
+		option = $("<option>");
+		option.val(id).html(name);
+		select.append(option);
+	}	
 }
 
 function getMatchedLikes(){
@@ -141,7 +164,7 @@ function onMyLikes(e){
 	var totalCount = myLikesOnLeft.length + myLikesOnRight.length;
 
 	mountList(myLikesOnLeft, myLikesOnRight);
-
+	$("#friendsSelectWrapper").css("display", "none");
 	drawMyPosition($("#me"), myLikesOnLeft.length, myLikesOnRight.length, totalCount);
 }
 
