@@ -78,12 +78,11 @@ function createBubble(type){
 
 function onChangeFriendsSelect(e){
 	var value = $(this).val();
-	
-	alert(value);
+	getMatchedLikes([value]);
 }
 
 function onFriendsLikes(e) {
-	var matchedLikes = getMatchedLikes();
+	var matchedLikes = getMatchedLikes(Object.keys(friendsList));
 
 	var leftKeys = Object.keys(matchedLikes.left);
 	var rightKeys = Object.keys(matchedLikes.right); 
@@ -99,6 +98,7 @@ function onFriendsLikes(e) {
 		rightLikes += matchedLikes.right[rightKeys[i]];	
 	}
 	$("#friendsSelectWrapper").css("display", "block");
+	$("#dataInformation").css("display", "none");
 	fillFriendsSelect();
 	drawMyPosition($("#me"), leftLikes, rightLikes, leftLikes + rightLikes);
 }
@@ -118,8 +118,8 @@ function fillFriendsSelect(){
 	}	
 }
 
-function getMatchedLikes(){
-	var friendsIds = Object.keys(friendsList);
+function getMatchedLikes(friendsIds){
+	//var friendsIds = Object.keys(friendsList);
 	var id, friendData, likes, likesKeys, likeKey;
 	var matches = {"left": {}, "right": {}};
 	
@@ -165,6 +165,7 @@ function onMyLikes(e){
 
 	mountList(myLikesOnLeft, myLikesOnRight);
 	$("#friendsSelectWrapper").css("display", "none");
+	$("#dataInformation").css("display", "block");
 	drawMyPosition($("#me"), myLikesOnLeft.length, myLikesOnRight.length, totalCount);
 }
 
