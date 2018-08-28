@@ -175,7 +175,8 @@ function getFriendsData() {
 }
 
 function checkLoginState(){
-	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends,user_birthday,user_hometown,user_location,user_religion_politics"});
+	FB.login(loginCallback, {scope: "public_profile,email,user_friends"});
+	//FB.login(loginCallback, {scope: "public_profile,email,user_posts,user_friends,user_birthday,user_hometown,user_location,user_religion_politics"});
 }
 
 /*function migrateUsersToDB(){
