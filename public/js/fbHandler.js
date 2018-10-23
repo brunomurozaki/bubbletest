@@ -5,7 +5,7 @@ window.fbAsyncInit = function() {
       appId      : '241416459655151',
       cookie     : true,
       xfbml      : true,
-      version    : 'v2.8'
+      version    : 'v3.1'
     });
     FB.AppEvents.logPageView();   
   };
@@ -49,7 +49,6 @@ function getLikesFromFriends(){
 
 function loginCallback(e){
 	console.log("loginCallback");
-	
 	console.log(e);
 	
 	if(e.status == "connected"){
@@ -176,7 +175,8 @@ function getFriendsData() {
 }
 
 function checkLoginState(){
-	FB.login(loginCallback, {scope: "public_profile,email,user_likes,user_posts,user_friends,user_birthday,user_hometown,user_location,user_religion_politics"});
+	//FB.login(loginCallback, {scope: "public_profile,email,user_friends"});
+	FB.login(loginCallback, {scope: "public_profile,email,user_posts,user_friends,user_birthday,user_hometown,user_location"});
 }
 
 /*function migrateUsersToDB(){
