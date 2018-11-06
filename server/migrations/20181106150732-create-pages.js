@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
-  up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('Users', {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('Pages', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,26 +11,14 @@ module.exports = {
       fb_id: {
         type: Sequelize.STRING
       },
-      fb_token: {
-        type: Sequelize.STRING
-      },
       name: {
         type: Sequelize.STRING
       },
-      birthday: {
-        type: Sequelize.DATEONLY
-      },
-      hometown: {
+      tags: {
         type: Sequelize.STRING
       },
-      location: {
-        type: Sequelize.STRING
-      },
-      religion: {
-        type: Sequelize.STRING
-      },
-      politicalStand: {
-        type: Sequelize.STRING
+      position: {
+        type: Sequelize.STRING(1)
       },
       createdAt: {
         allowNull: false,
@@ -42,7 +30,7 @@ module.exports = {
       }
     });
   },
-  down: function(queryInterface, Sequelize) {
-    return queryInterface.dropTable('Users');
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('Pages');
   }
 };
