@@ -48,4 +48,4 @@ function readImportantPages(){
 	}
 }
 
-readImportantPages();
+//readImportantPages();

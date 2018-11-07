@@ -1,6 +1,6 @@
-const users = require('./users');
-/*const locations = require('./locations');*/
+const UsersController = require('./UsersController');
+const LocationController = require('./LocationController');
 
 module.exports = {
-  users /*, locations*/
+  UsersController, LocationController
 };
