@@ -6,8 +6,13 @@ module.exports = (sequelize, DataTypes) => {
     tags: DataTypes.STRING,
     position: DataTypes.STRING(1)
   }, {});
+  
   Pages.associate = function(models) {
-    // associations can be defined here
+    Pages.belongsToMany(models.Users, {
+      through: 'PagesUsers',
+      foreignKey: 'pages_id'
+    });
+
   };
   return Pages;
 };

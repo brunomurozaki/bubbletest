@@ -6,7 +6,13 @@ module.exports = (sequelize, DataTypes) => {
     birthday: DataTypes.DATE
   }, {});
   Users.associate = function(models) {
-    // associations can be defined here
+    
+    Users.belongsToMany(models.Pages, {
+      through: 'PagesUsers',
+      foreignKey: 'users_id'
+    });
+
+
   };
   return Users;
 };
