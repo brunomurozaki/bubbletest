@@ -5,7 +5,10 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   Location.associate = function(models) {
-    // associations can be defined here
+    Location.hasMany(models.Users, {
+      foreignKey: "location_id",
+      sourceKey: "id"
+    });
   };
   return Location;
 };

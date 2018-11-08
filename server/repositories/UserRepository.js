@@ -1,7 +1,8 @@
 
 var Users = require("../models").Users;
 var Pages = require("../models").Pages;
-const UsersController = require('../controllers').UsersController;
+var Location = require("../models").Location;
+
 
 var UserRepository = {
 
@@ -12,7 +13,7 @@ var UserRepository = {
     },
 
     listUsers(res){
-        Users.findAll({include: [Pages]}).then(l => res.status(200).send(l));    
+        Users.findAll({include: [Pages, Location]}).then(l => res.status(200).send(l));    
     }
 
 };
