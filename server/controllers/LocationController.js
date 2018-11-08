@@ -9,7 +9,7 @@ module.exports = {
         LocationRepository.createLocation(req.body, res);
     },
 
-    locationlist(req, res){
+    list(req, res){
         LocationRepository.listLocation(res);
     }
 }

@@ -2,20 +2,20 @@
 var LocationModel = require("../models").Location;
 //const UsersController = require('../controllers').UsersController;
 
-var UserRepository = {
+var LocationRepository = {
 
-    createUser(params, res){
+    createLocation(params, res){
         LocationModel.create(params)
-            .then(user => res.status(200).send(user))
+            .then(loc => res.status(200).send(loc))
             .catch(err => res.status(201).send(err));
     },
 
-    listUsers(res){
+    listLocation(res){
         LocationModel.findAll().then(l => res.status(200).send(l));    
     }
 
 };
 
-module.exports = UserRepository;
+module.exports = LocationRepository;
 
 

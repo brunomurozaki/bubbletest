@@ -1,5 +1,6 @@
 const usersController = require('../controllers').UsersController;
 const locationController = require('../controllers').LocationController;
+const pagesController = require('../controllers').PagesController;
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -15,4 +16,7 @@ module.exports = (app) => {
 
   app.post('/api/location', locationController.create);
   app.get('/api/location', locationController.list);
+
+  app.post('/api/pages', pagesController.create);
+  app.get('/api/pages', pagesController.list);
 };
