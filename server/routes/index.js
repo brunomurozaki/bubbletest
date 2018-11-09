@@ -15,7 +15,7 @@ module.exports = (app) => {
     message: "teste " + req.body,
   }));
   
-  app.get('/import', (req, res) => {
+  /*app.get('/import', (req, res) => {
     //readImportantPages();
     var keys = Object.keys(pagesData);
     var tags;
@@ -33,7 +33,7 @@ module.exports = (app) => {
 
     Pages.findAll().then(l => res.status(200).send(l));
 
-  });
+  });*/
 
   // User paths
   app.post('/api/users', usersController.create);
