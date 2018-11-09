@@ -1,10 +1,12 @@
 const usersController = require('../controllers').UsersController;
 const locationController = require('../controllers').LocationController;
 const pagesController = require('../controllers').PagesController;
-const Pages = require('../models').Pages;
+const pagesUsersController = require('../controllers').PagesUsersController;
+
+/*const Pages = require('../models').Pages;
 var yaml = require('js-yaml');
 var fs   = require('fs');
-var pagesData = require("../../public/js/feeds.json");
+var pagesData = require("../../public/js/feeds.json");*/
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -42,10 +44,15 @@ module.exports = (app) => {
   // Location paths
   app.post('/api/location', locationController.create);
   app.get('/api/location', locationController.list);
+  app.get('/api/location/:id/likes', locationController.getLikesByLoc);
 
   // Pages paths
   app.post('/api/pages', pagesController.create);
   app.get('/api/pages', pagesController.list);
+
+  // PagesUsers paths
+  app.post('/api/pages_users', pagesUsersController.create);
+  app.get('/api/pages_users', pagesUsersController.list);
 };
 
 function getPosition(tagsArray){
