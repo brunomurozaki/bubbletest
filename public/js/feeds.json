@@ -1,0 +1,2795 @@
+{
+	"GloboNews": {
+		"fb_id": 200292646669956,
+		"tags": [
+			"Televisão",
+			"Site"
+		]
+	},
+	"Jornal Nacional": {
+		"fb_id": 159354314154963,
+		"tags": [
+			"Televisão"
+		]
+	},
+	"Rede Record": {
+		"fb_id": 143371292411222,
+		"tags": [
+			"Televisão"
+		]
+	},
+	"Revista Piauí": {
+		"fb_id": 115786371936,
+		"tags": [
+			"Facebook"
+		]
+	},
+	"Midia Ninja": {
+		"fb_id": 164188247072662,
+		"tags": [
+			"Esquerda",
+			"Facebook"
+		]
+	},
+	"Socialista Morena": {
+		"fb_id": 419178804809295,
+		"tags": [
+			"Esquerda",
+			"Facebook"
+		]
+	},
+	"Veja": {
+		"url": "http://veja.abril.com.br/feed/",
+		"fb_id": 109597815616,
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Veja Augusto Nunes": {
+		"url": "http://feeds2.feedburner.com/augustonunes",
+		"fb_id": 173785099370015,
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Veja Radar": {
+		"url": "http://feeds.feedburner.com/radar-on-line",
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Veja Reinaldo Azevedo": {
+		"url": "http://feeds2.feedburner.com/ReinaldoAzevedo",
+		"fb_id": 102285684838,
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Exame": {
+		"url": "http://feeds.feedburner.com/EXAME-Noticias?format=xml",
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Carta Capital": {
+		"url": "http://www.cartacapital.com.br/politica/politica/atom.xml",
+		"fb_id": 229151370439618,
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Carta Capital colunistas": {
+		"url": "http://www.cartacapital.com.br/colunistas/colunistas/atom.xml",
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"IstoÉ": {
+		"fb_id": 142656675745901,
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"IstoÉ Dinheiro": {
+		"url": "http://www.istoedinheiro.com.br/rss/news/rss-news.xml",
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Época Brasil": {
+		"url": "http://revistaepoca.globo.com/Revista/Epoca/Rss/0,,EDT0-15223,00.xml",
+		"fb_id": 145800826429,
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Época Ricardo Amaral": {
+		"url": "http://revistaepoca.globo.com/Revista/Epoca/Rss/0,,EDT0-15230,00.xml",
+		"tags": [
+			"Revistas",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Folha de São Paulo": {
+		"fb_id": 100114543363891,
+		"tags": [
+			"Grande Imprensa",
+			"Facebook",
+			"Jornais Impressos"
+		]
+	},
+	"Correio do Povo": {
+		"fb_id": 580405362002636,
+		"tags": [
+			"Jornais Impressos"
+		]
+	},
+	"Diario de Pernambuco": {
+		"url": "http://www.diariodepernambuco.com.br/rss/brasil/",
+		"tags": [
+			"Jornais Impressos"
+		]
+	},
+	"Jornal do Commercio": {
+		"fb_id": 196984146984424,
+		"tags": [
+			"Jornais Impressos"
+		]
+	},
+	"Diario do Nordeste": {
+		"url": "http://diariodonordeste.verdesmares.com.br/feed/nacional-1.784442",
+		"tags": [
+			"Jornais Impressos"
+		]
+	},
+	"Folha opinião": {
+		"url": "http://feeds.folha.uol.com.br/opiniao/rss091.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Folha poder": {
+		"url": "http://feeds.folha.uol.com.br/poder/rss091.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Valor Economico Brasil": {
+		"url": "http://www.valor.com.br/brasil/rss",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa"
+		]
+	},
+	"Valor Econômico Política": {
+		"url": "http://www.valor.com.br/politica/rss",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"O Globo país": {
+		"url": "http://oglobo.globo.com/rss.xml?secao=pais&completo=true",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"O Globo opinião": {
+		"url": "http://oglobo.globo.com/rss.xml?secao=opiniao&completo=true",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Estado de São Paulo nacional": {
+		"url": "http://www.estadao.com.br/rss/nacional.xml",
+		"fb_id": 115987058416365,
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Correio Braziliense Brasil": {
+		"url": "http://www.correiobraziliense.com.br/rss/noticia/brasil/rss.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Extra Brasil": {
+		"url": "http://extra.globo.com/noticias/brasil/rss.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"O Dia Brasil": {
+		"url": "http://odia.ig.com.br/brasil/rss.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Zero Hora": {
+		"url": "http://zh.clicrbs.com.br/rs/noticias/ultimas-noticias-rss/",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Gazeta do Povo": {
+		"url": "http://www.gazetadopovo.com.br/vida-publica/rss.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"O Povo": {
+		"url": "http://feeds.feedburner.com/com/SRba",
+		"tags": [
+			"Jornais Impressos"
+		]
+	},
+	"Estado de Minas": {
+		"url": "http://www.em.com.br/rss/noticia/politica/rss.xml",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"O Tempo": {
+		"url": "http://www.otempo.com.br/rss/politica",
+		"tags": [
+			"Jornais Impressos",
+			"Grande Imprensa",
+			"Site"
+		]
+	},
+	"Nexo": {
+		"url": "https://services.nexojornal.com.br/content/mini-home/latest-news.xml",
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"BBC": {
+		"url": "http://www.bbc.com/portuguese/topicos/brasil/index.xml",
+		"fb_id": 303522857815,
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"El País": {
+		"url": "http://ep01.epimg.net/rss/brasil/portada.xml",
+		"fb_id": 589843594408928,
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"EBC": {
+		"url": "http://www.ebc.com.br/rss/feed.xml",
+		"fb_id": 172582159505249,
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"HuffPost Brasil": {
+		"url": "http://www.brasilpost.com.br/feeds/verticals/brazil/index.xml",
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"Opera Mundi": {
+		"url": "http://operamundi.uol.com.br/rss",
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"Outras Palavras": {
+		"fb_id": 140551669316918,
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"Congresso em Foco": {
+		"url": "http://congressoemfoco.uol.com.br/feed/",
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"InfoMoney": {
+		"url": "http://www.infomoney.com.br/ultimas-noticias/rss",
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"Jornal do Brasil": {
+		"url": "http://www.jb.com.br/noticias/rss.xml",
+		"tags": [
+			"Meios Alternativos",
+			"Jornais Digitais",
+			"Site"
+		]
+	},
+	"Jovem Pan": {
+		"url": "http://jovempan.uol.com.br/noticias/brasil/rss",
+		"tags": [
+			"Radio"
+		]
+	},
+	"Terra Ultimas Noticias": {
+		"url": "http://rss.terra.com.br/0,,EI1,00.xml",
+		"tags": [
+			"Últimas Notícias"
+		]
+	},
+	"UOL": {
+		"url": "http://rss.home.uol.com.br/index.xml",
+		"fb_id": 21539158238,
+		"tags": [
+			"Portais",
+			"Últimas Notícias"
+		]
+	},
+	"Estado de São Paulo": {
+		"url": "http://www.estadao.com.br/rss/ultimas.xml",
+		"tags": [
+			"Últimas Notícias"
+		]
+	},
+	"Folha em cima da hora": {
+		"url": "http://feeds.folha.uol.com.br/folha/emcimadahora/rss091.xml",
+		"tags": [
+			"Últimas Notícias"
+		]
+	},
+	"Época Ultimas noticias": {
+		"url": "http://epoca.globo.com/rss/ultimas/feed.xml",
+		"tags": [
+			"Últimas Notícias"
+		]
+	},
+	"R7 Brasil": {
+		"url": "http://noticias.r7.com/brasil/feed.xml",
+		"fb_id": 142404191637,
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"G1 Brasil": {
+		"url": "http://g1.globo.com/dynamo/brasil/rss2.xml",
+		"fb_id": 180562885329138,
+		"tags": [
+			"Portais",
+			"Site",
+			"G1"
+		]
+	},
+	"G1 Política": {
+		"url": "http://g1.globo.com/dynamo/politica/rss2.xml",
+		"tags": [
+			"Portais",
+			"Site",
+			"G1"
+		]
+	},
+	"UOL Política": {
+		"url": "http://rss.uol.com.br/feed/politica.xml",
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"UOL Sakamoto": {
+		"url": "http://blogdosakamoto.blogosfera.uol.com.br/feed/",
+		"fb_id": 335237883171442,
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"UOL Esplanada": {
+		"url": "http://colunaesplanada.blogosfera.uol.com.br/feed/",
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"UOL Josias Souza": {
+		"url": "http://josiasdesouza.blogosfera.uol.com.br/feed/",
+		"fb_id": 295369237256879,
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"UOL Fernando Rodrigues": {
+		"url": "http://fernandorodrigues.blogosfera.uol.com.br/feed/",
+		"fb_id": 478713872142575,
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"Terra Brasil": {
+		"url": "http://rss.terra.com.br/0,,EI306,00.xml",
+		"tags": [
+			"Portais",
+			"Site"
+		]
+	},
+	"O Cafézinho": {
+		"url": "http://www.ocafezinho.com/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Carta Maior": {
+		"url": "http://cartamaior.com.br/feed/pt-br/feed_Destaques.xml",
+		"fb_id": 194552750585551,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Pragmatismo Político": {
+		"url": "http://feeds.feedburner.com/pragmatismopolitico",
+		"fb_id": 208858059145942,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Jornalistas Livres": {
+		"url": "http://jornalistaslivres.org/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"GGN": {
+		"url": "http://jornalggn.com.br/rss",
+		"fb_id": 171979776293312,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"DCM": {
+		"url": "http://www.diariodocentrodomundo.com.br/feed/",
+		"fb_id": 1441803576032791,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Revista Fórum": {
+		"url": "http://www.revistaforum.com.br/feed/",
+		"fb_id": 135536083145232,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Rede Brasil Atual Ultimas": {
+		"url": "http://www.redebrasilatual.com.br/ultimas-noticias/atom.xml",
+		"tags": [
+			"Esquerda"
+		]
+	},
+	"Rede Brasil Atual Politica": {
+		"url": "http://www.redebrasilatual.com.br/politica/politica/atom.xml",
+		"fb_id": 127835925882,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Viomundo": {
+		"url": "http://www.viomundo.com.br/feed",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Tijolaço": {
+		"url": "http://www.tijolaco.com.br/blog/feed/",
+		"fb_id": 609051955819458,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"A Pública": {
+		"url": "http://apublica.org/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Le Monde Diplomatique": {
+		"fb_id": 249444152448,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Brasileiros": {
+		"url": "http://brasileiros.com.br/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Portal Vermelho": {
+		"url": "http://www.vermelho.org.br/xml/rss_noticias.xml",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Brasil 247": {
+		"url": "http://www.brasil247.com/pt/feed/",
+		"fb_id": 167637636622585,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Caros Amigos": {
+		"url": "http://feeds.feedburner.com/CarosAmigos-Poltica",
+		"fb_id": 259797052227,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Ponte": {
+		"url": "http://ponte.org/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Democratize": {
+		"url": "https://medium.com/feed/@democratize",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Fluxo": {
+		"url": "http://www.fluxo.net/tudo?format=RSS",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Blog do Rovai": {
+		"url": "http://www.revistaforum.com.br/blogdorovai/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Escrivinhador": {
+		"url": "http://www.revistaforum.com.br/rodrigovianna/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Sul21": {
+		"url": "http://www.sul21.com.br/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"PassaPalavra": {
+		"url": "http://www.passapalavra.info/feed",
+		"fb_id": 123417721027845,
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"A Nova Democracia": {
+		"url": "http://anovademocracia.com.br/noticias?format=feed&type=rss",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Blog Maria Fro": {
+		"url": "http://www.revistaforum.com.br/mariafro/feed/",
+		"tags": [
+			"Esquerda",
+			"Site"
+		]
+	},
+	"Pensa Brasil": {
+		"url": "http://pensabrasil.com/feed/",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"O Reacionário": {
+		"fb_id": 176640722473482,
+		"tags": [
+			"Direita",
+			"Facebook"
+		]
+	},
+	"Correio do Poder": {
+		"url": "http://www.correiodopoder.com/feeds/posts/default?alt=rss",
+		"tags": [
+			"Direita",
+			"Site",
+			"RFA"
+		]
+	},
+	"O Implicante": {
+		"url": "http://www.implicante.org/feed/",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"O Antagonista": {
+		"url": "http://www.oantagonista.com/posts.atom",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Folha Política": {
+		"url": "http://www.folhapolitica.org/feeds/posts/default?alt=rss",
+		"tags": [
+			"Direita",
+			"Site",
+			"RFA"
+		]
+	},
+	"Spotniks": {
+		"url": "http://spotniks.com/feed/",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Gazeta Social": {
+		"url": "http://www.gazetasocial.com/feeds/posts/default?alt=rss",
+		"tags": [
+			"Direita",
+			"Site",
+			"RFA"
+		]
+	},
+	"Crítica Política": {
+		"url": "http://www.criticapolitica.org/feeds/posts/default?alt=rss",
+		"tags": [
+			"Direita",
+			"Site",
+			"RFA"
+		]
+	},
+	"Radio Vox": {
+		"url": "http://radiovox.org/feed/",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Revolta Brasil": {
+		"url": "http://www.revoltabrasil.com.br/feed",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Diário do Brasil": {
+		"url": "http://www.diariodobrasil.org/feed/",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Rodrigo Constantino": {
+		"url": "http://feedpress.me/rconstantino",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Revoltados On Line": {
+		"url": "https://www.blogger.com/feeds/8658474353808069296/posts/default",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Folha do Povo": {
+		"url": "http://www.folhadopovo.com.br/feed/",
+		"tags": [
+			"Direita",
+			"Site",
+			"RFA"
+		]
+	},
+	"Politica na Rede": {
+		"url": "http://www.politicanarede.com/feeds/posts/default?alt=rss",
+		"tags": [
+			"Direita",
+			"Site",
+			"RFA"
+		]
+	},
+	"Reaçonaria": {
+		"url": "http://reaconaria.org/feed/",
+		"tags": [
+			"Direita",
+			"Site"
+		]
+	},
+	"Sensacionalista": {
+		"url": "http://www.sensacionalista.com.br/feed/",
+		"tags": [
+			"Humor"
+		]
+	},
+	"Porta dos Fundos": {
+		"url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCEWHPFNilsT0IfQfutVzsag",
+		"tags": [
+			"Humor"
+		]
+	},
+	"BuzzFeed": {
+		"url": "http://www.buzzfeed.com/index.xml?country=br",
+		"tags": [
+			"Humor"
+		]
+	},
+	"Conjur": {
+		"url": "http://www.conjur.com.br/rss.xml",
+		"tags": [
+			"Portais jurídicos"
+		]
+	},
+	"Jota": {
+		"fb_id": 263199020531986,
+		"tags": [
+			"Portais jurídicos"
+		]
+	},
+	"Justificando": {
+		"fb_id": 608639995894509,
+		"tags": [
+			"Portais jurídicos"
+		]
+	},
+	"Conversa Afiada": {
+		"url": "http://feeds.feedburner.com/pha",
+		"tags": [
+			"Esquerda"
+		]
+	},
+	"Folha Centro Sul": {
+		"fb_id": 336040803177212,
+		"tags": [
+			"Direita"
+		]
+	},
+	"Aécio Neves": {
+		"fb_id": 411754008869486,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Jair Messias Bolsonaro": {
+		"fb_id": 211857482296579,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Dilma Rousseff": {
+		"fb_id": 351338968253034,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Movimento Contra Corrupção": {
+		"fb_id": 254329351346007,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Greenpeace Brasil": {
+		"fb_id": 159103797542,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Romário Faria": {
+		"fb_id": 111949165566730,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Marina Silva": {
+		"fb_id": 126351747376464,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Lula": {
+		"fb_id": 267949976607343,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Fundação SOS Mata Atlântica": {
+		"fb_id": 139007399495933,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Sargento Fahur": {
+		"fb_id": 443913262372306,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"AnonymousBrasil": {
+		"fb_id": 332934666793091,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Vem Pra Rua Brasil": {
+		"fb_id": 344408492407172,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"MBL - Movimento Brasil Livre": {
+		"fb_id": 204223673035117,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"PSDB": {
+		"fb_id": 190928727653011,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"NOVO 30": {
+		"fb_id": 168865359819628,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Jean Wyllys": {
+		"fb_id": 163566147024734,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Blog Dilma Rousseff": {
+		"fb_id": 151651781563716,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Partido dos Trabalhadores": {
+		"fb_id": 105821366170914,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Feminismo Sem Demagogia -  Original": {
+		"fb_id": 564161453675848,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Não foi ACIDENTE": {
+		"fb_id": 292563717426557,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Empodere Duas Mulheres": {
+		"fb_id": 282908221783173,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Eduardo Bolsonaro": {
+		"fb_id": 232788843580414,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Uma Gota no Oceano": {
+		"fb_id": 126497567449729
+	},
+	"Deboas na Revolução": {
+		"fb_id": 693187137431259,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Geraldo Alckmin": {
+		"fb_id": 96033897836,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"\"Eu nasci pra ser Polícia.\"": {
+		"fb_id": 281725565194851,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Amigos da Rota": {
+		"fb_id": 255484451162747,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Ronaldo Caiado": {
+		"fb_id": 398434416879875,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Alvaro Dias": {
+		"fb_id": 199599520097304,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Gregorio Duvivier": {
+		"fb_id": 203544913040809,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Todos Pela Educação - Página Oficial": {
+		"fb_id": 128802790469337,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Portal Social do Brasil": {
+		"fb_id": 384061938339429,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Coronel Telhada": {
+		"fb_id": 203712356360317,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Bolsonaro Zuero 3.0": {
+		"fb_id": 751020531581260,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Jandira Feghali": {
+		"fb_id": 208153919219278,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Cartazes & Tirinhas LGBT": {
+		"fb_id": 228900067209830,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"ATEA - Associação Brasileira de Ateus e Agnósticos": {
+		"fb_id": 172083906155533,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Conversa com os Brasileiros": {
+		"fb_id": 332206400239115,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Sargento Alexandre": {
+		"fb_id": 1380255015568570,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Juventude Contra Corrupção": {
+		"fb_id": 169843153170584,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Luciana Genro": {
+		"fb_id": 124632230915020,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Marcelo Freixo": {
+		"fb_id": 128416167198648,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Lindbergh Farias": {
+		"fb_id": 223382044339765,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Anonymous Brasil": {
+		"fb_id": 276935342355328,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"EcoDesenvolvimento.org": {
+		"fb_id": 112336052134313
+	},
+	"Apoio Policial": {
+		"fb_id": 411379318897934,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"WWF-Brasil": {
+		"fb_id": 7970426802
+	},
+	"Gleisi Hoffmann": {
+		"fb_id": 136344939876101,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Meu Professor de História": {
+		"fb_id": 361291767338033,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Cristovam Buarque": {
+		"fb_id": 166860353356903,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Ana Amélia Lemos": {
+		"fb_id": 404767669542740,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"ACM Neto": {
+		"fb_id": 366998400031953,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Campanha do Armamento": {
+		"fb_id": 170649656341921,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Passe Livre São Paulo": {
+		"fb_id": 176309402425319,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PSOL 50": {
+		"fb_id": 131269027034740,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"SP invisível": {
+		"fb_id": 598268693591136,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Canal da Direita": {
+		"fb_id": 262104660600739,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Chico Alencar": {
+		"fb_id": 184693888299537,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Kim Kataguiri": {
+		"fb_id": 833053646745836,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Cássio Cunha Lima": {
+		"fb_id": 260758727306325,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Movimento Contra Corrupção - São Paulo": {
+		"fb_id": 568871536470030,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"MST - Movimento dos Trabalhadores Sem Terra": {
+		"fb_id": 111746705564719,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Ivan Valente": {
+		"fb_id": 194174003960823,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Aécio Brasil": {
+		"fb_id": 178063989064606,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Direita Conservadora": {
+		"fb_id": 307492775999491,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Eduardo Cunha": {
+		"fb_id": 375335572583585,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Beto Richa": {
+		"fb_id": 272809098799,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Anistia Internacional Brasil": {
+		"fb_id": 187970114581051,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Idec - Instituto Brasileiro de Defesa do Consumidor": {
+		"fb_id": 149563141750194
+	},
+	"Fernando Pimentel": {
+		"fb_id": 124687590953528,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Levante Popular da Juventude": {
+		"fb_id": 162474053818157,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Rui Costa": {
+		"fb_id": 342905935841557,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Luiz Fernando Pezão": {
+		"fb_id": 351424748304288
+	},
+	"Mara Gabrilli": {
+		"fb_id": 215275598522355,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Luiza Erundina": {
+		"fb_id": 198276680205255
+	},
+	"Fundação Maria Cecilia Souto Vidigal": {
+		"fb_id": 426845644005481,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Fernando Haddad": {
+		"fb_id": 904277726319518,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"José Serra": {
+		"fb_id": 124815588195,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Instituto Mises Brasil": {
+		"fb_id": 91754571355,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Travesti Reflexiva": {
+		"fb_id": 133942826776341,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Infancia Livre de Consumismo": {
+		"fb_id": 294461477294477
+	},
+	"Felipe Moura Brasil": {
+		"fb_id": 158231024318482,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Paulo Skaf": {
+		"fb_id": 226117357411839,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Anonymous Rio": {
+		"fb_id": 231139103603112,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Flavio Bolsonaro": {
+		"fb_id": 156951837773645,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Manuela D'Ávila": {
+		"fb_id": 126702654044870,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PCdoB - Partido Comunista do Brasil": {
+		"fb_id": 203326359677581,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Onyx Lorenzoni": {
+		"fb_id": 263899720309064,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Jaques Wagner": {
+		"fb_id": 136224023082363,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Fundação Fernando Henrique Cardoso": {
+		"fb_id": 193719533998484,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"PSB Nacional 40": {
+		"fb_id": 157391014353300
+	},
+	"Democratas": {
+		"fb_id": 181779198501724,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"ILISP - Instituto Liberal de São Paulo": {
+		"fb_id": 1614894922069321,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Uma outra Opinião": {
+		"fb_id": 273656889336340,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Pedro Taques": {
+		"fb_id": 193304677382130,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Maria Do Rosário Nunes": {
+		"fb_id": 154111111330577,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Marconi Perillo": {
+		"fb_id": 162180507196280,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Povo Brasileiro": {
+		"fb_id": 208435752641538,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Movimento Direito Para Quem": {
+		"fb_id": 279973575379393
+	},
+	"O Eco": {
+		"fb_id": 106396941021
+	},
+	"Instituto Akatu": {
+		"fb_id": 315532713273
+	},
+	"Agência Pública": {
+		"fb_id": 228301373863551
+	},
+	"MATILHA CULTURAL": {
+		"fb_id": 334373605225,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Arte na rua": {
+		"fb_id": 521582701245792,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Eduardo Paes": {
+		"fb_id": 165276720205822
+	},
+	"Observador Político": {
+		"fb_id": 265361303475583,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Carlos Bolsonaro": {
+		"fb_id": 509607359088048,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Soldadinho de chumbo": {
+		"fb_id": 502054599855199,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Cidade Democrática": {
+		"fb_id": 100608420036475
+	},
+	"Instituto Socioambiental - ISA": {
+		"fb_id": 470750715303
+	},
+	"Beto Albuquerque": {
+		"fb_id": 471742212873697
+	},
+	"Fernando Holiday": {
+		"fb_id": 1563878917183602,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Muda Mais": {
+		"fb_id": 686639838041508,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Repórter Brasil": {
+		"fb_id": 333367720015251
+	},
+	"Randolfe Rodrigues": {
+		"fb_id": 687008454694990
+	},
+	"Humberto Costa": {
+		"fb_id": 174217422747805,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Social Good Brasil": {
+		"fb_id": 293451257374921
+	},
+	"Vá de Bike": {
+		"fb_id": 100695516689165
+	},
+	"Advogados Ativistas": {
+		"fb_id": 495852747151291
+	},
+	"Homofobia Não": {
+		"fb_id": 242631165768290,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PSL - Partido Social Liberal": {
+		"fb_id": 293827620698028,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"PSDB na Câmara": {
+		"fb_id": 243337122396807,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Rodrigo Rollemberg": {
+		"fb_id": 175651149274955
+	},
+	"Alessandro Molon": {
+		"fb_id": 271075406319289,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Tradutores de Direita": {
+		"fb_id": 492064987545728,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Meu Rio": {
+		"fb_id": 241897672509479
+	},
+	"Aloysio Nunes Ferreira": {
+		"fb_id": 154092474632496,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Paulo Teixeira": {
+		"fb_id": 123368671040530,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Mães de Maio": {
+		"fb_id": 173936532742055,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PT na Câmara": {
+		"fb_id": 396614643772478,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PT nacional": {
+		"fb_id": 215584771974928,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Black Bloc RJ": {
+		"fb_id": 531371666911001,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Movimento Pró-Corrupção": {
+		"fb_id": 373717796027730,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Virada Sustentável": {
+		"fb_id": 112413182175973
+	},
+	"Movimento Viva Brasil": {
+		"fb_id": 148794291858816,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Árvore, Ser Tecnológico": {
+		"fb_id": 501466783329266
+	},
+	"Sociedade Sem Prisões": {
+		"fb_id": 227280064014716,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"MTST - Movimento dos Trabalhadores Sem-Teto": {
+		"fb_id": 464790330225970,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Água, sua linda": {
+		"fb_id": 393341070834987
+	},
+	"Campanha Nacional Direito Educação": {
+		"fb_id": 416191898390895,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PSD": {
+		"fb_id": 199134323440025,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Frente Brasil Popular": {
+		"fb_id": 1692088547680604,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Maré Vive": {
+		"fb_id": 656366417732147,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Lídice da Mata": {
+		"fb_id": 203206869718110
+	},
+	"Instituto Alana": {
+		"fb_id": 197698930267127
+	},
+	"Rui Falcão": {
+		"fb_id": 127139487368866,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Observatório de Favelas": {
+		"fb_id": 103250716435866
+	},
+	"PT no Senado": {
+		"fb_id": 243535339057976,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Viva Rio": {
+		"fb_id": 136155599768136,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Hora do Planeta": {
+		"fb_id": 336462858011
+	},
+	"Projeto Criança e Consumo": {
+		"fb_id": 162297750451425
+	},
+	"PMDB Nacional": {
+		"fb_id": 185875761943,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Kátia Abreu": {
+		"fb_id": 175986319185315,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Direita Realista": {
+		"fb_id": 551192814892504,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Artemis": {
+		"fb_id": 1417190451844319,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Bike Anjo": {
+		"fb_id": 235578366477447
+	},
+	"CUT Brasil": {
+		"fb_id": 494283440671145,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Segurança Alimentar": {
+		"fb_id": 227351723988264
+	},
+	"Ponte Jornalismo": {
+		"fb_id": 325499670933452
+	},
+	"Otto Alencar": {
+		"fb_id": 281229865369097,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"#NãoMeCalarei": {
+		"fb_id": 328299340532217,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Fundo Brasil de Direitos Humanos": {
+		"fb_id": 172444996112900
+	},
+	"Movimento#OcupeEstelita": {
+		"fb_id": 320033178143669
+	},
+	"IDS": {
+		"fb_id": 239084452772926
+	},
+	"Conectas": {
+		"fb_id": 127789930632668
+	},
+	"Conselho Indigenista Missionário Cimi": {
+		"fb_id": 263973413710998
+	},
+	"Imagina Coletivo": {
+		"fb_id": 137205293081388
+	},
+	"Conservação Internacional CI-Brasil": {
+		"fb_id": 231538486861792
+	},
+	"Católicas Direito de Decidir": {
+		"fb_id": 106165746230398
+	},
+	"Fundação Amazonas Sustentável": {
+		"fb_id": 108015435927747
+	},
+	"Pense Livre": {
+		"fb_id": 433475113370489
+	},
+	"Temos que falar sobre isso": {
+		"fb_id": 892814944109314,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Juventude PSDB": {
+		"fb_id": 192743609877,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Marcha Mundial das Mulheres": {
+		"fb_id": 223556967662769
+	},
+	"Bacelar": {
+		"fb_id": 152534811624066,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Movimento Brasil Livre - São Paulo": {
+		"fb_id": 394979920626916,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Instituto Defesa": {
+		"fb_id": 300226290171666,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Podemos Mais": {
+		"fb_id": 303718686466441
+	},
+	"Conselho Nacional de Saúde": {
+		"fb_id": 462856057071951
+	},
+	"Coletivo Projetação": {
+		"fb_id": 516672891719996
+	},
+	"Movimento Brasil Livre - Brasília": {
+		"fb_id": 881914905198084,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"PSDB Mulher Nacional 45": {
+		"fb_id": 533306446710417,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Intervozes": {
+		"fb_id": 266806120012638
+	},
+	"Comitê Popular Rio Copa e Olimpíadas": {
+		"fb_id": 220708154655907
+	},
+	"Movimento dos Atingidos por Barragens (MAB)": {
+		"fb_id": 241651645926250
+	},
+	"Articulação Nacional de Agroecologia (ANA)": {
+		"fb_id": 245927812159347
+	},
+	"Justiça Global": {
+		"fb_id": 168262279871778
+	},
+	"Tarifa Zero BH": {
+		"fb_id": 582305668498014
+	},
+	"Instituto de Defensores de Direitos Humanos - DDH": {
+		"fb_id": 347772661906399
+	},
+	"Rede de Comunidades e Movimentos contra a Violência": {
+		"fb_id": 443075235735081
+	},
+	"Juventude do PT Nacional": {
+		"fb_id": 394546060555573,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"GIFE": {
+		"fb_id": 162973513716680
+	},
+	"Passe Livre Rio de Janeiro": {
+		"fb_id": 126339927569692
+	},
+	"Audiovisual pela Democracia_SP": {
+		"fb_id": 1301141576690993
+	},
+	"Cebes Pela Reforma Sanitária": {
+		"fb_id": 598508036830267
+	},
+	"CENPEC Educação e Cultura": {
+		"fb_id": 127071000710022
+	},
+	"Articulação no Semi-Árido": {
+		"fb_id": 124613907636595
+	},
+	"Instituto Ethos": {
+		"fb_id": 295940566431
+	},
+	"La Via Campesina": {
+		"fb_id": 342562582480986
+	},
+	"Fundação Perseu Abramo": {
+		"fb_id": 399744306752147
+	},
+	"MPA - Movimento dos Pequenos Agricultores": {
+		"fb_id": 209152822469383
+	},
+	"Aliança Pela Infância": {
+		"fb_id": 198732600170685
+	},
+	"coletivo vinhetando": {
+		"fb_id": 231026160386728
+	},
+	"Liderança PSDB Senado": {
+		"fb_id": 228638333838747,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"FNDC Democratização da Comunicação": {
+		"fb_id": 645544058821361
+	},
+	"Bloco de Luta pelo Transporte Público": {
+		"fb_id": 488875294508389
+	},
+	"Ação Educativa": {
+		"fb_id": 156035781157686
+	},
+	"Cáritas Brasileira": {
+		"fb_id": 273819959326960
+	},
+	"Para Expressar a Liberdade": {
+		"fb_id": 395445667176481
+	},
+	"Observatório do Clima": {
+		"fb_id": 140336485994933
+	},
+	"Inesc": {
+		"fb_id": 397806203568613
+	},
+	"Centro de Trabalho Indigenista": {
+		"fb_id": 120476701373768
+	},
+	"Ibase": {
+		"fb_id": 151626828228054
+	},
+	"Aliança pela Água": {
+		"fb_id": 1477162599239911
+	},
+	"WFP Centre of Excellence against Hunger": {
+		"fb_id": 116891208448846
+	},
+	"Contag": {
+		"fb_id": 1655535281335036
+	},
+	"Rede Nossa São Paulo": {
+		"fb_id": 196128493753084
+	},
+	"Instituto CicloBR": {
+		"fb_id": 154059867945314
+	},
+	"Ciclocidade": {
+		"fb_id": 183116492129
+	},
+	"Abong - Organizações em Defesa dos Direitos e Bens Comuns": {
+		"fb_id": 190615194341942
+	},
+	"Vila Autódromo": {
+		"fb_id": 232180020222221
+	},
+	"ARTIGO 19": {
+		"fb_id": 150615498430908
+	},
+	"ELAS Fundo de Investimento Social": {
+		"fb_id": 706933539357012
+	},
+	"Agência Patrícia Galvão": {
+		"fb_id": 148870245214457
+	},
+	"Resiste Izidora": {
+		"fb_id": 515450615267587
+	},
+	"Instituto Teotônio Vilela": {
+		"fb_id": 1402533303352339,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Partido Anti-PT": {
+		"fb_id": 1510625462536589,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Canal do Otário": {
+		"fb_id": 365550660153813,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Sérgio Moro": {
+		"fb_id": 1621963878060781,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Magno Malta": {
+		"fb_id": 604028822974212,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Fernando Francischini": {
+		"fb_id": 122807377823217,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Anthony Garotinho": {
+		"fb_id": 356754777706388
+	},
+	"A Verdade Nua & Crua": {
+		"fb_id": 117609408282128,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Militar Operacional": {
+		"fb_id": 1044403138943402,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Movimento Queromedefender": {
+		"fb_id": 663321027042654,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Avança Brasil Maçons.BR": {
+		"fb_id": 536530406365992,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Delegado Waldir": {
+		"fb_id": 306388799493851,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Movimento Endireita Brasil": {
+		"fb_id": 97663407343,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Desconstruindo Conceitos": {
+		"fb_id": 1565201117072725,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Socialista de iPhone": {
+		"fb_id": 637896092997233,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Arme-se": {
+		"fb_id": 204870429955214,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"FORA PT": {
+		"fb_id": 140140766087925,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"BOPE Tropa De Elite": {
+		"fb_id": 388947407962136,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Desquebrando o Tabu": {
+		"fb_id": 1839551059656909,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Desquebrando o Tabu 2.0": {
+		"fb_id": 944785292231319,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Rogério Peninha Mendonça": {
+		"fb_id": 608246322520640,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Vamos juntas?": {
+		"fb_id": 674160529384556,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Conspiração Global": {
+		"fb_id": 386088744770385,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"AnonymousBR": {
+		"fb_id": 153985948047112,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Brasil sem Màscara": {
+		"fb_id": 709636749081722,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Diários de uma feminista": {
+		"fb_id": 1488128651447521,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Ativismo, Poesia e Arte": {
+		"fb_id": 557014167707570,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Leandro Karnal - Fãs": {
+		"fb_id": 604823216284050,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Verdade sem manipulação": {
+		"fb_id": 240568739401280,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Não Vou Pagar o Pato": {
+		"fb_id": 1087476531262409,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Silas Câmara": {
+		"fb_id": 287239394648019
+	},
+	"Juntos pelo Brasil": {
+		"fb_id": 871404682949960,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Romero Jucá": {
+		"fb_id": 353898054715969,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Anarquismo - Liberdade": {
+		"fb_id": 310572705716802,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Vamos falar de Política?": {
+		"fb_id": 773106516075891,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Julio Lopes": {
+		"fb_id": 173776816159515,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Eduardo Braga": {
+		"fb_id": 263563620333111
+	},
+	"Marco Antonio Villa": {
+		"fb_id": 540986972601727,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Apoio ao Juiz Sérgio Moro": {
+		"fb_id": 770055596399374,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"OCC - Organização de Combate à Corrupção": {
+		"fb_id": 337610032976165,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Humans of Protesto": {
+		"fb_id": 788875501203929,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"PROTESTE - Associação Brasileira de Defesa do Consumidor": {
+		"fb_id": 114334041929164
+	},
+	"Enio Verri": {
+		"fb_id": 156499414480143,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"O Retrógrado": {
+		"fb_id": 197711077293949,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Retrógrado Reaça": {
+		"fb_id": 1633734046906622,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Ventre Feminista": {
+		"fb_id": 1549071468703771,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Voz da Liberdade Brasil": {
+		"fb_id": 1438785413094985,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Juiz Sérgio Moro": {
+		"fb_id": 993578233985552,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Pablo Villaça": {
+		"fb_id": 248620111909889,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Anti-PT": {
+		"fb_id": 1646635912224332,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Eduardo Jorge": {
+		"fb_id": 608697619219051,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Black is power": {
+		"fb_id": 1401722370122550,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Arquivos Feministas": {
+		"fb_id": 1642163139340284,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"João Doria": {
+		"fb_id": 144112092312277,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"NasRuas": {
+		"fb_id": 142574502501122,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Mobilização Patriota": {
+		"fb_id": 466816306698872,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Esquerda Revolucionária": {
+		"fb_id": 484149994993623,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Feminismo Poético": {
+		"fb_id": 509484355739684,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Conacc - Brasil": {
+		"fb_id": 139049866259305,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Comando Tático Policial": {
+		"fb_id": 400406456715387,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Po Serra": {
+		"fb_id": 329170453891894,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Mais Saúde Menos Corruptos": {
+		"fb_id": 520741367998012,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Haddad Tranquilão": {
+		"fb_id": 428308127218245,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Antonio Imbassahy": {
+		"fb_id": 191926190961332,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Beyoncé Feminista": {
+		"fb_id": 311119439041450,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Ciro Gomes": {
+		"fb_id": 1624304177798362,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Jovens de Direita": {
+		"fb_id": 1392558690986399,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Ricardo Coutinho": {
+		"fb_id": 135219713164573
+	},
+	"Poeta Sérgio Vaz": {
+		"fb_id": 354571867955570,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Zumbi Vive": {
+		"fb_id": 469824563216322,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Partido Pirata - Brasil": {
+		"fb_id": 180044272023090,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Poder Negro - Black Power": {
+		"fb_id": 265782310198206,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Gilberto Natalini": {
+		"fb_id": 651784334883442
+	},
+	"Força Tática": {
+		"fb_id": 283867265044480,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"O Pesadelo de Qualquer Político": {
+		"fb_id": 405845152892440,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Diário Feminista": {
+		"fb_id": 194285780760016,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Tudo sobre Polícia": {
+		"fb_id": 476216682448478,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Vanessa Grazziotin": {
+		"fb_id": 302901263140722,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Bolsonaro Presidente": {
+		"fb_id": 757691967671502,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Carlos Sampaio": {
+		"fb_id": 157095474375284,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Fora Foro de São Paulo": {
+		"fb_id": 456464594509423,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Daniel Coelho": {
+		"fb_id": 142142725852014,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Orgulho de ser Policial": {
+		"fb_id": 495179440548331,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Matheus Faria": {
+		"fb_id": 416643905156268,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Artur Virgílio Neto": {
+		"fb_id": 193453687358589
+	},
+	"Levy Fidelix": {
+		"fb_id": 100171323500740,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Green Anarchy - Anarquia Verde": {
+		"fb_id": 532194050169589
+	},
+	"Bruno Araújo": {
+		"fb_id": 244967188956849,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Esta é uma Coxinha": {
+		"fb_id": 892369167446664,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Falandoverdades 2": {
+		"fb_id": 448703918578267,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Otavio Leite": {
+		"fb_id": 190642107714952,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Faça amor, não faça chapinha": {
+		"fb_id": 291406694336983,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Clarissa Garotinho": {
+		"fb_id": 381544615216928
+	},
+	"Sempre ROTA": {
+		"fb_id": 1634187163466858,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Marta": {
+		"fb_id": 125980744110410
+	},
+	"Camilo Santana": {
+		"fb_id": 1563383537227567,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Jair Bolsonaro Presidente 2018": {
+		"fb_id": 402760906551545,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Dilma Rousseff, NÃO": {
+		"fb_id": 295760327194918,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Feira Cultural Preta": {
+		"fb_id": 156590172771
+	},
+	"Levante Negro": {
+		"fb_id": 387125204831498,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Nunca Antes": {
+		"fb_id": 236090219922086,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Glauber Braga": {
+		"fb_id": 158198544337175
+	},
+	"Legítima Defesa Armada": {
+		"fb_id": 599827330131951,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"O Brasil vai melhorar": {
+		"fb_id": 463423930380492,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Acorda Cidadão! Movimento de Cidadania e Politização": {
+		"fb_id": 370631379618109
+	},
+	"Deboas na Opressão": {
+		"fb_id": 1581399932123747,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Bolsomito TV": {
+		"fb_id": 1716561595230703,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Livre de Abuso": {
+		"fb_id": 1462382414055202,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Anarcomiguxos V": {
+		"fb_id": 853928541389571,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Liberalismo da Zoeira": {
+		"fb_id": 187007398148877,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Paulo Pimenta": {
+		"fb_id": 254476531311977,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Frente de Ação Liberal": {
+		"fb_id": 1525960574386970,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"PSC Nacional": {
+		"fb_id": 156409967753739,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Patriotas Brasil": {
+		"fb_id": 651832181548711,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Forças Militares": {
+		"fb_id": 278403715626986,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Parada Hetero Brasil": {
+		"fb_id": 558518920861936,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"As Melhores Perolas da Esquerda": {
+		"fb_id": 1673622012875450,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Hissa Abrahão": {
+		"fb_id": 353421701454387
+	},
+	"Eu Odeio a Globo": {
+		"fb_id": 560018287448463,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Mães pela Diversidade": {
+		"fb_id": 601991656485596,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Redução de Danos": {
+		"fb_id": 785773234817803,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Geraldo Julio": {
+		"fb_id": 433157776729125
+	},
+	"Movimento Democracia Participativa": {
+		"fb_id": 497618613584581,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Admiradores de Jair Bolsonaro": {
+		"fb_id": 225814954280463,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Acorda Brasil": {
+		"fb_id": 312629685506694,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Mulheres nos Quadrinhos": {
+		"fb_id": 408425102550765,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Movimento O Sul é o Meu País": {
+		"fb_id": 191647184256725,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Testes de Macho": {
+		"fb_id": 267631976668215,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Boicote o Consumismo": {
+		"fb_id": 488555477873987,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Metendo a Real": {
+		"fb_id": 414711658652365,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"João Gualberto Vasconcelos": {
+		"fb_id": 485208524866772,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Gustavo Fruet": {
+		"fb_id": 214730151901124,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Força Sindical Brasil": {
+		"fb_id": 1392029707675738
+	},
+	"Sargento Moterani": {
+		"fb_id": 1637627979819583,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Ricardo Young": {
+		"fb_id": 279610508863219
+	},
+	"Erika Kokay": {
+		"fb_id": 257453204279241,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Preta e Acadêmica": {
+		"fb_id": 1588088048076337,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Menino Gay": {
+		"fb_id": 435219723233240,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Dilma Resistente": {
+		"fb_id": 668744266581955,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"LGBT Brasil": {
+		"fb_id": 282401368603154,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Arthur Oliveira Maia": {
+		"fb_id": 558618490903477,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Beto Mansur": {
+		"fb_id": 113004515398485,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Bolsonaro Opressão": {
+		"fb_id": 1644094822542352,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Marx da Depressão": {
+		"fb_id": 121427978055606,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Partido Comunista Brasileiro - PCB (Oficial)": {
+		"fb_id": 200234660093102,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Roberto Freire": {
+		"fb_id": 122914214403298,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"AFREAKA": {
+		"fb_id": 320628421350185,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Crespinhos SA": {
+		"fb_id": 1649311738685948,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Fernando Bezerra Coelho": {
+		"fb_id": 214703445397159
+	},
+	"Feminismo de 3/4": {
+		"fb_id": 399278810194527,
+		"tags": [
+			"anti-antiPT"
+		]
+	},
+	"Impeachment para Presidanta Dilma": {
+		"fb_id": 608371515902374,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Delegado Eder Mauro": {
+		"fb_id": 388811064617464,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"Partido Verde": {
+		"fb_id": 326797144544
+	},
+	"Instituto Libertare": {
+		"fb_id": 723474901129417,
+		"tags": [
+			"anti-PT"
+		]
+	},
+	"José Agripino": {
+		"fb_id": 234137580017617,
+		"tags": [
+			"anti-PT"
+		]
+	}
+}

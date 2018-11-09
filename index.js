@@ -39,13 +39,6 @@ app.listen(port, host, function() {
 	console.log("really really really running?");
 });
 
-function readImportantPages(){
-// Get document, or throw exception on error
-	try {
-	  pages = yaml.safeLoad(fs.readFileSync('/app/public/js/feeds.yaml', 'utf8'));
-	} catch (e) {
-	  console.log(e);
-	}
-}
+
 
 //readImportantPages();
