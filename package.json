@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js production",
+    "dev": "node index.js development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,13 +19,15 @@
   "homepage": "https://github.com/bubui/bubbletest#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^6.1.0",
     "express": "^4.15.2",
     "js-yaml": "^3.8.4",
     "merge": "^1.2.0",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.41.0",
-    "sequelize-auto": "^0.4.29"
+    "sequelize-auto": "^0.4.29",
+    "sequelize-cli": "^5.3.0"
   },
   "devDependencies": {},
   "description": ""
