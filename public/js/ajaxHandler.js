@@ -26,8 +26,8 @@ function getAllUsers(){
 }
 
 /*TODO: Add the other user's information when I get all the permissions*/
-function addUser(fb_id, fb_token, name){
-	unansweredPost(USER, {"fb_id": fb_id, /*"fb_token": fb_token,*/ "name": name});	
+function addUser(response){
+	unansweredPost(USER, {"fb_id": response.id, "name": response.name, "gender": response.gender.charAt(0), "birthday": response.birthday});
 }
 
 function delUser(fb_id){
