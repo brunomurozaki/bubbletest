@@ -35,8 +35,8 @@ function defaultDataTratment(){
 	//alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
 
 	//createPageList();
-	getFriendsData();
-	getMyLikesData();		
+	//getFriendsData();
+	//ongetMyLikesData();		
 }
 
 function getLikesFromFriends(){
