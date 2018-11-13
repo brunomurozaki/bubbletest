@@ -13,7 +13,7 @@ var UserRepository = {
     },
 
     listUsers(res){
-        Users.findAll({include: [Pages, Location]}).then(l => res.status(200).send(l));    
+        Users.findAll({include: [{model: Pages}, {model: Location}, {model: Users, as: "Friend"}]}).then(l => res.status(200).send(l));    
     }
 
 };

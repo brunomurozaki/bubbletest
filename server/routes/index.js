@@ -2,6 +2,7 @@ const usersController = require('../controllers').UsersController;
 const locationController = require('../controllers').LocationController;
 const pagesController = require('../controllers').PagesController;
 const pagesUsersController = require('../controllers').PagesUsersController;
+const friendsController = require('../controllers').FriendsController;
 
 /*const Pages = require('../models').Pages;
 var yaml = require('js-yaml');
@@ -53,6 +54,10 @@ module.exports = (app) => {
   // PagesUsers paths
   app.post('/api/pages_users', pagesUsersController.create);
   app.get('/api/pages_users', pagesUsersController.list);
+
+  // Friends paths
+  app.post('/api/friend', friendsController.create);
+  app.get('/api/friend', friendsController.list);
 };
 
 function getPosition(tagsArray){
