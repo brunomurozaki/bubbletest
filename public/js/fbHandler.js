@@ -34,7 +34,7 @@ function defaultDataTratment(){
 	// TODO retirar isto!
 	//alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
 
-	createPageList();
+	//createPageList();
 	getFriendsData();
 	getMyLikesData();		
 }
@@ -66,9 +66,12 @@ function loginCallback(e){
 }
 
 function getUserData(id, accessToken){
-	FB.api("/me", "get", function(response){
+	FB.api("/me?fields=id,name,location,birthday,gender", "get", function(response){
 		var name = response.name;
-		addUser(id, accessToken, name);
+
+		console.log(response);
+
+		//addUser(id, accessToken, name);
 	});
 }
 
@@ -176,7 +179,7 @@ function getFriendsData() {
 
 function checkLoginState(){
 	//FB.login(loginCallback, {scope: "public_profile,email,user_friends"});
-	FB.login(loginCallback, {scope: "public_profile,email,user_posts,user_friends,user_birthday,user_hometown,user_location"});
+	FB.login(loginCallback, {scope: "public_profile,email,user_friends,user_birthday,user_location,user_likes,user_gender,user_birthday"});
 }
 
 /*function migrateUsersToDB(){
