@@ -30,6 +30,11 @@ var UserRepository = {
 
     listUsers(res){
         Users.findAll({include: [{model: Pages}, {model: Location}, {model: Users, as: "Friend"}]}).then(l => res.status(200).send(l));    
+    },
+
+    async getUserByFbID(fbId){
+        const user = await Users.findOne({where: {fb_id: fbId}});
+        return user;
     }
 
 };

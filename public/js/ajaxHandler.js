@@ -34,8 +34,36 @@ function startAddingUser(req){
 	else {
 		unansweredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": null});		
 	}
+
+	if(req.likes){
+		var likesData = req.likes.data;
+
+		for(var i = 0; i < likesData.length; i++)
+		{
+			unansweredPost(LIKES, {"users_id": req.id, "pages_id": likesData[i].id});
+		}
+
+		if(req.likes.paging && req.likes.paging.next){
+			continueSendingLikes(req.likes.paging.next, req.id);
+		}
+	}
 }
 
+function continueSendingLikes(url, userID){
+	FB.api(url, "GET", function(response){
+
+		var likesData = response.data;
+		var userID = getIdByPagingURL(response.paging.previous);
+		for(var i = 0; i < likesData.length; i++)
+		{
+			unansweredPost(LIKES, {"users_fb_id": userID, "pages_id": likesData[i].id});
+		}
+
+		if(response.paging && response.paging.next){
+			continueSendingLikes(response.paging.next, userID);
+		}
+	});
+}
 
 /*TODO: Add the other user's information when I get all the permissions*/
 function addUser(response){

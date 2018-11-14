@@ -4,10 +4,10 @@ const pagesController = require('../controllers').PagesController;
 const pagesUsersController = require('../controllers').PagesUsersController;
 const friendsController = require('../controllers').FriendsController;
 
-/*const Pages = require('../models').Pages;
+const Pages = require('../models').Pages;
 var yaml = require('js-yaml');
 var fs   = require('fs');
-var pagesData = require("../../public/js/feeds.json");*/
+var pagesData = require("../../public/js/feeds.json");
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -18,7 +18,7 @@ module.exports = (app) => {
     message: "teste " + req.body,
   }));
   
-  /*app.get('/import', (req, res) => {
+  app.get('/import', (req, res) => {
     //readImportantPages();
     var keys = Object.keys(pagesData);
     var tags;
@@ -36,7 +36,7 @@ module.exports = (app) => {
 
     Pages.findAll().then(l => res.status(200).send(l));
 
-  });*/
+  });
 
   // User paths
   app.post('/api/users', usersController.create);
@@ -52,8 +52,8 @@ module.exports = (app) => {
   app.get('/api/pages', pagesController.list);
 
   // PagesUsers paths
-  app.post('/api/pages_users', pagesUsersController.create);
-  app.get('/api/pages_users', pagesUsersController.list);
+  app.post('/api/likes', pagesUsersController.create);
+  app.get('/api/likes', pagesUsersController.list);
 
   // Friends paths
   app.post('/api/friend', friendsController.create);

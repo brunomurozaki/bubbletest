@@ -25,6 +25,11 @@ module.exports = {
     name: 'unique_loc_fb_id'
   });
 
+  queryInterface.addConstraint('PagesUsers', ['pages_id', 'users_id'], {
+    type: 'unique',
+    name: 'unique_page_user_fb_id'
+  });
+
   },
 
   down: (queryInterface, Sequelize) => {

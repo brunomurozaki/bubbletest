@@ -12,6 +12,11 @@ var PagesRepository = {
 
     listPages(res){
         PagesModel.findAll().then(l => res.status(200).send(l));    
+    },
+
+    async findPageById(pageId){
+        const page = await PagesModel.findOne({where: {fb_id: pageId}});
+        return page;
     }
 
 };

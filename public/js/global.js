@@ -31,5 +31,6 @@ var FRIENDS_LIKES_DATA = "friends_likes_data";
 var PAGES_DATA = "pages_data";
 var ALL_USERS = "get_users";
 var USER = "/api/users";
+var LIKES = "/api/likes";
 var LOCATION = "/api/location";
 var DEL_USER = "del_user";
