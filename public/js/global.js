@@ -34,3 +34,5 @@ var USER = "/api/users";
 var LIKES = "/api/likes";
 var LOCATION = "/api/location";
 var DEL_USER = "del_user";
+
+var myUser = {};

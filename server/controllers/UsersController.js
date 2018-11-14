@@ -21,6 +21,32 @@ module.exports = {
         return res.status(200).send(user.Pages);
     },
 
+    async getLikesByAge(req, res){
+        var birthday = new Date(req.params.birthday);
+        var startDate = new Date("01/01/" + birthday.getFullYear());
+        var endDate = new Date("12/31/" + birthday.getFullYear());
+        var ret = {year: birthday.getFullYear(), left: 0, right: 0, neutral: 0, press: 0};
+
+        var userList = await UserRepository.getAllUsersByDateInterval(startDate, endDate);
+
+        for(var i = 0; i < userList.length; i++){
+            var pages = userList[i].Pages;
+
+            for(var j = 0; j < pages.length; j++){
+                if(pages[j].position == 'L')
+                    ret.left++;
+                else if(pages[j].position == 'R')
+                    ret.right++;
+                else if(pages[j].position == 'P')
+                    ret.press++;
+                else if(pages[j].position == 'N')
+                    ret.neutral++;
+            }
+        }
+
+        return res.status(200).send(ret);
+    },
+
     async likesByGender(req, res){
         var currGender = req.params.gender.toLowerCase();
         var genderList = await UserRepository.getAllUsersByGender(currGender);

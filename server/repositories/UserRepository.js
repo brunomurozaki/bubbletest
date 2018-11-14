@@ -38,6 +38,10 @@ var UserRepository = {
 
     async getAllUsersByGender(genderLetter){
         return await Users.findAll({where: {gender: genderLetter}, include: [Pages]});
+    },
+
+    async getAllUsersByDateInterval(startDate, endDate){
+        return await Users.findAll({where: {birthday: {$between: [startDate, endDate]}}, include:[Pages]});
     }
 
 };
