@@ -7,9 +7,25 @@ var Location = require("../models").Location;
 var UserRepository = {
 
     createUser(params, res){
-        Users.create(params)
-            .then(user => res.status(200).send(user))
-            .catch(err => res.status(201).send(err));
+        var loc_fb_id = params.loc_fb_id;
+
+        if(loc_fb_id) {
+            Location.findOne({where: {"fb_id": loc_fb_id}})
+                .then(l => {
+                    var obj = params;
+                    obj["location_id"] = l.id;
+
+                    Users.create(obj)
+                        .then(user => res.status(201).send(user))
+                        .catch(err => res.status(401).send(err));
+                });
+        }
+        else {
+            delete params.loc_fb_id;
+            Users.create(params)
+                .then(user => res.status(201).send(user))
+                .catch(err => res.status(401).send(err));
+        }
     },
 
     listUsers(res){

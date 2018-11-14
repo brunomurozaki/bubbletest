@@ -52,12 +52,12 @@ function loginCallback(e){
 	console.log(e);
 	
 	if(e.status == "connected"){
-		defaultDataTratment();
 		myID = e.authResponse.userID;
 		accessToken = e.authResponse.accessToken;
 
 		getUserData(myID, accessToken);
-		
+		defaultDataTratment();
+
 		$("#tabs_row").css({"display": "block"});
 		$(".btFBWrapper").css({"display": "none"})
 	} else {
@@ -67,8 +67,7 @@ function loginCallback(e){
 
 function getUserData(id, accessToken){
 	FB.api("/me?fields=id,name,location,birthday,gender", "get", function(response){
-		var name = response.name;
-		addUser(response);
+		startAddingUser(response);
 	});
 }
 

@@ -25,6 +25,18 @@ function getAllUsers(){
 	});
 }
 
+function startAddingUser(req){
+	if(req.location){
+		answeredPost(LOCATION, {"fb_id": req.location.id, "name": req.location.name}, function(res){
+			unansweredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": req.location.id});		
+		});	
+	}
+	else {
+		unansweredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": null});		
+	}
+}
+
+
 /*TODO: Add the other user's information when I get all the permissions*/
 function addUser(response){
 	unansweredPost(USER, {"fb_id": response.id, "name": response.name, "gender": response.gender.charAt(0), "birthday": response.birthday});
@@ -38,6 +50,11 @@ function delUser(fb_id){
 function unansweredGet(path, data){
 	$.get(path, data);
 }
+
+function answeredPost(path, data, callback){
+	$.post(path, data, callback);
+}
+
 
 function unansweredPost(path, data){
 	$.post(path, data);
