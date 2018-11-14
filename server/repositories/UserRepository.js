@@ -33,8 +33,11 @@ var UserRepository = {
     },
 
     async getUserByFbID(fbId){
-        const user = await Users.findOne({where: {fb_id: fbId}});
-        return user;
+        return await Users.findOne({where: {fb_id: fbId}, include: [Pages]});
+    },
+
+    async getAllUsersByGender(genderLetter){
+        return await Users.findAll({where: {gender: genderLetter}, include: [Pages]});
     }
 
 };

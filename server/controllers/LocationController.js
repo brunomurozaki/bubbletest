@@ -11,7 +11,8 @@ module.exports = {
         LocationRepository.listLocation(res);
     },
 
-    getLikesByLoc(req, res){
-        LocationRepository.getLikesByLoc(req.params.id, res);
+    async getLikesByLoc(req, res){
+        var loc = await LocationRepository.getLocByFbId(req.params.id);
+        LocationRepository.getLikesByLoc(loc.id, res);
     }
 }

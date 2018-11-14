@@ -41,6 +41,8 @@ module.exports = (app) => {
   // User paths
   app.post('/api/users', usersController.create);
   app.get('/api/users', usersController.list);
+  app.get('/api/users/:gender', usersController.likesByGender);
+  app.get('/api/users/:id/likes', usersController.likesByUserId);
 
   // Location paths
   app.post('/api/location', locationController.create);

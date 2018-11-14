@@ -21,6 +21,11 @@ var LocationRepository = {
     getLikesByLoc(locId, res){
         Location.findByPk(locId, {include: [{model: Users, include: [Pages]}]})
             .then(l => calcLikes(l, res));
+    },
+
+    async getLocByFbId(fbId)
+    {
+        return await Location.findOne({where: {fb_id: fbId}});
     }
 
 };

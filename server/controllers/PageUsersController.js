@@ -11,9 +11,6 @@ module.exports = {
         var user;
         var page = await PagesRepository.findPageById(obj.pages_id);
 
-        console.log("Pré page");
-        //console.log(page);
-
         if(!page || !Object.keys(page).length)
         {
             return res.status(200).send({});
@@ -23,10 +20,8 @@ module.exports = {
 
         if(obj.users_fb_id){
             user = await UserRepository.getUserByFbID(obj.users_fb_id);
-            console.log(user);
             obj["users_id"] = user.id;
             delete obj.users_fb_id;
-            
         }
 
         return PageUsersRepository.createPageUsers(obj, res);
