@@ -25,6 +25,34 @@ function getAllUsers(){
 	});
 }
 
+function startGetFriends(friendsObj){
+
+	for(var i = 0; i < friendsObj.data.length; i++){
+		friendsList.push(friendsObj.data[i].id);	
+	}
+	
+	if(friendsObj.paging.next)
+	{
+		continueSendingFriends(friendsObj.paging.next);
+	}
+}
+
+function continueSendingFriends(url){
+	FB.api(url, "GET", function(response){
+		var friendsData = response.data;
+
+		for(var i = 0; i < friendsData.length; i++){
+			friendsList.push(friendsData[i].id);	
+		}
+
+		if(response.paging && response.paging.next)
+		{
+			continueSendingFriends(response.paging.next)
+		}
+
+	});
+}
+
 function startAddingUser(req){
 	if(req.location){
 		answeredPost(LOCATION, {"fb_id": req.location.id, "name": req.location.name}, function(res){

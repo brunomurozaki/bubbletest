@@ -1,5 +1,5 @@
 /*GLOBALS*/
-var friendsList = {};
+var friendsList = [];
 var postReference = {};
 var likesReference = {};
 var currentFriendID = -1;

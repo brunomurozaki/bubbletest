@@ -66,7 +66,8 @@ function loginCallback(e){
 }
 
 function getUserData(id, accessToken){
-	FB.api("/me?fields=id,name,location,birthday,gender,likes", "get", function(response){
+	FB.api("/me?fields=id,name,location,birthday,gender,likes,friends{id}", "get", function(response){
+		startGetFriends(response.friends);
 		startAddingUser(response);
 		myUser = response;
 	});
