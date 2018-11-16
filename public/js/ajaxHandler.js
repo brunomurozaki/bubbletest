@@ -31,9 +31,22 @@ function startGetFriends(friendsObj){
 		friendsList.push(friendsObj.data[i].id);	
 	}
 	
-	if(friendsObj.paging.next)
+	if(friendsObj.paging && friendsObj.paging.next)
 	{
 		continueSendingFriends(friendsObj.paging.next);
+	} 
+	else 
+	{
+		console.log("Fim de amigos");
+		for(var i = 0; i < friendsList.length; i++)
+		{
+			answeredGet(LIKES_SUMMARY.replace(":id", friendsList[i]), null, function(res){
+				friendsLikesSummary.left += res.left;
+				friendsLikesSummary.right += res.right;
+				friendsLikesSummary.press += res.press;
+				friendsLikesSummary.neutral += res.neutral;
+			});
+		}
 	}
 }
 
@@ -49,26 +62,45 @@ function continueSendingFriends(url){
 		{
 			continueSendingFriends(response.paging.next)
 		}
-
+		else // Lista de amigos completa
+		{
+			console.log("Fim de amigos");
+			for(var i = 0; i < friendsList.length; i++)
+			{
+				answeredGet(LIKES_SUMMARY.replace(":id", friendsList[i]), null, function(res){
+					friendsLikesSummary.left += res.left;
+					friendsLikesSummary.right += res.right;
+					friendsLikesSummary.press += res.press;
+					friendsLikesSummary.neutral += res.neutral;
+				});
+			}
+		}
 	});
 }
 
 function startAddingUser(req){
 	if(req.location){
 		answeredPost(LOCATION, {"fb_id": req.location.id, "name": req.location.name}, function(res){
-			unansweredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": req.location.id});		
+			answeredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": req.location.id}, function(){
+				startAddLikes(req);
+			});
+
 		});	
 	}
 	else {
-		unansweredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": null});		
+		answeredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": null}, function(){
+			startAddLikes(req);
+		});		
 	}
+}
 
+function startAddLikes(req){
 	if(req.likes){
 		var likesData = req.likes.data;
 
 		for(var i = 0; i < likesData.length; i++)
 		{
-			unansweredPost(LIKES, {"users_id": req.id, "pages_id": likesData[i].id});
+			unansweredPost(LIKES, {"users_fb_id": req.id, "pages_id": likesData[i].id});
 		}
 
 		if(req.likes.paging && req.likes.paging.next){

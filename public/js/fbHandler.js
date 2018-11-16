@@ -2,13 +2,21 @@
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '241416459655151',
+      appId      : '1955155201237687',
       cookie     : true,
       xfbml      : true,
       version    : 'v3.2'
     });
     FB.AppEvents.logPageView();   
   };
+
+(function(d, s, id){
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement(s); js.id = id;
+ js.src = "//connect.facebook.net/en_US/sdk.js";
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
 function prepareFriendsData(friendsList){
 	var obj = {};
@@ -20,13 +28,6 @@ function prepareFriendsData(friendsList){
 	return obj;
 }
 
-(function(d, s, id){
- var js, fjs = d.getElementsByTagName(s)[0];
- if (d.getElementById(id)) {return;}
- js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/en_US/sdk.js";
- fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
 
 function defaultDataTratment(){
 	// provisorio
@@ -67,9 +68,9 @@ function loginCallback(e){
 
 function getUserData(id, accessToken){
 	FB.api("/me?fields=id,name,location,birthday,gender,likes,friends{id}", "get", function(response){
+		myUser = response;
 		startGetFriends(response.friends);
 		startAddingUser(response);
-		myUser = response;
 	});
 }
 

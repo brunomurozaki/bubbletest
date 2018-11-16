@@ -21,6 +21,31 @@ module.exports = {
         return res.status(200).send(user.Pages);
     },
 
+    async getSummaryLikesById (req, res) {
+        console.log("summary");
+        var user = await UserRepository.getUserByFbID(req.params.id);
+        var pages, ret = {left: 0, right: 0, neutral: 0, press: 0};
+        if(!user){
+            return res.status(404).send({});
+        }
+
+        pages = user.Pages;
+
+        for(var i = 0; i < pages.length; i++){
+            if(pages[i].position == 'L')
+                ret.left++;
+            else if(pages[i].position == 'R')
+                ret.right++;
+            else if(pages[i].position == 'P')
+                ret.press++;
+            else if(pages[i].position == 'N')
+                ret.neutral++;
+        }
+
+        return res.status(200).send(ret);
+
+    },
+
     async getLikesByAge(req, res){
         var birthday = new Date(req.params.birthday);
         var startDate = new Date("01/01/" + birthday.getFullYear());

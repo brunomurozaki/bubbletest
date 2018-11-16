@@ -18,7 +18,7 @@ module.exports = (app) => {
     message: "teste " + req.body,
   }));
   
-  app.get('/import', (req, res) => {
+  /*app.get('/import', (req, res) => {
     //readImportantPages();
     var keys = Object.keys(pagesData);
     var tags;
@@ -36,13 +36,14 @@ module.exports = (app) => {
 
     Pages.findAll().then(l => res.status(200).send(l));
 
-  });
+  });*/
 
   // User paths
   app.post('/api/users', usersController.create);
   app.get('/api/users', usersController.list);
   app.get('/api/users/:gender', usersController.likesByGender);
   app.get('/api/users/:id/likes', usersController.likesByUserId);
+  app.get('/api/users/:id/likesSummary', usersController.getSummaryLikesById);
   app.get('/api/users/age/:birthday/likes', usersController.getLikesByAge);
 
   // Location paths

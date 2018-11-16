@@ -34,5 +34,8 @@ var USER = "/api/users";
 var LIKES = "/api/likes";
 var LOCATION = "/api/location";
 var DEL_USER = "del_user";
+var LIKES_SUMMARY = "/api/users/:id/likesSummary";
 
 var myUser = {};
+
+var friendsLikesSummary = {left: 0, right: 0, neutral: 0, press: 0};
