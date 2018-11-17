@@ -1,30 +1,5 @@
 /* AJAX HANDLER */
 
-function sendFriendsData(){
-	var friendsData = prepareFBFriendsData();
-	unansweredGet(FRIENDS_DATA_PATH, friendsData);
-}
-
-function sendFriendsLikesData(friendsLikesData, friendId){
-	var obj = {"id": friendId, "data":friendsLikesData};
-	unansweredGet(FRIENDS_LIKES_DATA, obj);
-}
-
-function getPagesData () {
-	answeredGet(PAGES_DATA, {}, function(res){
-		trackedPages = res;
-		trackedPagesKeys = Object.keys(trackedPages);
-		baseTrackedPages = jQuery.extend(true, {}, trackedPages);
-	});
-}
-
-function getAllUsers(){
-	answeredGet(ALL_USERS, {}, function(res){
-		console.log(res);
-		allServerUsers = res;
-	});
-}
-
 function startGetFriends(friendsObj){
 
 	for(var i = 0; i < friendsObj.data.length; i++){
@@ -45,6 +20,9 @@ function startGetFriends(friendsObj){
 				friendsLikesSummary.right += res.right;
 				friendsLikesSummary.press += res.press;
 				friendsLikesSummary.neutral += res.neutral;
+				
+				okData.friends = true;
+				mountMap();
 			});
 		}
 	}
@@ -72,6 +50,9 @@ function continueSendingFriends(url){
 					friendsLikesSummary.right += res.right;
 					friendsLikesSummary.press += res.press;
 					friendsLikesSummary.neutral += res.neutral;
+
+					okData.friends = true;
+					mountMap();
 				});
 			}
 		}
@@ -103,8 +84,15 @@ function startAddLikes(req){
 			unansweredPost(LIKES, {"users_fb_id": req.id, "pages_id": likesData[i].id});
 		}
 
-		if(req.likes.paging && req.likes.paging.next){
+		if(req.likes&& req.likes.paging && req.likes.paging.next){
 			continueSendingLikes(req.likes.paging.next, req.id);
+		} else {
+			answeredGet(LIKES_SUMMARY.replace(":id", myUser.id), null, function(res){
+				myLikesSummary = res;
+
+				okData.me = true;
+				mountMap();
+			});
 		}
 	}
 }
@@ -121,6 +109,13 @@ function continueSendingLikes(url, userID){
 
 		if(response.paging && response.paging.next){
 			continueSendingLikes(response.paging.next, userID);
+		} else {
+			answeredGet(LIKES_SUMMARY.replace(":id", myUser.id), null, function(res){
+				myLikesSummary = res;
+				
+				okData.me = true;
+				mountMap();
+			});
 		}
 	});
 }
@@ -139,8 +134,8 @@ function unansweredGet(path, data){
 	$.get(path, data);
 }
 
-function answeredPost(path, data, callback){
-	$.post(path, data, callback);
+function answeredPost(path, data, callback, failCallback){
+	$.post(path, data, callback).fail(failCallback);
 }
 
 
@@ -156,4 +151,37 @@ function prepareFBFriendsData() {
 	var object = {"friends_data": prepareFriendsData(friendsList)};
 	console.log(object);
 	return object;
+}
+
+function getAllData(){
+	getGenderSummaryLikes();
+	getAgeSummaryLikes();
+	getLocationSummaryLikes();
+}
+
+function getGenderSummaryLikes() {
+	answeredGet(LIKES_GENDER.replace(":gender", myUser.gender.charAt(0)), null, function(res){
+		genderLikesSummary = res;
+
+		okData.gender = true;
+		mountMap();
+	});
+}
+
+function getAgeSummaryLikes() {
+	answeredGet(LIKES_BIRTHDAY.replace(":birthday", myUser.birthday.replace(/\//g, "-")), null, function(res){
+		ageLikesSummary = res;
+
+		okData.age = true;
+		mountMap();
+	});
+}
+
+function getLocationSummaryLikes() {
+	answeredGet(LIKES_LOCATION.replace(":id", myUser.location.id), null, function(res){
+		locationLikesSummary = res;
+
+		okData.location = true;
+		mountMap();
+	});
 }

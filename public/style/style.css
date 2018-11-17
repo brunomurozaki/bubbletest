@@ -6,7 +6,7 @@
 #btFB:hover{background-color: #286090}
 #tabs_row{display: none}
 #politicalMap{}
-#testWrapper{display: none}
+#testWrapper{display: block}
 #rightWing{background-color: blue; color: white; float: right}
 #leftWing{background-color: red; color: white; float: left}
 #dataInformation{clear: both;}
@@ -67,3 +67,16 @@ input.componentValue{color: black}
 .listWrapper{overflow: auto; height: 20em}
 
 .visible{display: block!important}
+
+.testPercentage{clear: both; width: 100%; display: none}
+.rightPercentage{float: left; width: 50%}
+.rightPercentage>span.numberPercentage{float: left; font-weight: bold; padding: 5px}
+.rightPercentage>.colorWrapper{float:left; width:80%}
+.rightPercentage>.colorWrapper>span.colorPercentage{width:50%; background-color: blue; height: 30px; float: left}
+
+.leftPercentage{float: left; width: 50%}
+.leftPercentage>span.numberPercentage{float: right; font-weight: bold; padding: 5px}
+.leftPercentage>.colorWrapper{float: right; width:80%}
+.leftPercentage>.colorWrapper>span.colorPercentage{width:50%; background-color: red; height: 30px; float: right}
+
+.map{padding: 10px}

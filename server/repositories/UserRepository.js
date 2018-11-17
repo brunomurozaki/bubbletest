@@ -17,14 +17,14 @@ var UserRepository = {
 
                     Users.create(obj)
                         .then(user => res.status(201).send(user))
-                        .catch(err => res.status(401).send(err));
+                        .catch(err => res.status(200).send(err));
                 });
         }
         else {
             delete params.loc_fb_id;
             Users.create(params)
                 .then(user => res.status(201).send(user))
-                .catch(err => res.status(401).send(err));
+                .catch(err => res.status(200).send(err));
         }
     },
 

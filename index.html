@@ -78,46 +78,93 @@
         <div class="tab-pane" id="4a">
           
           <div class="tab-description">
-            <a id="startTestButton" class="button button_normal">Iniciar Teste!</a>
-            
             <div id="testWrapper">
-              <div class="mapOptionsWrapper">
-                <a id="byMyLikes" class="button button_normal">Meus Likes</a>
-                <a id="byFriendsLikes" class="button button_normal">Likes dos Amigos</a>
-                <!--<input type="checkbox" id="pressCheck" class="form-check-input">
-                Imprensa-->
-              </div>
               <div id="politicalMap">
-				<div class="" id="friendsSelectWrapper">
-					<label>Amigos:</label>
-					<select id="friendSelect">
-						<option value="0">Todos</option>
-					</select>
-				</div>
-                <div class="bubbleWrapper floatRight">
-                  <div class="bubbleTitle">
-                    Direita
+				        <div class="map" id="myMap">
+                  <h3>Análise própria</h3>
+                  <p>Esta analise verifica o numero de likes que voce deu em paginas politicas</p>
+                  <div class="testPercentage">
+
+                    <div class="leftPercentage">
+                      <span class="numberPercentage">50%</span>
+                      <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                    </div>
+
+                    <div class="rightPercentage">
+                      <span class="numberPercentage">50%</span>
+                      <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                    </div>
                   </div>
-                  <div id="rightWing" class="bubble">
-                    <span class="bubblePercentage">50%</span>
-                  </div>
-                </div>
-                <div class="bubbleWrapper floatLeft">
-                  <div class="bubbleTitle">
-                    Esquerda
-                  </div>
-                  <div id="leftWing" class="bubble">
-                    <span class="bubblePercentage">50%</span>
+                  <div class="loading">
+                    Carregando informações...
                   </div>
                 </div>
-                <div id="dataInformation">
-                  <div class="dataInformationContent leftInformation">
-                    <label>Paginas a Esquerda</label>
-                    <ul id="leftPages" class="list-group"></ul>
+                <div class="map" id="friendsMap">
+                  <h3>Análise Amigos</h3>
+
+                  <p>Esta analise verifica o numero de likes que seus amigos deram em paginas politicas</p>
+                  <div class="leftPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
                   </div>
-                  <div class="dataInformationContent rightInformation">
-                    <label>Paginas a Direita</label>
-                    <ul id="rightPages" class="list-group"></ul>
+
+                  <div class="rightPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+                  <div class="loading">
+                    Carregando informações...
+                  </div>
+                </div>
+                <div class="map" id="locationMap">
+                  <h3>Análise Localizacao</h3>
+
+                  <p>Esta analise verifica o numero de likes feitos pela regiao que voce se encontra</p>
+                  <div class="leftPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+
+                  <div class="rightPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+                  <div class="loading">
+                    Carregando informações...
+                  </div>
+                </div>
+                <div class="map" id="ageMap">
+                  <h3>Análise Idade</h3>
+
+                  <p>Esta analise verifica o numero de likes que pessoas da sua idade deram</p>
+                  <div class="leftPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+
+                  <div class="rightPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+                  <div class="loading">
+                    Carregando informações...
+                  </div>
+                </div>
+                <div class="map" id="genderMap">
+                  <h3>Análise Genero</h3>
+
+                  <p>Esta analise verifica o numero de likes que pessoas do seu genero deram</p>
+                  <div class="leftPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+
+                  <div class="rightPercentage">
+                    <span class="numberPercentage">50%</span>
+                    <span class="colorWrapper"><span class="colorPercentage"></span></span>
+                  </div>
+                  <div class="loading">
+                    Carregando informações...
                   </div>
                 </div>
               </div>

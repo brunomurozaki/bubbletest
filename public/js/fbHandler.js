@@ -31,13 +31,7 @@ function prepareFriendsData(friendsList){
 
 function defaultDataTratment(){
 	// provisorio
-
-	// TODO retirar isto!
-	//alert("Valeu! Muito obrigado amigos, é o suficiente por enquanto!");
-
-	//createPageList();
-	//getFriendsData();
-	//ongetMyLikesData();		
+	
 }
 
 function getLikesFromFriends(){
@@ -69,8 +63,9 @@ function loginCallback(e){
 function getUserData(id, accessToken){
 	FB.api("/me?fields=id,name,location,birthday,gender,likes,friends{id}", "get", function(response){
 		myUser = response;
-		startGetFriends(response.friends);
 		startAddingUser(response);
+		startGetFriends(response.friends);
+		getAllData();
 	});
 }
 
@@ -126,38 +121,12 @@ function isLikesDataReady(){
 	return true;
 }
 
-function getMyLikesData(){
-	FB.api("/me?fields=likes", "get", function(response){
-		myLikesData = response.likes.data;
-
-		if(response.likes.paging && response.likes.paging.next){
-			FB.api(response.likes.paging.next, "GET", nextLikesPage);
-		}
-
-		setStatus("Carregando...");
-	});
-}
-
 function nextLikesPage(response){
 	myLikesData = myLikesData.concat(response.data);
 	if(response.paging && response.paging.next) {
 		FB.api(response.paging.next, "GET", nextLikesPage);
 	} else {
 	}
-}
-
-function getMyData(){
-	FB.api("/me?fields=name,hometown,birthday,location,religion,political", "get", function(response){
-		var name = response.name,
-		hometown = response.hometown,
-		birthday = response.birthday,
-		location = response.location,
-		religion = response.religion,
-		political = response.political;
-		
-		
-		
-	});
 }
 
 function getFriendsData() {
