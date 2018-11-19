@@ -1,0 +1,31 @@
+Makefile variables
+------------------
+
+BIBTEX
+	Defaults to "yes".
+
+PDFLATEX
+	Defaults to "yes".
+
+FORMAT
+	If PDFLATEX=yes (see above), then is automatically set to
+	"pdf". Otherwise, defaults to "dvi".
+
+MAIN
+	Defaults to "main".
+
+OUTPUT
+	Defaults to ${MAIN}.${FORMAT} (see above).
+
+
+References vs. Bibliography
+---------------------------
+
+To split in separate pages the References (i.e. the works cited in
+text) and the Bibliography (i.e. the works NOT cited in text) you can
+use:
+
+make very-clean # just-in-case
+NOCITE=yes make
+make very-clean # mandatory
+make

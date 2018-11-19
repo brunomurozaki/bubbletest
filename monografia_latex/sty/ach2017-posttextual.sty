@@ -1,0 +1,52 @@
+% ach2017-posttextual.sty: LaTeX macro providing commands for
+% post-textual elements of the ABNT standard, used by the main macro
+% package ach2017.
+%
+% Copyright: 2010 Fernando Auil <troesmix@gmail.com>
+% Upstream Author: Fernando Auil <troesmix@gmail.com>
+% Last Revision: 11Dec2010
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ach2017-posttextual}[2010/11/12 v0.1 (Fernando Auil)]
+\typeout{Document Style: ach2017-posttextual 2010/11/12 v0.1 Definitions
+ for some post-textual elements of ABNT standard used by the macro
+ package ach2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Split the References (works cited in text) and the Bibliography
+% (works NOT cited in text) in separate pages.
+
+\providecommand{\bibfile}{}
+\providecommand{\nocitebibfile}{}
+\providecommand{\nocitetexfile}{main.nocite}
+\providecommand{\nocitelist}{}
+
+%---------------------------------------------------------------------
+
+\newcommand{\referencesandbibliography}{%
+\ifthenelse{\not\equal{\nocitebibfile}{}}
+{
+	\IfFileExists{\nocitetexfile}
+	{% then
+		\ifthenelse{\not\equal{\bibfile}{}}
+		{\bibliography{\bibfile}}
+		{}
+
+		\renewcommand{\bibname}{Obras Consultadas}
+		% This alternative MUST BE avoided: \ABNTbibliographyname{Bibliografia}
+		\include{\nocitetexfile}
+	}{% else
+		\ifthenelse{\not\equal{\nocitelist}{}}
+		{\bibliography{\nocitebibfile}\nocite{\nocitelist}}
+		{}
+	}
+}
+{
+	\ifthenelse{\not\equal{\bibfile}{}}
+	{\bibliography{\bibfile}}
+	{}
+}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EndOfFile

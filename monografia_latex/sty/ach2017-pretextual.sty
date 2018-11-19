@@ -1,0 +1,437 @@
+% ach2017-pretextual.sty: LaTeX macro providing commands for
+% pre-textual elements of the ABNT standard, used by the main macro
+% package ach2017.
+%
+% Copyright: 2009 Fernando Auil <troesmix@gmail.com>
+% Upstream Author: Fernando Auil <troesmix@gmail.com>
+% Last Revision: 07Dec2009
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ach2017-pretextual}[2009/09/12 v0.1 (Fernando Auil)]
+\typeout{Document Style: ach2017-pretextual 2009/09/12 v0.1 Definitions
+ for some pre-textual elements of ABNT standard used by the macro
+ package ach2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Capa
+
+\@ifpackageloaded{sty/logo-each}{}{% else
+\renewcommand{\makeheader} {%
+\begin{center}
+{\large\textbf\ABNTinstituicaodata}
+\end{center}}}
+
+%---------------------------------------------------------------------
+
+\providecommand{\ABNTvarautordata}{}
+\let\oldautor\autor\relax
+\renewcommand{\autor}[2][] {%
+\renewcommand{\ABNTvarautordata}{#1}
+\oldautor{#2}}
+
+\renewcommand{\capa} {%
+\begin{titlepage}
+\makeheader
+\begin{center}
+\vfill
+{\Large\ABNTautordata}\\[2cm]
+{\LARGE\textbf{\ABNTtitulodata}}\\[2cm]
+\vfill
+{\large \ABNTlocaldata \\ \ABNTdatadata}
+\end{center}
+\end{titlepage}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Folha de Rosto
+
+\providecommand{\areaname}{\'Area de Concentra\c c\~ao}
+\providecommand{\optionname}{Op\c c\~ao}
+
+\providecommand{\ABNTareadata}{}
+\providecommand{\ABNTareaname}{}
+
+\providecommand{\ABNTopcaodata}{}
+\providecommand{\ABNTopcaoname}{}
+
+\ifthenelse{\boolean{ABNTrelax}}{%
+\newcommand{\area}[2][\areaname:\vspace{1mm}\\] {%
+\renewcommand{\ABNTareaname}{#1}
+\renewcommand{\ABNTareadata}{#2}}
+
+\providecommand{\areanameformat}{}
+\providecommand{\areaformat}{\large}
+
+\newcommand{\opcao}[2][\optionname:\vspace{1mm}\\] {%
+\renewcommand{\ABNTopcaoname}{#1}
+\renewcommand{\ABNTopcaodata}{#2}}
+
+\providecommand{\opcaonameformat}{}
+\providecommand{\opcaoformat}{\large}
+}{%
+\newcommand{\area}[2][\areaname:] {%
+\renewcommand{\ABNTareaname}{#1}
+\renewcommand{\ABNTareadata}{#2}}
+
+\providecommand{\areanameformat}{\bf}
+\providecommand{\areaformat}{}
+
+\newcommand{\opcao}[2][\optionname:] {%
+\renewcommand{\ABNTopcaoname}{#1}
+\renewcommand{\ABNTopcaodata}{#2}}
+
+\providecommand{\opcaonameformat}{\bf}
+\providecommand{\opcaoformat}{}
+}
+
+%---------------------------------------------------------------------
+% Anverso.
+
+\renewcommand{\folhaderosto} {%
+\begin{titlepage}
+\begin{center}
+{\large\bf\ABNTinstituicaodata}
+\vfill
+{\Large\ABNTautordata}\\[2cm]
+{\LARGE\textbf{\ABNTtitulodata}}\\[2cm]
+\hspace{.45\textwidth}
+\begin{minipage}{.5\textwidth}
+\begin{espacosimples}
+%\begin{small}
+\ifthenelse{\boolean{ABNTrelax}}
+{\ABNTcomentariodata}
+{\ABNTcomentariodata\\[5mm]
+\ABNTifnotempty{\ABNTareadata}{%
+	{\areanameformat\ABNTareaname}
+	{\areaformat\ABNTareadata}\protect
+}\\[5mm]
+\ABNTifnotempty{\ABNTopcaodata}{%
+	{\opcaonameformat\ABNTopcaoname}
+	{\opcaoformat\ABNTopcaodata}}
+}
+%\end{small}
+\end{espacosimples}
+\end{minipage}
+\ifthenelse{\boolean{ABNTrelax}}{%
+\vfill
+\ABNTifnotempty{\ABNTareadata}{%
+	{\areanameformat\ABNTareaname}
+	{\par\areaformat\ABNTareadata}\protect\\
+	\vspace{0.7cm}}
+\ABNTifnotempty{\ABNTopcaodata}{%
+	{\opcaonameformat\ABNTopcaoname}
+	{\par\opcaoformat\ABNTopcaodata}}
+}{}
+\vfill
+\ABNTifnotempty{\ABNTorientadordata}{%
+	{\orientadornameformat\ABNTorientadorname}
+	{\par\orientadorformat\ABNTorientadordata}\protect\\
+	\vspace{0.7cm}}
+\ABNTifnotempty{\ABNTcoorientadordata}{%
+	{\coorientadornameformat\ABNTcoorientadorname}
+	{\par\coorientadorformat\ABNTcoorientadordata}}
+\vfill
+{\large \ABNTlocaldata \\ \ABNTdatadata}
+\end{center}
+\end{titlepage}}
+
+%---------------------------------------------------------------------
+% Reverso.
+
+%
+% Trademarks
+%
+\providecommand{\trademarknameformat}{\noindent\bf}
+\providecommand{\trademarkname}{Marcas registradas:}
+
+\providecommand{\trademarkformat}{\noindent}
+\providecommand{\ABNTtrademarkname}{}
+\providecommand{\ABNTtrademarkdata}{}
+
+\newcommand{\trademark}[2][\trademarkname] {%
+\renewcommand{\ABNTtrademarkname}{#1}
+\renewcommand{\ABNTtrademarkdata}{#2}}
+
+%
+% Disclaimer
+%
+\providecommand{\disclaimernameformat}{\noindent\bf}
+\providecommand{\disclaimername}{Disclaimer:}
+
+\providecommand{\disclaimerformat}{\noindent}
+\providecommand{\ABNTdisclaimername}{}
+\providecommand{\ABNTdisclaimerdata}{}
+
+\newcommand{\disclaimer}[2][\disclaimername] {%
+\renewcommand{\ABNTdisclaimername}{#1}
+\renewcommand{\ABNTdisclaimerdata}{#2}}
+
+%
+% License
+%
+\providecommand{\licensenameformat}{\noindent\bf}
+\providecommand{\licensename}{License:}
+
+\providecommand{\licenseformat}{\noindent}
+\providecommand{\ABNTlicensename}{}
+\providecommand{\ABNTlicensedata}{}
+
+\newcommand{\license}[2][\licensename] {%
+\renewcommand{\ABNTlicensename}{#1}
+\renewcommand{\ABNTlicensedata}{#2}}
+
+%
+% Catalog
+%
+\providecommand{\catalognameformat}{\large\bf}
+\providecommand{\catalogname}{Cataloga\c c\~ao na publica\c c\~ao -- Bibilioteca da EACH/USP}
+
+% Adviser name (variant)
+\providecommand{\advisername}{}
+
+\providecommand{\ABNTvaradviserdata}{}
+\providecommand{\ABNTadviserdata}{}
+
+\newcommand{\adviser}[2][\advisername] {%
+\renewcommand{\ABNTvaradviserdata}{#1}
+\renewcommand{\ABNTadviserdata}{#2}}
+
+% Page number
+\providecommand{\paginasformat}{\indent}
+\providecommand{\paginasname}{}
+
+\providecommand{\ABNTpaginasname}{}
+\providecommand{\ABNTpaginasdata}{}
+
+\newcommand{\paginas}[2][\paginasname] {%
+\renewcommand{\ABNTpaginasname}{#1}
+\renewcommand{\ABNTpaginasdata}{#2}}
+
+% Catalog top statement
+\providecommand{\catalogtopformat}{\indent}
+\providecommand{\catalogtopname}{}
+
+\providecommand{\ABNTcatalogtopname}{}
+\providecommand{\ABNTcatalogtopdata}{}
+
+\newcommand{\catalogtop}[1] {\renewcommand{\ABNTcatalogtopdata}{#1}}
+%\newcommand{\catalogtop}[2][\catalogtopname] {%
+%\renewcommand{\ABNTcatalogtopname}{#1}
+%\renewcommand{\ABNTcatalogtopdata}{#2}}
+
+% Catalog intermediary statement
+\providecommand{\catalogmedformat}{\indent}
+\providecommand{\catalogmedname}{}
+
+\providecommand{\ABNTcatalogmedname}{}
+\providecommand{\ABNTcatalogmeddata}{}
+
+\newcommand{\catalogmed}[2][\catalogmedname] {%
+\renewcommand{\ABNTcatalogmedname}{#1}
+\renewcommand{\ABNTcatalogmeddata}{#2}}
+
+% Catalog bottom statement
+\providecommand{\catalogbottomformat}{\indent}
+\providecommand{\catalogbottomname}{}
+
+\providecommand{\ABNTcatalogbottomname}{}
+\providecommand{\ABNTcatalogbottomdata}{}
+
+\newcommand{\catalogbottom}[2][\catalogbottomname] {%
+\renewcommand{\ABNTcatalogbottomname}{#1}
+\renewcommand{\ABNTcatalogbottomdata}{#2}}
+
+% CDD number
+\providecommand{\catalogcddnameformat}{}
+\providecommand{\catalogcddname}{}
+
+\providecommand{\catalogcddformat}{\indent\hfill}
+\providecommand{\ABNTcatalogcddname}{}
+\providecommand{\ABNTcatalogcdddata}{}
+
+\newcommand{\catalogcdd}[2][\catalogcddname] {%
+\renewcommand{\ABNTcatalogcddname}{#1}
+\renewcommand{\ABNTcatalogcdddata}{#2}}
+
+% LaTeX stanza
+\providecommand{\latexstanzaformat}{}
+\providecommand{\latexstanzaname}{}
+
+\providecommand{\ABNTlatexstanzaname}{}
+\providecommand{\ABNTlatexstanzadata}{}
+
+\newcommand{\latexstanza}[2][\latexstanzaname] {%
+\renewcommand{\ABNTlatexstanzaname}{#1}
+\renewcommand{\ABNTlatexstanzadata}{#2}}
+
+% And now put all stuff above together
+\newcommand{\folhaderostoreverso} {%
+\begin{titlepage}
+\ifthenelse{\boolean{DISABLEcopyright}}{\indent}{%
+\noindent
+\ABNTtitulodata\\
+Copyright \copyright\ \ABNTdatadata\ {\ABNTautordata}}
+\vfill
+\ABNTifnotempty{\ABNTtrademarkdata}{%
+	\ABNTifnotempty{\ABNTtrademarkname}{%
+		{\trademarknameformat\ABNTtrademarkname}}
+		{\trademarkformat\ABNTtrademarkdata}
+	\par\vspace{0.7cm}}
+\ABNTifnotempty{\ABNTdisclaimerdata}{%
+	\ABNTifnotempty{\ABNTdisclaimername}{%
+		{\disclaimernameformat\ABNTdisclaimername}}
+	{\disclaimerformat\ABNTdisclaimerdata}
+	\par\vspace{0.7cm}}
+\ABNTifnotempty{\ABNTlicensedata}{%
+	\ABNTifnotempty{\ABNTlicensename}{%
+		{\licensenameformat\ABNTlicensename}}
+	{\licenseformat\ABNTlicensedata}
+	\par\vspace{0.7cm}}
+\vfill
+\begin{center}
+\ABNTifnotempty{\catalogname}{%
+	{\catalognameformat\catalogname}}\\[.5cm]
+\begin{minipage}{.8\textwidth}
+\begin{espacosimples}
+\hrulefill\\[.5cm]
+\ifthenelse{\not\equal{\ABNTvarautordata}{}}
+	{\ABNTvarautordata\\}
+	{\ABNTautordata\\}[.5cm]
+%\begin{quote}
+\ABNTifnotempty{\ABNTcatalogtopdata}{%
+	{\catalogtopformat\ABNTcatalogtopdata}\\
+	{\paginasformat\ABNTpaginasdata}
+	\par\vspace{0.3cm}}
+\ABNTifnotempty{\ABNTcatalogmeddata}{%
+	{\catalogmedformat\ABNTcatalogmeddata}
+	\par\vspace{0.3cm}}
+\ABNTifnotempty{\ABNTcatalogbottomdata}{%
+	{\catalogbottomformat\ABNTcatalogbottomdata}}\\[.5cm]
+%\end{quote}
+\ABNTifnotempty{\ABNTcatalogcdddata}{%
+	{\catalogcddformat\ABNTcatalogcdddata}}\\[.5cm]
+\indent\hrulefill
+\end{espacosimples}
+\end{minipage}
+\end{center}
+\vfill
+\ABNTifnotempty{\ABNTlatexstanzadata}{%
+	{\latexstanzaformat\ABNTlatexstanzadata}}
+\end{titlepage}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Folha de aprovacao
+
+\providecommand{\defesaname}{Data de Aprova\c c\~ao}
+
+\providecommand{\ABNTdefesadata}{}
+\providecommand{\ABNTdefesaname}{}
+\newcommand{\defesadata}[2][\defesaname:\vspace{1mm}\\]%
+{\renewcommand{\ABNTdefesaname}{#1}%
+\renewcommand{\ABNTdefesadata}{#2}}
+
+\providecommand{\defesanameformat}{}
+\providecommand{\defesaformat}{\large}
+
+%---------------------------------------------------------------------
+
+\providecommand{\bancaname}{Banca Examinadora:}
+\providecommand{\bancainstitute}{EACH-USP}
+
+\providecommand{\ABNTbancaonedata}{}
+\providecommand{\ABNTbancaoneinstitute}{}
+\newcommand{\bancaone}[2][\bancainstitute] {%
+\renewcommand{\ABNTbancaoneinstitute}{#1}
+\renewcommand{\ABNTbancaonedata}{#2}}
+
+\providecommand{\ABNTbancatwodata}{}
+\providecommand{\ABNTbancatwoinstitute}{}
+\newcommand{\bancatwo}[2][\bancainstitute] {%
+\renewcommand{\ABNTbancatwoinstitute}{#1}
+\renewcommand{\ABNTbancatwodata}{#2}}
+
+\providecommand{\bancanameformat}{}
+\providecommand{\bancaformat}{\large}
+
+\setlength{\ABNTsignthickness}{0.4pt}
+\setlength{\ABNTsignskip}{20mm}
+\setlength{\ABNTsignwidth}{90mm}
+
+%---------------------------------------------------------------------
+
+\renewcommand{\folhadeaprovacao} {%
+\begin{titlepage}
+\begin{center}
+{\large\bf\ABNTinstituicaodata}
+\vfill
+{\Large\ABNTautordata}
+\vfill
+{\LARGE\textbf{\ABNTtitulodata}}
+\vfill
+\hspace{.45\textwidth}
+\begin{minipage}{.5\textwidth}
+\begin{espacosimples}
+%\begin{small}
+\ifthenelse{\boolean{ABNTrelax}}
+{\ABNTcomentariodata}
+{\ABNTcomentariodata\\[5mm]
+\ABNTifnotempty{\ABNTareadata}{%
+	{\areanameformat\ABNTareaname}
+	{\areaformat\ABNTareadata}\protect
+}\\[5mm]
+\ABNTifnotempty{\ABNTopcaodata}{%
+	{\opcaonameformat\ABNTopcaoname}
+	{\opcaoformat\ABNTopcaodata}}
+}
+%\end{small}
+\end{espacosimples}
+\end{minipage}
+\ifthenelse{\boolean{ABNTrelax}}{%
+\vfill
+\ABNTifnotempty{\ABNTareadata}{%
+	{\areanameformat\ABNTareaname}
+	{\areaformat\ABNTareadata}\protect\\
+	\vspace{0.7cm}}
+\ABNTifnotempty{\ABNTopcaodata}{%
+	{\opcaonameformat\ABNTopcaoname}
+	{\opcaoformat\ABNTopcaodata}}
+}{}
+\vfill
+\ABNTifnotempty{\ABNTdefesadata}{%
+	{\defesanameformat\ABNTdefesaname}
+	{\defesaformat\ABNTdefesadata}}
+\vfill
+\ABNTifnotempty{\ABNTbancaonedata\ABNTbancatwodata}{%
+	\bancanameformat\bancaname}
+\ABNTifnotempty{\ABNTbancaonedata}{%
+\assinatura{{\bancaformat\ABNTbancaonedata}\\
+	\ABNTbancaoneinstitute}}
+\ABNTifnotempty{\ABNTbancatwodata}{%
+\assinatura{{\bancaformat\ABNTbancatwodata}\\
+	\ABNTbancatwoinstitute}}
+\vfill
+{\large \ABNTlocaldata \\ \ABNTdatadata}
+\end{center}
+\end{titlepage}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resumo
+
+\providecommand{\palavraschavename}{Palavras-Chave}
+
+\providecommand{\ABNTpalavraschavedata}{}
+\providecommand{\ABNTpalavraschavename}{}
+
+\newcommand{\palavraschave}[2][\palavraschavename:] {%
+\renewcommand{\ABNTpalavraschavename}{#1}
+\renewcommand{\ABNTpalavraschavedata}{#2}}
+
+\providecommand{\palavraschavenameformat}{\bf}
+\providecommand{\palavraschaveformat}{}
+
+\providecommand{\makekeywords}{%
+\noindent
+{\palavraschavenameformat\ABNTpalavraschavename}
+{\palavraschaveformat\ABNTpalavraschavedata}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EndOfFile

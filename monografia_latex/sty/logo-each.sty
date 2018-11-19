@@ -1,0 +1,306 @@
+% logo-each.sty: LaTeX macro to include the logo of EACH-USP.
+% Adapted from cartimbre.sty by Fernando Auil <troesmix@gmail.com>
+% Last revision: 09Dec2009
+%
+% Contributors: John Robson <john.robson@usp.br> kindly provides me
+% with the SVG file (vector graphics format) for the EACH logo.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{logo-each}[2009/04/18 v0.2 (Fernando Auil)]
+\typeout{Document Style: logo-each 2009/04/18 v0.2 Include the logo of EACH-USP}
+
+% LaTeX macros which we need.
+\usepackage{color}
+%\usepackage[dvips]{graphicx}
+\usepackage{multicol}
+
+\setlength{\unitlength}{1pt}
+
+\font\univ=cmss10  % scaled \magstep1
+\font\inst=cmbx10
+\font\depto=cmbx10
+\newcommand\q{\hspace*{.07in}}
+
+\newsavebox{\university}
+\newsavebox{\sep}
+\newsavebox{\institute}
+\newsavebox{\department}
+\newsavebox{\sepi}
+\newsavebox{\raddress}
+\newsavebox{\phones}
+\newsavebox{\pobox}
+\newsavebox{\header}
+\newsavebox{\footer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Who is gonna tell how you blue see?
+\definecolor{midnightblue}{rgb}{0.10,0.10,0.44}
+\definecolor{navyblue}{rgb}{0.00,0.00,0.50}
+\definecolor{cornflowerblue}{rgb}{0.39,0.58,0.93}
+\definecolor{darkslateblue}{rgb}{0.28,0.24,0.55}
+\definecolor{slateblue}{rgb}{0.42,0.35,0.80}
+\definecolor{mediumslateblue}{rgb}{0.48,0.41,0.93}
+\definecolor{lightslateblue}{rgb}{0.52,0.44,1.00}
+\definecolor{mediumblue}{rgb}{0.00,0.00,0.80}
+\definecolor{royalblue}{rgb}{0.25,0.41,0.88}
+\definecolor{blue}{rgb}{0.00,0.00,1.00}
+\definecolor{dodgerblue}{rgb}{0.12,0.56,1.00}
+\definecolor{deepskyblue}{rgb}{0.00,0.75,1.00}
+\definecolor{skyblue}{rgb}{0.53,0.81,0.92}
+\definecolor{lightskyblue}{rgb}{0.53,0.81,0.98}
+\definecolor{steelblue}{rgb}{0.27,0.51,0.71}
+\definecolor{lightsteelblue}{rgb}{0.69,0.77,0.87}
+\definecolor{lightblue}{rgb}{0.68,0.85,0.90}
+\definecolor{powderblue}{rgb}{0.69,0.88,0.90}
+\definecolor{paleturquoise}{rgb}{0.69,0.93,0.93}
+\definecolor{darkturquoise}{rgb}{0.00,0.81,0.82}
+\definecolor{mediumturquoise}{rgb}{0.28,0.82,0.80}
+\definecolor{turquoise}{rgb}{0.25,0.88,0.82}
+\definecolor{cyan}{rgb}{0.00,1.00,1.00}
+\definecolor{lightcyan}{rgb}{0.88,1.00,1.00}
+\definecolor{cadetblue}{rgb}{0.37,0.62,0.63}
+\definecolor{mediumaquamarine}{rgb}{0.40,0.80,0.67}
+\definecolor{aquamarine}{rgb}{0.50,1.00,0.83}
+
+% And out of the blue...
+\definecolor{eachsteelblue}{rgb}{0.00,0.63,0.73}
+\definecolor{eachturquoise}{rgb}{0.16,0.76,0.87}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcase\@ptsize\relax
+
+\typeout{Building 10pt letterhead... }
+
+\savebox{\university}(151,6)[lb] {
+	\univ\put(1,1){U N I V E R S I D A D E \q DE \q S \~A O \q P A U L O}
+}
+
+
+\savebox{\sep}(0,0)[lb] {
+	\color{eachsteelblue}
+	\put(0.00,0.00){\line(4,0){360}}
+	\put(0.00,0.50){\line(4,0){360}}
+	\put(0.00,1.00){\line(4,0){360}}
+	\put(0.00,1.50){\line(4,0){360}}
+	\put(0.00,2.00){\line(4,0){360}}
+}
+
+%\savebox{\sep}(0,0)[lb]
+%{
+%	\color{blue}
+%	\put( 10.00, 20.00){\line(0,10){20}}
+%}
+
+
+\savebox{\institute}(80,5)[lb] {
+	\inst\put(1,1){Escola de Artes, Ci\^encias e Humanidades}
+}
+
+\savebox{\department}(114,4)[lb] {
+	\depto\put(1,1){Sistemas de Informa\c{c}\~ao}
+}
+
+\savebox{\sepi}(0,0)[lb] {
+	\color{eachsteelblue}
+	\put(0.00,0.00){\line(4,0){430}}
+	\put(0.00,0.50){\line(4,0){430}}
+}
+
+
+\savebox{\raddress}(34,12)[lb] {
+	\scriptsize\sf
+	\put(7,20){Av. Arinldo Bettio 1000 --- CEP 03828-000 --- Ermelino Matarazzo --- S\~ao Paulo - SP --- Brasil --- each.uspnet.usp.br}
+%	\put(1,10){Ermelino Matarazzo}
+%	\put(1,0){S\~ao Paulo - SP}
+%	\put(1,-10){Brasil}
+}
+
+%\savebox{\raddress}(34,12)[lb]
+%{
+%	\scriptsize\sf
+%	\put(1,20){Av. Arlindo Bettio 1000}
+%	\put(1,10){Ermelino Matarazzo}
+%	\put(1,0){S\~ao Paulo - SP}
+%	\put(1,-10){Brasil}
+%}
+
+
+\savebox{\pobox}(34,12)[lb] {
+	\scriptsize\sf
+	\put(1,20){Caixa Postal 66318}
+	\put(1,10){CEP: 05315-970}
+	\put(1,0){S\~ao Paulo - SP}
+	\put(1,-10){Brasil}
+}
+
+\savebox{\phones}(42,12)[lb] {
+	\scriptsize\sf
+	\put(1,20){Telefone: +55 11 3091-6992}
+	\put(1,10){Fax:\hspace{17pt} +55 11 3091-6833}
+	\put(1,0){E-mail:\hspace{11pt}fismat@fma.if.usp.br}
+	\put(1,-10){URL:\hspace{15pt}each.uspnet.usp.br}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\or
+
+\typeout{Building 11pt letterhead... }
+
+\savebox{\university}(151,6)[lb] {
+	\univ\put(1,1){U N I V E R S I D A D E \q DE \q S \~A O \q P A U L O}
+}
+
+\savebox{\sep}(0,0)[lb] {
+	\color{eachsteelblue}
+	\put(0.00,0.00){\line(4,0){360}}
+	\put(0.00,0.50){\line(4,0){360}}
+	\put(0.00,1.00){\line(4,0){360}}
+	\put(0.00,1.50){\line(4,0){360}}
+	\put(0.00,2.00){\line(4,0){360}}
+}
+
+\savebox{\institute}(80,5)[lb] {
+	\inst\put(1,1){Escola de Artes, Ci\^encias e Humanidades}
+}
+
+\savebox{\department}(114,4)[lb] {
+	\depto\put(1,1){Sistemas de Informa\c{c}\~ao}
+}
+
+\savebox{\sepi}(0,0)[lb] {
+	\color{eachsteelblue}
+	\put(0.00,0.00){\line(4,0){430}}
+	\put(0.00,0.50){\line(4,0){430}}
+}
+
+\savebox{\raddress}(34,12)[lb] {
+	\scriptsize\sf
+	\put(7,20){Av. Arinldo Bettio 1000 --- CEP 03828-000 --- Ermelino Matarazzo --- S\~ao Paulo - SP --- Brasil --- each.uspnet.usp.br}
+}
+
+\savebox{\pobox}(34,12)[lb] {
+	\scriptsize\sf
+	\put(1,20){Caixa Postal 66318}
+	\put(1,10){CEP: 05315-970}
+	\put(1,0){S\~ao Paulo - SP}
+	\put(1,-10){Brasil}
+}
+
+\savebox{\phones}(42,12)[lb] {
+	\scriptsize\sf
+	\put(1,20){Telefone: +55 11 3091-6992}
+	\put(1,10){Fax:\hspace{17pt} +55 11 3091-6833}
+	\put(1,0){E-mail:\hspace{11pt}fismat@fma.if.usp.br}
+	\put(1,-10){URL:\hspace{15pt}each.uspnet.usp.br}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\or
+
+\typeout{Building 12pt letterhead... }
+
+\savebox{\university}(151,6)[lb] {
+	\univ\put(1,1){U N I V E R S I D A D E \q DE \q S \~A O \q P A U L O}
+}
+
+\savebox{\sep}(0,0)[lb] {
+	\color{eachsteelblue}
+	\put(0.00,0.00){\line(4,0){360}}
+	\put(0.00,0.50){\line(4,0){360}}
+	\put(0.00,1.00){\line(4,0){360}}
+	\put(0.00,1.50){\line(4,0){360}}
+	\put(0.00,2.00){\line(4,0){360}}
+}
+
+\savebox{\institute}(80,5)[lb] {
+	\inst\put(1,1){Escola de Artes, Ci\^encias e Humanidades}
+}
+
+\savebox{\department}(114,4)[lb] {
+	\depto\put(1,1){Sistemas de Informa\c{c}\~ao}
+}
+
+\savebox{\sepi}(0,0)[lb] {
+	\color{eachsteelblue}
+	\put(0.00,0.00){\line(4,0){430}}
+	\put(0.00,0.50){\line(4,0){430}}
+}
+
+\savebox{\raddress}(34,12)[lb] {
+	\scriptsize\sf
+	\put(7,20){Av. Arinldo Bettio 1000 --- CEP 03828-000 --- Ermelino Matarazzo --- S\~ao Paulo - SP --- Brasil --- each.uspnet.usp.br}
+}
+
+\savebox{\pobox}(34,12)[lb] {
+	\scriptsize\sf
+	\put(1,20){Caixa Postal 66318}
+	\put(1,10){CEP: 03828-000}
+	\put(1,0){S\~ao Paulo - SP}
+	\put(1,-10){Brasil}
+}
+
+\savebox{\phones}(42,12)[lb] {
+	\scriptsize\sf
+	\put(1,20){Telefone: +55 11 3091-6992}
+	\put(1,10){Fax:\hspace{17pt} +55 11 3091-6833}
+	\put(1,0){E-mail:\hspace{11pt}fismat@fma.if.usp.br}
+	\put(1,-10){URL:\hspace{15pt} each.uspnet.usp.br}
+}
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{ifthen}
+
+\newboolean{PDFoutput}
+\newboolean{DVIoutput}
+
+\DeclareOption{output=pdf}{\setboolean{PDFoutput}{true}\setboolean{DVIoutput}{false}}
+\DeclareOption{output=dvi}{\setboolean{PDFoutput}{false}\setboolean{DVIoutput}{true}}
+
+\ProcessOptions
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\unitlength}{1 mm}
+
+\savebox{\header}(151,30)[lb] {
+	\put(72,24){\usebox{\university}}
+	\put(24,21){\usebox{\sep}}
+	\put(78,15){\usebox{\institute}}
+%	\put(105,15){\usebox{\institute}}
+%	\put(27,15){\usebox{\department}}
+}
+
+\savebox{\footer}(151,30)[lb] {
+	\put(0,20){\usebox{\sepi}}
+	\put(0,9){\usebox{\raddress}}
+%	\put(0,6){\usebox{\raddress}}
+%	\put(55,6){\usebox{\pobox}}
+%	\put(110,6){\usebox{\phones}}
+}
+
+\newcommand{\makeheader} {
+	\begin{picture}(0,22)
+		%\thinlines\put(0,0){\framebox(151,30){}}\thicklines
+
+		\ifthenelse{\boolean{PDFoutput}}
+		{\put(0,32){\rotatebox{180}{\includegraphics[height=2.2cm,width=2.2cm]{sty/logo-each.png}}}}
+		{\put(0,32){\rotatebox{180}{\includegraphics[height=2.2cm,width=2.2cm]{sty/logo-each.eps}}}}
+
+		\put(0.5,0){\usebox{\header}}
+	\end{picture}
+}
+
+\newcommand{\makefooter} {
+	\begin{picture}(0,22)
+		\put(0.5,0){\usebox{\footer}}
+	\end{picture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

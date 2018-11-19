@@ -1,0 +1,347 @@
+% Document type and layout.
+\documentclass[12pt,a4paper,espaco=umemeio,noindentfirst,oneside,openany,tocpage=plain,pnumromarab,ruledheader,time,anapcustomindent]{sty/abnt}
+
+% Brazilian portuguese language stuff (acents, etc.).
+\usepackage[brazil]{babel}
+
+% Encoding (or charset).
+% This is a feature depending on the configuration of the text editor
+% or the particular system which you are using.
+\usepackage[utf8]{inputenc}
+% If you experience some problem with the charset encoding (weird
+% simbols being displayed) try to change the option utf8 below to
+% latin1 (which sets the charset to ISO-8859-1 encoding).
+%\usepackage[latin1]{inputenc}
+
+% Load the package abncite, for bibliographical citations into the
+% text body. The option call=authordata below sets the layout of
+% citations to Autor-Date style.
+%\usepackage[call=authordata,order=alphabetic,recuo=0.5cm,abnt-emphasize=bf,
+%abnt-and-type=&,abnt-etal-list=3,abnt-etal-cite=3]{abntcite}
+% but doesn't work. Use this instead:
+\usepackage[call=numeric,order=alphabetic,recuo=0.5cm,abnt-emphasize=bf,
+abnt-and-type=&,abnt-etal-list=3,abnt-etal-cite=3]{abntcite}
+% If you want to use numbers, comment out the line below.
+%\usepackage[call=numeric,order=citation,recuo=0.5cm,abnt-emphasize=bf,
+%abnt-and-type=&,abnt-etal-list=3,abnt-etal-cite=3,
+%call=brackets,biblabel=show,biblabel=brackets]{sty/abntcite}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PDF output and additional related settings.
+\usepackage{sty/pdfcompat}
+
+% Additional ABNTex definitions.
+\usepackage[disable=copyright,disable=biblabel]{sty/ach2017}
+
+% This package seems to conflicts with logo-each above, if loaded
+% before that package. Therefore, put it here.
+\usepackage[T1]{fontenc}
+
+% To type URL with linebreak at special characters.
+\usepackage{url}
+
+\usepackage[unicode=true,bookmarks=true,bookmarksnumbered=false,
+bookmarksopen=true,bookmarksopenlevel=1,breaklinks=false,
+pdfborder={0 0 1},backref=section,colorlinks=false]{hyperref}
+
+% Improved and customizable hyphenation patterns.
+\usepackage{hyphenat}
+\hyphenation{pe-rio-do res-pon-sá-vel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\ABNTchapterfont}{\fontfamily{ptm}\bfseries\selectfont}
+\renewcommand{\tituloformat}{\huge\ABNTchapterfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Define the base path for the graphic files, anchored to the
+% directory in which this .sty file is placed (recommended).
+%\graphicspath{{./pictures/}}
+
+% Produce lists of symbols as in nomenclature.
+\usepackage{nomencl}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+\renewcommand{\nomname}{Glossário}
+\renewcommand{\nomlabel}[1]{{\bf #1}:}
+
+% Delicatessen pour (LaTeX) connaisseurs.
+\usepackage{lastpage}
+
+% Add background color to tables.
+\usepackage{colortbl}
+
+%\usepackage{lscape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% User defined gadgets.
+
+\newcommand{\up}[1]{\raisebox{1.4ex}[0pt]{#1}}
+\newcommand{\struthis}[1]{\rule{0pt}{4ex}\raisebox{1ex}{#1}}
+
+\definecolor{buttonblue}{rgb}{0.25,0.40,0.56}
+\newcommand{\buttonblue}[1]{\colorbox{buttonblue}{\textcolor{white}{\sf\footnotesize #1}}}
+\newcommand{\buttonred}[1]{\colorbox{red}{\textcolor{white}{\sf\footnotesize #1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesection}{\arabic{section}}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fill the fields below, in order to provide the informations for the
+% pre-textual elements.
+
+\instituicao{Universidade de São Paulo\\Escola de Artes, Ciências e
+  Humanidades}
+
+\autor[Rocha, Larissa Teles da]{Larissa Teles da Rocha}
+
+\titulo{Tripulações aéreas e hotéis: os critérios de escolha
+  utilizados por companhias aéreas e as adaptações realizadas pelos
+  hoteis em seus produtos e serviços}
+
+\local{São Paulo}
+
+\data{Fevereiro de 2010}
+
+\comentario{Modelo de monografia para ser apresentada à Escola de
+  Artes, Ciências e Humanidades da Universidade de São Paulo, como
+  parte dos requisitos exigidos para aprovação na disciplina
+  \disciplinaname, do curso de Bacharelado em Sistemas de Informação.}
+
+\area[Modalidade:]{Trabalho de graduação curto -- 1 semestre.}
+
+\orientador{Prof. Dr. Renato Braz Oliveira de Seixas}
+
+\defesadata{29 de fevereiro de 2010}
+
+\bancaone{Profª Drª Ariane Machado Lima}
+\bancatwo{Prof. Dr. Antonio Luciano Digiampietri}
+
+\adviser[Seixas, Renato Braz Oliveira de]{Renato Braz Oliveira de
+  Seixas}
+
+\paginas{\pageref{LastPage} p. : il.}
+
+\catalogtop{{\ABNTtitulodata} / {\ABNTautordata} ; orientação de
+  \ABNTadviserdata. -- {\ABNTlocaldata} : Universidade de São Paulo,
+  Escola de Artes, Ciências e Humanidades, \ABNTdatadata.}
+
+\catalogmed{Monografia apresentada para Conclusão de Curso de Lazer e
+  Turismo -- Escola de Artes, Ciências e Humanidades da Universidade
+  de São Paulo.} 
+
+\catalogbottom{1. Hotelaria. 2. Empresas de transportes
+  turísticos. I. \ABNTvaradviserdata, orient. II. Título.}
+
+\catalogcdd{CDD 22.ed. -- 910.46}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pre-Textual elements without title and without numeric indexation
+% (5.3.4).
+
+% Mandatory (4.1.1 Capa).
+\capa
+
+% Mandatory (4.1.3 Folha de rosto).
+\folhaderosto
+\folhaderostoreverso
+
+% Mandatory (4.1.5 Folha de aprovação).
+\folhadeaprovacao
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pre-Textual elements without numeric indexation (5.3.3). The title
+% of these elements must be centralized, as stated in NBR 6024.
+
+% Optional (4.1.6 Dedicatória).
+\pretextualchapter{Dedicatória} % Title.
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+% Optional (4.1.7 Agradecimentos).
+\pretextualchapter{Agradecimentos} % Title.
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+% Mandatory (4.1.9 Resumo na língua vernácula).
+\palavraschave{ABNT, norma NBR 6028, elementos pre-textuais, resumo.}
+\begin{resumo}
+Elemento obrigatório constituido de uma sequência de frases concisas e
+objetivas e não de uma simples enumeração de tópicos, não
+ultrapassando 500 palabras, seguido logo abaixo, das palavras
+representativas do conteúdo do trabalho, isto é, palabras-chave e/ou
+descritores, conforme a ABNT NBR 6028. As diretrizes da USP também
+recomendam que o resumo seja redigido em parágrafo único, embora essa
+especificação não conste na norma NBR 14724.
+
+\makekeywords
+\end{resumo}
+
+% Mandatory (4.1.10 Resumo em língua estrangeira).
+\renewcommand{\ABNTabstractname}{Résumé}
+\palavraschave[Keywords:]{ABNT, norm NBR 6028, pre-textual elements, abstract.}
+\begin{abstract}
+Mandatory element, with the same features of the Abstract in the
+native language, typed on a separate sheet (in English
+\emph{Abstract}, in Spanish \emph{Resumen}, in French \emph{Résumé},
+for instance). It must be followed by the representative words of the
+work subject, i.e., keywords and/or descriptors in the given
+language. Article 99 of Regimento do Pós-Graduação da USP states that
+the Abstract must be redacted in English language, for divulgation
+purpouses. Exceptions to this rule could be allowed at criterion of
+the CPG of each faculty.
+
+\makekeywords
+\end{abstract}
+
+% Optional (4.1.11 Lista de ilustrações).
+\listadefiguras
+
+% Optional (4.1.11 Lista de tabelas).
+\listadetabelas
+
+% Optional(?): Glossary.
+\printnomenclature
+
+% Mandatory (4.1.15 Sumário).
+\sumario
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Textual elements.
+
+%\cleardoublepage
+%%\clearpage
+%\chapter*{}
+%\section{Título de seção isolada sem número de capítulo}
+
+\chapter{Introdução} % Chapter title.
+
+No Glossário as palavras deverão aparecer em ordem alfabética. A
+palavra ou sigla a ser definida grafada em negrito seguida de dois
+pontos (:), e em seguida a definição é escrita sem negrito. Por
+exemplo, veja como a sigla GLCE
+\nomenclature{GLCE}{Gramática Livre de Contexto Estocástica –
+  gramática livre de contexto com uma distribuição de probabilidades
+  sobre as produções com o mesmo lado esquerdo.}
+aparece no Glossário.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Objetivos}
+
+\section{Objetivo Geral}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+\section{Objetivos Específicos}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Revisão bibliográfica}
+
+Exemplo de citação~\cite{Pressman:2006}. Outro exemplo \cite{Levy:1999}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Metodologia}
+\input{development/metodologia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Resultados}
+Para cadastrar um novo usuário, deve-se preencher os dados e clicar no
+botão \buttonblue{\quad Enviar\quad}. Para excluir um usuário do
+sistema, deve-se clicar no botão \buttonred{\quad Excluir\quad} na
+linha correspondente ao usuário que deseja-se excluir.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Discussão}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Conclusão}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Post-textual element: Bibliographical references (mandatory).
+
+\bibliographystyle{bst/abnt-alf}
+%\bibliographystyle{bst/abnt-num}
+
+% You can use this:
+%\bibliography{bib/example}
+% or the stuff below, but NOT both simultaneously.
+\renewcommand{\bibfile}{bib/example}
+\renewcommand{\nocitebibfile}{bib/nocite}
+\renewcommand{\nocitelist}{Apache,WAI}
+\referencesandbibliography
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Post-textual element: Appendix (optional).
+
+% From now on, the chapters are no longer referenciated by numbers,
+% but as "Appendix", and with an alpha-numeric identifier.
+\appendix
+
+
+\chapter{Título do Apêndice A}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Título do Apêndice B}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Annex.
+
+% From now on, the chapters are referenciated as "Annex", and with an
+% alpha-numeric identifier.
+\annex
+
+
+\chapter{Título do Anexo A}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Título do Anexo B}
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+bla bla bla bla bla bla bla bla bla bla bla bla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

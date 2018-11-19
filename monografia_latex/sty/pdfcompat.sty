@@ -1,0 +1,18 @@
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+	\pdffalse
+\else
+	\pdftrue
+\fi
+
+\ifpdf
+\pdfoutput=1
+\usepackage[pdftex]{graphicx}
+\usepackage[output=pdf]{sty/logo-each}
+\else
+% Enables the usage of graphics in .jpg format, rather than .eps
+% (Encapsulated PostScript).
+% Furthermore, is also required by package logo-each below.
+\usepackage[dvips]{graphicx}
+\usepackage{sty/logo-each}	% EACH-USP logo.
+\fi

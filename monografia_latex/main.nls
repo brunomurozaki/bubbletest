@@ -1,0 +1,8 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{GLCE}]\begingroup Gramática Livre de Contexto Estocástica –   gramática livre de contexto com uma distribuição de probabilidades   sobre as produções com o mesmo lado esquerdo.\nomeqref {1.0}
+		\nompageref{1}
+
+\end{thenomenclature}

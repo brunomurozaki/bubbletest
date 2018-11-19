@@ -1,0 +1,189 @@
+% ach2017.sty: LaTeX macro providing the layout used for monographs
+% in the courses "ACH2017 - Projeto de Graduação ou Supervisionado I"
+% and "ACH2018 - Projeto de Graduação ou Supervisionado II" from the
+% course Sistemas de Informação (SI) at Escola de Artes, Ciências e
+% Humanidades da Universidade de São Paulo (EACH-USP).
+%
+% Adapted from the style file for the layout of "Tese/Dissertação
+% segundo as normas da Pós-graduação do IFSC-USP", created by
+% Alexandre de Castro Maciel - Grupo de Polimeros Bernhard Gross.
+% That work was licenced under the license Creative Commons
+% Atribuição-Uso Não-Comercial-Compartilhamento pela mesma Licença
+% 2.5 Brasil.
+%
+% The original style file cited above was downloaded from:
+%
+% http://www.tex-br.org/index.php/Página_inicial
+% http://www.teseemlatex.ifsc.usp.br/
+% http://www.teseemlatex.ifsc.usp.br/modelos/TeseIFSC20081105.zip
+%
+% Copyright: 2009 Fernando Auil <troesmix@gmail.com>
+% Upstream Author: Fernando Auil <troesmix@gmail.com>
+% Last revision: 11Dec2010
+%
+% Contributors:
+%
+% Felipe Meneses Besson <besson@usp.br>
+% Circa 03Jun2009 (?): First version of \capa and \folhadeaprovacao,
+% now extensively modified and detached to the companion macro package
+% ach2017-pretextual.
+%
+% John Robson <john.robson@usp.br>
+% Dec2009: Helpful hints, discusions, and feedback.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ach2017}[2009/07/11 v0.1 (Fernando Auil)]
+\typeout{Document Style: ach2017 2009/07/11 v0.1 ABNT compliant monograph for ACH2017 and ACH2018 at EACH-USP}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX macros which we need.
+
+\usepackage{setspace} % Needed for abntex.
+
+% Enables a better control in the layout of List Of Figures and Tables
+% (loft), as well to define new lists.
+\usepackage{tocloft}
+
+\usepackage{multirow}	% Mix cells in tables.
+\usepackage{rotating}	% Used by macro sidewaytable for tables rotated by Pi/2.
+\usepackage{booktabs}	% Modifies the layout of tables.
+\usepackage{longtable}	% For long tables extended along several pages.
+
+% Improves the placement of float objects, as figures and tables, as
+% also enables the definition new float objects.
+\usepackage{float}
+
+% Settings for the layout of the captions in tables and figures.
+\usepackage[format=hang,font=it,justification=centerlast,labelfont=bf,labelsep=endash]{caption}
+
+\usepackage{subfig} % CRIA AMBIENTES DE FIGURA COM VÁRIAS FIGURAS
+
+% Settings for the layout of footnotes
+\usepackage[bottom,marginal,flushmargin,stable,multiple]{footmisc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newboolean{DISCIPLINAach2017}
+\newboolean{DISCIPLINAach2018}
+\DeclareOption{disciplina=ach2017}{\setboolean{DISCIPLINAach2017}{true}\setboolean{DISCIPLINAach2018}{false}}
+\DeclareOption{disciplina=ach2018}{\setboolean{DISCIPLINAach2017}{false}\setboolean{DISCIPLINAach2018}{true}}
+
+\newboolean{ABNTrelax}
+\newboolean{ABNTstrict}
+\DeclareOption{abnt=relax}{\setboolean{ABNTrelax}{true}\setboolean{ABNTstrict}{false}}
+\DeclareOption{abnt=strict}{\setboolean{ABNTrelax}{false}\setboolean{ABNTstrict}{true}}
+
+\newboolean{DISABLEcopyright}
+\DeclareOption{disable=copyright}{\setboolean{DISABLEcopyright}{true}}
+
+% Hack on abntcite.sty (Part 1).
+\newboolean{DISABLEbiblabel}
+\DeclareOption{disable=biblabel}{\setboolean{DISABLEbiblabel}{true}}
+
+\ProcessOptions
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\boolean{DISCIPLINAach2018}}
+{\providecommand{\disciplinaname}{ACH2018 – Projeto Supervisionado ou de Gradua\c c\~ao II}}
+{\providecommand{\disciplinaname}{ACH2017 – Projeto Supervisionado ou de Gradua\c c\~ao I}}
+
+\providecommand{\disciplinanameformat}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Definitions for some pre-textual elements of ABNT standard.
+\usepackage{sty/ach2017-pretextual}
+
+% Definitions for some post-textual elements of ABNT standard.
+\usepackage{sty/ach2017-posttextual}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout for epigraphs.
+
+\providecommand{\epigraphtopmargin}{}
+\providecommand{\epigraphindent}{\indent}
+\providecommand{\epigraphleftmargin}{\hspace{\stretch{1}}}
+\providecommand{\epigraphformat}{\small}
+\providecommand{\epigraphauthorformat}{\small\sl}
+
+\newenvironment{epigraph}[4]{%
+\ABNTifnotempty{#1}{\renewcommand{\epigraphtopmargin}{\vspace{#1}}}
+\epigraphtopmargin
+\begin{spacing}{1}
+\begin{quote}
+\epigraphindent\epigraphleftmargin
+{\epigraphformat {#2}}\\[2mm]
+\ABNTifnotempty{#3}{%
+	\indent\hspace{\stretch{1}}
+	{\epigraphauthorformat {#3}}\ABNTifnotempty{#4}{\,\footnote{{#4}}}
+}
+\end{quote}
+\end{spacing}}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cria o ambiente de lista de símbolos e abreviações
+% Não há necessidade de editar isso ao menos que você saiba o que
+% está fazendo.
+
+\newenvironment{listaespecial}[1][R(x)]{%
+\begin{list}{}{%
+\renewcommand\makelabel[1]{\normalsize\ensuremath{##1}}
+\setlength{\listparindent}{0pt}
+\settowidth{\labelwidth}{\makelabel{#1}}
+\setlength{\leftmargin}{\labelwidth}
+\addtolength{\leftmargin}{\labelsep}}
+}{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Layout for figures
+\newlength{\mylenf}
+\settowidth{\mylenf}{\bfseries\cftfigpresnum\cftfigaftersnum}
+\addtolength{\cftfignumwidth}{\mylenf}
+\setlength{\mylenf}{0.5in}
+\renewcommand{\cftfigpresnum}{\hfill}
+\renewcommand{\cftfigaftersnum}{\hspace*{\mylenf}}
+\addtolength{\cftfignumwidth}{\mylenf}
+\renewcommand{\cftfigleader}{\cftdotfill{\cftfigdotsep}}
+\renewcommand{\cftfigpresnum}{Figura }
+\renewcommand{\cftfigaftersnum}{ - }
+
+% Layout for tables
+\newlength{\mylent}
+\settowidth{\mylent}{\bfseries\cfttabpresnum\cfttabaftersnum}
+\addtolength{\cfttabnumwidth}{\mylent}
+\setlength{\mylent}{0.5in}
+\renewcommand{\cfttabpresnum}{\hfill}
+\renewcommand{\cfttabaftersnum}{\hspace*{\mylent}}
+\addtolength{\cfttabnumwidth}{\mylent}
+\renewcommand{\cfttableader}{\cftdotfill{\cfttabdotsep}}
+\renewcommand{\cfttabpresnum}{Tabela }
+\renewcommand{\cfttabaftersnum}{ - }
+
+% Layout for the captions of long tables
+\setlength{\LTcapwidth}{6.3in}
+\setlength{\LTpre}{0.1in}
+
+% Layout for footnotes
+\newlength{\myFootnoteWidth}
+\newlength{\myFootnoteLabel}
+\setlength{\myFootnoteLabel}{0.5em} % <-- can be changed to any valid value
+\renewcommand{\@makefntext}[1]{%
+	\setlength{\myFootnoteWidth}{\columnwidth}%
+	\addtolength{\myFootnoteWidth}{-\myFootnoteLabel}%
+	\noindent\makebox[\myFootnoteLabel][r]{\@makefnmark\ }%
+	\parbox[t]{\myFootnoteWidth}{#1}%
+}
+
+\renewcommand\footnoterule{\kern-.\p@\hrule\@width3cm\kern2.6\p@}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Hack on abntcite.sty (Part 2).
+\ifthenelse{\boolean{DISABLEbiblabel}}
+	{\renewcommand{\@biblabel}[1]{}}
+	{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EndOfFile

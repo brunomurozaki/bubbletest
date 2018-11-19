@@ -1,0 +1,17 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.53 }
+
+\bibitem[L{\'E}VY 1999]{Levy:1999}
+\abntrefinfo{L{\'E}VY}{L{\'E}VY}{1999}
+{L{\'E}VY, P. \textbf{Cibercultura}. Rio de Janeiro: Editora 34, 1999.}
+
+\bibitem[PRESSMAN 2006]{Pressman:2006}
+\abntrefinfo{PRESSMAN}{PRESSMAN}{2006}
+{PRESSMAN, R.~S. \textbf{Engenharia de Software}. 6. ed. São Paulo:
+  Mc-Graw-Hill, 2006. 752~p.}
+
+\end{thebibliography}
