@@ -43,121 +43,175 @@ var myUser = {};
 
 var publicData = {
     // norte
-    ac = {
+    ac : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    am = {
+    am : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    ap = {
+    ap : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    rr = {
+    rr : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    pa = {
+    pa : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    ro = {
+    ro : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    to = {
+    to : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
 
     // nordeste 
-    ce = {
+    ce : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    ma = {
+    ma : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    rn = {
+    rn : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    pe = {
+    pe : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    se = {
+    se : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    ba = {
+    ba : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    al = {
+    al : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    pb = {
+    pb : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    pi = {
+    pi : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
 
     // sudeste
-    mg = {
+    mg : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    es = {
+    es : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    rj = {
+    rj : {
+        left : 30,
+        right : 70,
         gender: {},
         age: {}
     },
-    sp = {
+    sp : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
 
     // centro-oeste
-    go = {
+    go : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    mt = {
+    mt : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    ms = {
+    ms : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
 
     // distrito federal
-    df = {
+    df : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
 
     // sul
-    rs = {
+    rs : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    pr = {
+    pr : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     },
-    sc = {
+    sc : {
+        left : 50,
+        right : 50,
         gender: {},
         age: {}
     }

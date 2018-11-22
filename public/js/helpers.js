@@ -10,6 +10,8 @@ function init(){
 
 function bindEvents() {
 	$("#btFB").on("click", checkLoginState);
+	$('#globalData').on('change', tradeLocationData)
+	$('#selectState').on('change', tradeLocationData)
 }
 
 function max(i, j){
