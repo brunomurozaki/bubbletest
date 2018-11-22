@@ -40,3 +40,125 @@ var LIKES_GENDER = "/api/users/:gender";
 var LIKES_LOCATION = "/api/location/:id/likes";
 
 var myUser = {};
+
+var publicData = {
+    // norte
+    ac = {
+        gender: {},
+        age: {}
+    },
+    am = {
+        gender: {},
+        age: {}
+    },
+    ap = {
+        gender: {},
+        age: {}
+    },
+    rr = {
+        gender: {},
+        age: {}
+    },
+    pa = {
+        gender: {},
+        age: {}
+    },
+    ro = {
+        gender: {},
+        age: {}
+    },
+    to = {
+        gender: {},
+        age: {}
+    },
+
+    // nordeste 
+    ce = {
+        gender: {},
+        age: {}
+    },
+    ma = {
+        gender: {},
+        age: {}
+    },
+    rn = {
+        gender: {},
+        age: {}
+    },
+    pe = {
+        gender: {},
+        age: {}
+    },
+    se = {
+        gender: {},
+        age: {}
+    },
+    ba = {
+        gender: {},
+        age: {}
+    },
+    al = {
+        gender: {},
+        age: {}
+    },
+    pb = {
+        gender: {},
+        age: {}
+    },
+    pi = {
+        gender: {},
+        age: {}
+    },
+
+    // sudeste
+    mg = {
+        gender: {},
+        age: {}
+    },
+    es = {
+        gender: {},
+        age: {}
+    },
+    rj = {
+        gender: {},
+        age: {}
+    },
+    sp = {
+        gender: {},
+        age: {}
+    },
+
+    // centro-oeste
+    go = {
+        gender: {},
+        age: {}
+    },
+    mt = {
+        gender: {},
+        age: {}
+    },
+    ms = {
+        gender: {},
+        age: {}
+    },
+
+    // distrito federal
+    df = {
+        gender: {},
+        age: {}
+    },
+
+    // sul
+    rs = {
+        gender: {},
+        age: {}
+    },
+    pr = {
+        gender: {},
+        age: {}
+    },
+    sc = {
+        gender: {},
+        age: {}
+    }
+}
