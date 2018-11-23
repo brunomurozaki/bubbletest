@@ -310,9 +310,9 @@ Keywords: Keyword1. Keyword2. Keyword3. Etc.
 %
 %-------------------------------------------------------------------------
 \begin{siglas}
-  \item[WEB] Termo referente à World Wide Web, geralmente referido como sinônimo de internet;
-  \item[REST] Acrônimo para Representational State Transfer. Arquitetura para servidores \textit{web};
-  \item[Sigla/abreviatura 3] Definição da sigla ou da abreviatura por extenso
+  \item[WEB] Termo referente à \textit{World Wide Web}, geralmente referido como sinônimo de internet;
+  \item[REST] Acrônimo para \textit{Representational State Transfer}. Arquitetura para servidores \textit{web};
+  \item[API] Acrônimo para \textit{Application Programming Interface}. Interface de programação definida para o consumo da mesma;
   \item[Sigla/abreviatura 4] Definição da sigla ou da abreviatura por extenso
   \item[Sigla/abreviatura 5] Definição da sigla ou da abreviatura por extenso
   \item[Sigla/abreviatura 6] Definição da sigla ou da abreviatura por extenso
@@ -323,24 +323,6 @@ Keywords: Keyword1. Keyword2. Keyword3. Etc.
 \end{siglas}
 % ---
 
-% ---
-% inserir lista de símbolos
-% ---
-%-------------------------------------------------------------------------
-% Informações sobre ``Lista de símbolos'': 
-%
-% Opcional.
-% Uma vez que se deseja usar, é necessário manter padrão e consistência no
-% trabalho inteiro.
-% Se usar: inserir na ordem em que aparece no texto.
-% 
-%-------------------------------------------------------------------------
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
 % ---
 
 % ---
@@ -431,15 +413,18 @@ A hospedagem da aplicação ficou por conta do Heroku, um servidor que permite c
 \section{Postgres}
 O SGBD escolhido foi o Postgres, já que é o único SGBD gratuito disponível no Heroku. O Postgres é um projeto open-source, amplamente utilizado no mercado. 
 
+\section{Graph API}
+A API fornecida pelo Facebook para a consulta de dados de usuários e páginas é a Graph API. Para a utilização da Graph API, é necessário que o desenvolvedor crie um novo aplicativo, com uma chave secreta, dentro da sua conta de desenvolvedor do Facebook. Assim, sua aplicação \textit{web} está apta a utilizar a Graph API. A utilização básica é gratuíta.
+
 \chapter{Metodologia}
 \label{metodologia}
 
 O projeto visa construir uma interface que permita ao usuário entender sua posição na bolha de informação em comparação com a polarização política de esquerda e direita. Foram inseridas 493 páginas de uma base de dados fornecida pelo Professor Dr. Márcio Moretto, que participa do projeto "Monitor do Debate Político no meio digital" \cite{}(INSERIR AQUI REFERENCIA). Essa base foi um resultado da pesquisa realizada pelo professor, que apontou as principais páginas do Facebook que tinham um alto nível de engajamento público. Esse engajamento era medido por número de compartilhamento da página e de seus posts por usuários, número de "curtir" na página e nos seus posts, número de comentários, etc. Através destas analises, também foi possível relacionar paginas às outras, consideram quais compartilhavam conteúdos entre si, quais haviam se "curtido", etc. Com as principais páginas definidas, houve um trabalho de qualificação dessas páginas, de forma que foram classificadas com \textit{tags} que definem o seu propósito na rede. 
 
-Através destas \textit{tags} foi possível inferir o posicionamento político de cada uma das páginas. A tabela \ref{tabelaTags} demonstra como foi feita a relação entre as tags existentes e o posicionamento político de cada uma.  
+Através destas \textit{tags} foi possível inferir o posicionamento político de cada uma das páginas. A tabela \ref{tab:tabelaTags} demonstra como foi feita a relação entre as tags existentes e o posicionamento político de cada uma.  
 
 \begin{table}[htbp]
-	\label{tabelaTags}
+	\label{tab:tabelaTags}
 	\centering
 	\caption{Relação entre as \textit{tags} existentes e o seu posicionamento político na esfera pública}
 		\begin{tabular}{p{2in} p{2in} } \hline
@@ -451,7 +436,11 @@ Através destas \textit{tags} foi possível inferir o posicionamento político d
 		\end{tabular}
 \end{table}
 
+A definição do posicionamento das páginas, apesar de não estar na estrutura inicial do dado, foi inserido no banco de dados para que se pudesse fazer a seleção dos dados já orientado a esse posicionamento. 
 
+A aplicação desenvolvida consiste no uso da Graph API, que pede autorização ao usuário para ter acesso aos dados de localização, data de nascimento, amigos, páginas curtidas e gênero. Assim, é possivel cruzar os dados de páginas curtidas com a base prévia de páginas já posicionadas no espectro político da esfera pública, além de poder ter uma base geográfica demográfica desses posicionamentos.
+
+Como as páginas são criadoras de conteúdo no Facebook, pode-se afirmar que todo o seu conteúdo produzido é de acordo com a sua posição política. Assim, o usuário terá acesso as postagens criadas por páginas que ele acompanha (pois ele curtiu estas páginas). Mas também terá acesso ao conteúdo das páginas em que seus amigos por sua vez estão seguindo. Logo, se um usuário segue muitas páginas classificadas como "Esquerda", espera-se que ele tenha um acesso mais fácil a conteúdos do espectro político da esquerda, ao passo que se ele possui muitos amigos que acompanham páginas de direita, ele tem o contraponto de que pode entrar em contato com postagens de conteúdo do espectro político de direita.
 
 \chapter{Resultados}
 
