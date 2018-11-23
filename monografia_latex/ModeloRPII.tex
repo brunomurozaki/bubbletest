@@ -310,8 +310,8 @@ Keywords: Keyword1. Keyword2. Keyword3. Etc.
 %
 %-------------------------------------------------------------------------
 \begin{siglas}
-  \item[Sigla/abreviatura 1] Definição da sigla ou da abreviatura por extenso
-  \item[Sigla/abreviatura 2] Definição da sigla ou da abreviatura por extenso
+  \item[WEB] Termo referente à World Wide Web, geralmente referido como sinônimo de internet;
+  \item[REST] Acrônimo para Representational State Transfer. Arquitetura para servidores \textit{web};
   \item[Sigla/abreviatura 3] Definição da sigla ou da abreviatura por extenso
   \item[Sigla/abreviatura 4] Definição da sigla ou da abreviatura por extenso
   \item[Sigla/abreviatura 5] Definição da sigla ou da abreviatura por extenso
@@ -396,11 +396,62 @@ Logo, com o filtro das redes sociais agindo com base nas informações recebidas
 
 \chapter{Objetivo}
 \section{Objetivo Geral}
+
+Construir uma ferramenta que auxilie o usuário a entender os efeitos do Filtro Bolha e do Viés de Confirmação no seu dia-a-dia, aplicado ao seu perfil na rede social Facebook, um possivel local de busca de informações. Será possível também a percepção do usuário sobre seu posicionamento político, juntamente com qual tipo de informação ele tem acesso por suas conexões na rede social. Como consequência, será possível ter uma base de dados com informações geográficas e demográficas de posicionamento político na esfera pública. 
+
+
 \section{Objetivos Específicos}
+
+\begin{itemize}
+	\item{Demonstração ao usuário sobre os efeitos do Viés de Confirmação na vivência dentro das Redes Sociais;} 
+	\item{Possibilitar a percepção do usuário sobre os efeitos do chamado “Filtro Bolha”, entendendo suas aplicações;}
+	\item{Possibilitar a criação de uma base de dados que permita no futuro inferir algum tipo de informação baseado em dados geográficos e demográficos.}
+\end{itemize}
+
 
 \chapter{Revisão Bibliográfica}
 
+Nesta seção será inserida uma descrição breve de cada item utilizado na Metodologia, e do material de estudo utilizado para a implementação da aplicação.
+
+\section{REST}
+REST é um acrônimo em inglês para as palavras "\textit{Representational State Transfer}". Trata-se de uma arquitetura muito utilizada em aplicações de servidor para um fácil e intuitivo acesso aos dados. Como forma de extensão da aplicação, foi utilizada uma arquitetura REST que será explicada na seção \ref{metodologia} (TROCAR ESSA REF)
+
+\section{Node JS}
+O servidor escolhido para a aplicação foi o Node JS, um projeto \textit{open source} que permite que scripts feitos em JavaScript rodem em aplicações servidor \textit{desktop}. Toda sua arquitetura é baseada em execução de tarefas assíncronas, juntamente com conceitos de troca de \textit{threads} em pontos de interrupção do Sistema Operacional, o que faz com que sua execução seja mais eficaz, sobretudo em aplicações \textit{web}.
+
+\section{Sequelize}
+O Sequelize é um \textit{framework} de ORM (\textit{Object-Relational Mapping}) do Node JS. Utiliza uma arquitetura baseada no conceito de \textit{Active Record}. Como a aplicação requer uma série de consultas com muitas junções de tabelas diferentes, as consultas do Sequelize são simples de implementar, agilizando o processo de desenvolvimento. Há também um controle de transação com o Banco de Dados implicito no \textit{framework}, o que dá uma maior robustez à aplicação. 
+
+\section{Git/Github}
+O sistema de versionamento escolhido para o projeto foi o git. Projeto iniciado em 2005, o git é um sistema de controle de versão open-source. A hospedagem desse repositório fica por conta do Github, site que é amplamente utilizado pela comunidade, sobretudo para projetos open-source. 
+
+\section{Heroku}
+A hospedagem da aplicação ficou por conta do Heroku, um servidor que permite com que aplicações de pequeno porte possam ser hospedadas de maneira gratuita. O site oferece estruturas de \textit{deploy} automáticos, já conectados com repositórios git ou svn. 
+
+\section{Postgres}
+O SGBD escolhido foi o Postgres, já que é o único SGBD gratuito disponível no Heroku. O Postgres é um projeto open-source, amplamente utilizado no mercado. 
+
 \chapter{Metodologia}
+\label{metodologia}
+
+O projeto visa construir uma interface que permita ao usuário entender sua posição na bolha de informação em comparação com a polarização política de esquerda e direita. Foram inseridas 493 páginas de uma base de dados fornecida pelo Professor Dr. Márcio Moretto, que participa do projeto "Monitor do Debate Político no meio digital" \cite{}(INSERIR AQUI REFERENCIA). Essa base foi um resultado da pesquisa realizada pelo professor, que apontou as principais páginas do Facebook que tinham um alto nível de engajamento público. Esse engajamento era medido por número de compartilhamento da página e de seus posts por usuários, número de "curtir" na página e nos seus posts, número de comentários, etc. Através destas analises, também foi possível relacionar paginas às outras, consideram quais compartilhavam conteúdos entre si, quais haviam se "curtido", etc. Com as principais páginas definidas, houve um trabalho de qualificação dessas páginas, de forma que foram classificadas com \textit{tags} que definem o seu propósito na rede. 
+
+Através destas \textit{tags} foi possível inferir o posicionamento político de cada uma das páginas. A tabela \ref{tabelaTags} demonstra como foi feita a relação entre as tags existentes e o posicionamento político de cada uma.  
+
+\begin{table}[htbp]
+	\label{tabelaTags}
+	\centering
+	\caption{Relação entre as \textit{tags} existentes e o seu posicionamento político na esfera pública}
+		\begin{tabular}{p{2in} p{2in} } \hline
+			Posicionamento 	& Tags \\ \hline
+			Esquerda		& Esquerda, anti-antiPT \\
+			Direita			& Direita, anti-PT \\
+			Imprensa		& Grande Imprensa, Jornais Digitais, Jornais Impressos, Televisão \\
+			Neutro			& Outras tags/sem tags \\ \hline
+		\end{tabular}
+\end{table}
+
+
 
 \chapter{Resultados}
 
@@ -410,7 +461,6 @@ Logo, com o filtro das redes sociais agindo com base nas informações recebidas
 
 Este \textit{template} apresenta as regras básicas para a elaboração do trabalho segundo as normas ABNT.
 
-Lembrar de fazer as devidas \citeonline{teste1} referências, tal como \cite{teste1, teste2, teste3}.
 
 Além das regras básicas previstas aqui, solicita-se consultar outros detalhes da norma ABNT sempre que se desejar inserir ou configurar algum elemento não previsto aqui. Ou seja, mesmo que este \textit{template} não preveja as demais regras ABNT, por ser uma visão simplificada, ainda assim elas precisam ser seguidas. O anexo \ref{anexoA} deste documento apresenta um resumo das normas ABNT, mas ainda assim também não completo.
 
