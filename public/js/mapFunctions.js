@@ -54,3 +54,15 @@ function mountGenericMap(elementId, likesObj){
 	testPercentage.css({display: "block"})
 
 }
+
+function tradeLocationData(e){
+	if($("#globalData").val() == 'on'){
+		getLocationData($("#stateSelect").val().toLowerCase())
+	} else {
+		mountMap();
+	}
+}
+
+function getLocationData(state){
+	mountGenericMap("locationMap", publicData[state]);
+}
