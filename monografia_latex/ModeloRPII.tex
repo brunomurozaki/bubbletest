@@ -444,7 +444,37 @@ Como as páginas são criadoras de conteúdo no Facebook, pode-se afirmar que to
 
 \chapter{Resultados}
 
+A aplicação foi desenvolvida, tanto a visualização do usuário, quanto a API para a recuperação dos dados demográficos, conforme as imagens \ref{fig:figura1} e \ref{fig:figura2} (COLOCAR AS IMAGENS E TROCAR AS REFERENCIAS AQUI). O código da aplicação é público e pode ser encontrado em https://github.com/brunomurozaki/bubbletest, onde há instruções rodar o servidor. A aplicação de visualização do usuário pode ser acessada em https://devbubbletest.herokuapp.com.
+
+Entretando, vale ressaltar que a aplicação utiliza-se de permissões pedidas ao usuário na ação do login. Essas permissões precisam passar por autorização de utilização do Facebook, e para isso, é necessário a gravação de um vídeo onde deve-se demonstrar como os dados da determinada permissão são utilizados pela aplicação. Uma demonstração de como deve ser feita a requisição, com descrição completa dos passos que deve-se seguir para executar a aplicação, pode ser vista no \ref{anexoA}. Após diversas tentativas, não foi possivel ainda conseguir as autorizações do Facebook para se usar as permissões de maneira pública. Portanto, para poder testar a aplicação inteira, é preciso ser adicionado como usuário teste da aplicação, e ser um contato válido do desenvolvedor que criou a requisição de teste (ser Amigo no Facebook). Caso esse processo seja completado, é possivel testar a aplicação. As imagens demonstram a aplicação com usuários teste adicionados por este processo citado.
+
+\begin{figure}[H]
+	\centering
+	\caption{Layout da análise de posicionamento na esfera pública}
+	\includegraphics[scale=0.4]{figura1.png}
+	\label{fig:figura1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{Exemplo de chamada REST para a listagem de dados no servidor}
+	\includegraphics[scale=0.7]{figura2.png}
+	\label{fig:figura2}
+\end{figure}
+
+Outro ponto a se salientar é o fato de que a avaliação de posicionamento politico das amizades do usuário se refere apenas aos que estão conectados no app. As amizades do usuário que não aprovaram as permissões da aplicação, não aparecem como conexão do usuário. Este é um bloqueio explícito do Facebook na Graph API. Entretando, a análise de dados relacionada à localização e gênero independem da conexão ou não com o usuário. Como todo usuário é adicionado a base de dados do projeto quando entra na aplicação, tem-se as informações demográficas e geográficas persistidas no banco. O modelo de banco utilizado é o descrito na imagem \ref{img:bancoDeDados}.
+
+Além da visualização relacionadas ao perfil do usuário, há também a possibilidade de se comparar os dados apresentados pela aplicação com dados externos, de fora da aplicação do Facebook. Cada estado possui os dados da última eleição (segundo turno), fornecidos pelo TSE (Adicionar SIGLA) e os dados sobre a última pesquisa de opinião realizada pelo Instituto DataFolha (REFERENCIA AQUI), já que o TSE não disponibiliza dados sobre o gênero, localidade e idade de quem votou. 
+
+Quanto aos dados demográficos e geográficos armazenados, todos podem ser acessados pela API localizada no mesmo endereço da aplicação. No anexo \ref{anexoC} é possivel ver todos as chamadas possiveis dentro da API, juntamente com os resultados esperados. 
+
 \chapter{Discussão}
+
+Tirando-se as dificuldades de desenvolvimento, que impediram a aplicação de ser lançada publicamente, não apenas para usuários pré-aprovados, inferir conclusões através dos dados seria extremamente difícil. Inicialmente, o plano do projeto era uma ampla divulgação em páginas de temáticas políticas, para que se tivesse uma amostra bem grande, e uma divulgação ampla em páginas dos dois lados do espectro político da esfera pública. Porém, mesmo desta forma, fica difícil garantir uma amostra sem viés. 
+
+Quanto a análise do usuário, a análise por amizades e páginas curtidas é eficaz pois considera quem cria conteúdos e quem potencialmente os compartilha. Porém, o universo de amigos se restringe apenas aos presentes na aplicação, e também se desconsidera totalmente o algorítimo que fornece o conteúdo ao usuário, feito pelo Facebook. Alguns testes realizados mostram que após um tempo elevado de conexão no Facebook, muitas vezes é trazido um conteúdo pouco comum ao usuário, já que o tempo elevado na aplicação o fez percorrer por todas as temáticas que já lhe são familiares. Existem outros fatores, como engajamento em postagens de amigos por meio de comentários, que fazem também com que o Facebook considere que aquele conteúdo é algo que te interessa e que vale a pena lhe trazer novamente. Há também o fator de \textit{marketing} pago, que a aplicação do projeto não cobre. Uma melhor análise poderia ser feita se fosse possível uma análise do conteúdo trazido pelo Facebook diretamente. Tal funcionalidade existe na Graph API, porém nos últimos anos foi restringida a fabricantes de aplicativos nativos do Facebook, como empresas de telefonia. No \ref{anexoB} é possível ver uma das diversas tentativas de contato com a equipe de desenvolvimento do projeto, explicando o porquê seria interessante a liberação desta permissão para a aplicação. Não foi obtido sucesso na requisição.
+
+Outro ponto que foi tratado durante o desenvolvimento do projeto foi a implementação da autenticação por \textit{token}, ou \textit{OAuth}. Este tipo de autenticação com o servidor foi por um tempo pré-requisito do Facebook, mas posteriormente esse requisito foi retirado. A preocupação do Facebook era que o \textit{id} do usuário fornecido pela Graph API, apesar de diferente entre as aplicações, era possivel acessar o perfil da pessoa diretamente, colocando este \textit{id} na \textit{url}. Porém, uma atualização recente da Graph API fez com que o \textit{id} não seja mais o localizador do perfil quando inserido diretamente na \textit{url}.
 
 \chapter{Conclusão}
 
