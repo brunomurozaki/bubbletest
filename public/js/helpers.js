@@ -22,7 +22,7 @@ function max(i, j){
 }
 
 function onChangeLocationCheck(e){
-	if($("#globalData")[0])
+	if($("#globalData")[0].checked)
 		$(".stateSelectionWrapper").show();
 	else
 		$(".stateSelectionWrapper").hide();
