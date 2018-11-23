@@ -1,0 +1,26 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Amenta et al. 2002]{teste1}
+\abntrefinfo{Amenta et al.}{AMENTA et al.}{2002a}
+{AMENTA, N. et al. A simple algorithm for homeomorphic surface reconstruction.
+\emph{International Journal of Computational Geometry and Applications}, World
+  Scientific Publishing Co., v.~12, n.~1-2, p. 125--141, 2002.}
+
+\bibitem[Amenta et al. 2002]{teste2}
+\abntrefinfo{Amenta et al.}{AMENTA et al.}{2002b}
+{AMENTA, N. et al. A simple algorithm for homeomorphic surface reconstruction.
+\emph{International Journal of Computational Geometry and Applications}, World
+  Scientific Publishing Co., v.~12, n.~1-2, p. 125--141, 2002.}
+
+\bibitem[Amenta et al. 2002]{teste3}
+\abntrefinfo{Amenta et al.}{AMENTA et al.}{2002c}
+{AMENTA, N. et al. A simple algorithm for homeomorphic surface reconstruction.
+\emph{International Journal of Computational Geometry and Applications}, World
+  Scientific Publishing Co., v.~12, n.~1-2, p. 125--141, 2002.}
+
+\end{thebibliography}
