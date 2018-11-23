@@ -36,6 +36,10 @@ function mountMap(){
 
 function mountGenericMap(elementId, likesObj){
 	var total = likesObj.left + likesObj.right;
+
+	if(total == 0)
+		return;
+
 	var myMap = $("#" + elementId);
 	var loadingDiv = myMap.find(".loading");
 	var testPercentage = myMap.find(".testPercentage");
@@ -56,7 +60,7 @@ function mountGenericMap(elementId, likesObj){
 }
 
 function tradeLocationData(e){
-	if($("#globalData").val() == 'on'){
+	if($("#globalData")[0].checked){
 		getLocationData($("#stateSelect").val().toLowerCase())
 	} else {
 		mountMap();
@@ -65,4 +69,13 @@ function tradeLocationData(e){
 
 function getLocationData(state){
 	mountGenericMap("locationMap", publicData[state]);
+}
+
+function blockLocation(){
+	okData.location = true;
+	mountMap();
+
+	$("#globalData")[0].checked = true;
+	$("#globalData").prop("disabled", "disabled");
+	onChangeLocationCheck();
 }

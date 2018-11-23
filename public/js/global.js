@@ -44,174 +44,174 @@ var myUser = {};
 var publicData = {
     // norte
     ac : {
-        left : 50,
-        right : 50,
+        left : 23,
+        right : 77,
         gender: {},
         age: {}
     },
     am : {
-        left : 50,
-        right : 50,
+        left : 49,
+        right : 51,
         gender: {},
         age: {}
     },
     ap : {
-        left : 50,
-        right : 50,
+        left : 49,
+        right : 51,
         gender: {},
         age: {}
     },
     rr : {
-        left : 50,
-        right : 50,
+        right : 71,
+        left : 29,
         gender: {},
         age: {}
     },
     pa : {
-        left : 50,
-        right : 50,
+        left : 54,
+        right : 46,
         gender: {},
         age: {}
     },
     ro : {
-        left : 50,
-        right : 50,
+        right : 72,
+        left : 28,
         gender: {},
         age: {}
     },
     to : {
-        left : 50,
-        right : 50,
+        left : 51,
+        right : 49,
         gender: {},
         age: {}
     },
 
     // nordeste 
     ce : {
-        left : 50,
-        right : 50,
+        left : 71,
+        right : 29,
         gender: {},
         age: {}
     },
     ma : {
-        left : 50,
-        right : 50,
+        left : 73,
+        right : 27,
         gender: {},
         age: {}
     },
     rn : {
-        left : 50,
-        right : 50,
+        left : 63,
+        right : 37,
         gender: {},
         age: {}
     },
     pe : {
-        left : 50,
-        right : 50,
+        left : 66,
+        right : 34,
         gender: {},
         age: {}
     },
     se : {
-        left : 50,
-        right : 50,
+        left : 68,
+        right : 32,
         gender: {},
         age: {}
     },
     ba : {
-        left : 50,
-        right : 50,
+        left : 73,
+        right : 27,
         gender: {},
         age: {}
     },
     al : {
-        left : 50,
-        right : 50,
+        left : 60,
+        right : 40,
         gender: {},
         age: {}
     },
     pb : {
-        left : 50,
-        right : 50,
+        left : 65,
+        right : 35,
         gender: {},
         age: {}
     },
     pi : {
-        left : 50,
-        right : 50,
+        left : 77,
+        right : 23,
         gender: {},
         age: {}
     },
 
     // sudeste
     mg : {
-        left : 50,
-        right : 50,
+        right : 58,
+        left : 42,
         gender: {},
         age: {}
     },
     es : {
-        left : 50,
-        right : 50,
+        right : 63,
+        left : 37,
         gender: {},
         age: {}
     },
     rj : {
-        left : 30,
-        right : 70,
+        right : 68,
+        left : 32,
         gender: {},
         age: {}
     },
     sp : {
-        left : 50,
-        right : 50,
+        right : 68,
+        left : 32,
         gender: {},
         age: {}
     },
 
     // centro-oeste
     go : {
-        left : 50,
-        right : 50,
+        right : 65,
+        left : 35,
         gender: {},
         age: {}
     },
     mt : {
-        left : 50,
-        right : 50,
+        right : 66,
+        left : 34,
         gender: {},
         age: {}
     },
     ms : {
+        right : 65,
         left : 50,
-        right : 50,
         gender: {},
         age: {}
     },
 
     // distrito federal
     df : {
-        left : 50,
-        right : 50,
+        right : 70,
+        left : 30,
         gender: {},
         age: {}
     },
 
     // sul
     rs : {
-        left : 50,
-        right : 50,
+        left : 37,
+        right : 63,
         gender: {},
         age: {}
     },
     pr : {
-        left : 50,
-        right : 50,
+        left : 32,
+        right : 68,
         gender: {},
         age: {}
     },
     sc : {
-        left : 50,
-        right : 50,
+        left : 76,
+        right : 24,
         gender: {},
         age: {}
     }

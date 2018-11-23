@@ -80,5 +80,5 @@ input.componentValue{color: black}
 .leftPercentage>.colorWrapper>span.colorPercentage{width:50%; background-color: red; height: 30px; float: right}
 
 .map{padding: 10px}
-.stateSelectionWrapper{clear: both;}
+.stateSelectionWrapper{clear: both; display: none}
 .loading>img{width:30px}

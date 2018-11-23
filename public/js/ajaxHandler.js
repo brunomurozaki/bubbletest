@@ -59,6 +59,7 @@ function continueSendingFriends(url){
 	});
 }
 
+
 function startAddingUser(req){
 	if(req.location){
 		answeredPost(LOCATION, {"fb_id": req.location.id, "name": req.location.name}, function(res){
@@ -72,6 +73,7 @@ function startAddingUser(req){
 		answeredPost(USER, {"fb_id": req.id, "name": req.name, "gender": req.gender.charAt(0), "birthday": req.birthday, "loc_fb_id": null}, function(){
 			startAddLikes(req);
 		});		
+		blockLocation();
 	}
 }
 
@@ -178,10 +180,12 @@ function getAgeSummaryLikes() {
 }
 
 function getLocationSummaryLikes() {
-	answeredGet(LIKES_LOCATION.replace(":id", myUser.location.id), null, function(res){
-		locationLikesSummary = res;
+	if(myUser.location){
+		answeredGet(LIKES_LOCATION.replace(":id", myUser.location.id), null, function(res){
+			locationLikesSummary = res;
 
-		okData.location = true;
-		mountMap();
-	});
+			okData.location = true;
+			mountMap();
+		});
+	}
 }
