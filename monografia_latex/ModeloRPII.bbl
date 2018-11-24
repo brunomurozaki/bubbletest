@@ -5,24 +5,6 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
-\bibitem[Amenta et al. 2002]{teste1}
-\abntrefinfo{Amenta et al.}{AMENTA et al.}{2002a}
-{AMENTA, N. et al. A simple algorithm for homeomorphic surface reconstruction.
-\emph{International Journal of Computational Geometry and Applications}, World
-  Scientific Publishing Co., v.~12, n.~1-2, p. 125--141, 2002.}
-
-\bibitem[Amenta et al. 2002]{teste2}
-\abntrefinfo{Amenta et al.}{AMENTA et al.}{2002b}
-{AMENTA, N. et al. A simple algorithm for homeomorphic surface reconstruction.
-\emph{International Journal of Computational Geometry and Applications}, World
-  Scientific Publishing Co., v.~12, n.~1-2, p. 125--141, 2002.}
-
-\bibitem[Amenta et al. 2002]{teste3}
-\abntrefinfo{Amenta et al.}{AMENTA et al.}{2002c}
-{AMENTA, N. et al. A simple algorithm for homeomorphic surface reconstruction.
-\emph{International Journal of Computational Geometry and Applications}, World
-  Scientific Publishing Co., v.~12, n.~1-2, p. 125--141, 2002.}
-
 \bibitem[Facebook 2015]{facebook_media}
 \abntrefinfo{Facebook}{FACEBOOK}{2015}
 {FACEBOOK. \emph{State of Connectivity 2015: A Report on Global Internet
@@ -40,6 +22,13 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Habermas}{HABERMAS}{1974}
 {HABERMAS, J. The public sphere: An encyclopedia article.
 \emph{New German Critique}, New German Critique, v.~3, p. 49--55, 1974.}
+
+\bibitem[{Instituto Data Folha} 2018]{datafolha}
+\abntrefinfo{{Instituto Data Folha}}{{Instituto Data Folha}}{2018}
+{{Instituto Data Folha}. \emph{Bolsonaro chega à véspera da eleição com
+  55\% dos votos válidos}. 2018.
+Dispon{\'\i}vel em:
+  \url{http://datafolha.folha.uol.com.br/eleicoes/2018/10/1983786-bolsonaro-chega-a-vespera-da-eleicao-com-55-dos-votos-validos.shtml}.}
 
 \bibitem[Liu 2017]{liu}
 \abntrefinfo{Liu}{LIU}{2017}
@@ -96,6 +85,19 @@ Dispon{\'\i}vel em:
 In:  \underline{\ \ \ \ \ \ \ \ }. \emph{The Filter Bubble: How the New
   Personalized Web Is Changing What We Read and How We Think}. MoveOn
   Organization: Penguin Books, 2011. cap. Introduction, p.~11.}
+
+\bibitem[Ribeiro e Ortelado 2016]{monitor}
+\abntrefinfo{Ribeiro e Ortelado}{RIBEIRO; ORTELADO}{2016}
+{RIBEIRO, M.~M.; ORTELADO, P. \emph{Monitor do Debate Político no Meio
+  Digital}. 2016.
+Dispon{\'\i}vel em: \url{https://www.monitordigital.org/}.}
+
+\bibitem[{Tribunal Superior Eleitoral} 2018]{tse}
+\abntrefinfo{{Tribunal Superior Eleitoral}}{{Tribunal Superior
+  Eleitoral}}{2018}
+{{Tribunal Superior Eleitoral}. \emph{Repositório de Dados Eleitorais}. 2018.
+Dispon{\'\i}vel em:
+  \url{http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais-1/repositorio-de-dados-eleitorais}.}
 
 \bibitem[Vieira 2013]{vivian}
 \abntrefinfo{Vieira}{VIEIRA}{2013}
