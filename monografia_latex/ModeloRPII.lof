@@ -1,4 +1,15 @@
 \babel@toc {brazil}{}
 \contentsline {figure}{\numberline {1}{\ignorespaces Layout da an\IeC {\'a}lise de posicionamento na esfera p\IeC {\'u}blica}}{18}{figure.5.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de chamada REST para a listagem de dados no servidor}}{19}{figure.5.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Defini\IeC {\c c}\IeC {\~a}o do banco de dados utilizado pela aplica\IeC {\c c}\IeC {\~a}o}}{20}{figure.5.3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de chamada REST para a listagem de dados no servidor}}{18}{figure.5.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Defini\IeC {\c c}\IeC {\~a}o do banco de dados utilizado pela aplica\IeC {\c c}\IeC {\~a}o}}{19}{figure.5.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Resultado parcial da chamada de listagem de usu\IeC {\'a}rios}}{26}{figure.A.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Resultado da chamada de "curtir" por g\IeC {\^e}neros (exemplo de chamada com o par\IeC {\^a}metro 'm')}}{27}{figure.A.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Resultado da chamada de "curtir" por usu\IeC {\'a}rio}}{28}{figure.A.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Resultado da chamada de resumo de p\IeC {\'a}ginas curtidas por usu\IeC {\'a}rio}}{29}{figure.A.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Resultado da chamada de resumo de n\IeC {\'u}mero de curtidas por data de nascimento}}{30}{figure.A.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Resultado da chamada de listagem de Localiza\IeC {\c c}\IeC {\~o}es}}{30}{figure.A.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Resultado da chamada de resumo de n\IeC {\'u}mero de curtidas por localiza\IeC {\c c}\IeC {\~a}o}}{31}{figure.A.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Resultado da chamada de listagem de p\IeC {\'a}ginas}}{32}{figure.A.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Requisi\IeC {\c c}\IeC {\~a}o n\IeC {\~a}o aprovada pelo Facebook}}{33}{figure.anexochapback.1.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Informa\IeC {\c c}\IeC {\~a}o de retirada de permiss\IeC {\~o}es previamente aprovadas pela nova pol\IeC {\'\i }tica de acesso de informa\IeC {\c c}\IeC {\~a}o do site}}{33}{figure.anexochapback.1.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Requisi\IeC {\c c}\IeC {\~a}o feita para ter autoriza\IeC {\c c}\IeC {\~a}o de utulizar a permiss\IeC {\~a}o de \textit {feed} do Facebook}}{34}{figure.anexochapback.1.14}

@@ -4,62 +4,40 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{10}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{9}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}Objetivo}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Objetivo Geral}{13}{section.2.1}
-\contentsline {section}{\numberline {2.2}Objetivos Espec\IeC {\'\i }ficos}{13}{section.2.2}
+\contentsline {chapter}{\chapternumberline {2}Objetivo}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Objetivo Geral}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Objetivos Espec\IeC {\'\i }ficos}{12}{section.2.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}REST}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Node JS}{14}{section.3.2}
-\contentsline {section}{\numberline {3.3}Sequelize}{14}{section.3.3}
-\contentsline {section}{\numberline {3.4}Git/Github}{15}{section.3.4}
-\contentsline {section}{\numberline {3.5}Heroku}{15}{section.3.5}
-\contentsline {section}{\numberline {3.6}Postgres}{15}{section.3.6}
-\contentsline {section}{\numberline {3.7}Graph API}{15}{section.3.7}
+\contentsline {chapter}{\chapternumberline {3}Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}REST}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Node JS}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sequelize}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Git/Github}{14}{section.3.4}
+\contentsline {section}{\numberline {3.5}Heroku}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6}Postgres}{14}{section.3.6}
+\contentsline {section}{\numberline {3.7}Graph API}{14}{section.3.7}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}Metodologia}{16}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}Metodologia}{15}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}Resultados}{18}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}Resultados}{17}{chapter.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}Discuss\IeC {\~a}o}{21}{chapter.6}
+\contentsline {chapter}{\chapternumberline {6}Discuss\IeC {\~a}o}{20}{chapter.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {7}Conclus\IeC {\~a}o}{22}{chapter.7}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias\footnote {De acordo com a Associa\c {c}\~ao Brasileira de Normas T\'ecnicas. NBR 6023.}}{23}{chapter*.8}
+\contentsline {chapter}{Refer\^encias}{23}{chapter*.7}
 \renewcommand *{\cftappendixname }{Ap\^endice \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
 \contentsline {appendix}{\chapternumberline {A}Chamadas REST para a API}{25}{appendix.A}
-\contentsline {section}{\numberline {A.1}Listagem de Usu\IeC {\'a}rios}{25}{section.A.1}
-\contentsline {section}{\numberline {A.2}Inser\IeC {\c c}\IeC {\~a}o de Usu\IeC {\'a}rios}{25}{section.A.2}
-\contentsline {section}{\numberline {A.3}Numero de "curtir" em p\IeC {\'a}ginas pol\IeC {\'\i }ticas por g\IeC {\^e}nero}{25}{section.A.3}
-\contentsline {section}{\numberline {A.4}P\IeC {\'a}ginas curtidas por usu\IeC {\'a}rio}{25}{section.A.4}
-\contentsline {section}{\numberline {A.5}Numero de "curtir" em p\IeC {\'a}ginas pol\IeC {\'\i }ticas por usu\IeC {\'a}rio}{25}{section.A.5}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}Exemplo de ap\IeC {\^e}ndice}{28}{appendix.B}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}Exemplo de ap\IeC {\^e}ndice}{30}{appendix.C}
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{Anexo \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}Resumo das normas}{32}{appendix.anexochapback.1}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}Exemplo de anexo}{43}{appendix.anexochapback.2}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}Exemplo de anexo}{45}{appendix.anexochapback.3}
+\contentsline {appendix}{\chapternumberline {A}Tratativas com a plataforma Facebook}{33}{appendix.anexochapback.1}

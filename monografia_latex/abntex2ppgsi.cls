@@ -304,7 +304,7 @@
 \addto\captionsbrazil{% portugues-brasil
   %% ajusta nomes padroes do babel
 %   \renewcommand{\bibname}{Refer\^encias}
-  \renewcommand{\bibname}{Refer\^encias\protect\footnote{De acordo com a Associa\c{c}\~ao Brasileira de Normas T\'ecnicas. NBR 6023.}}
+  \renewcommand{\bibname}{Refer\^encias}
   \renewcommand{\indexname}{\'Indice}
   \renewcommand{\listfigurename}{Lista de figuras}
   \renewcommand{\listtablename}{Lista de tabelas}
@@ -1296,7 +1296,7 @@
 
 % ---
 % Folha de rosto
-%   usar \imprimirfolhaderosto* casodeseje imprimir algo no verso da
+%   usar \* casodeseje imprimir algo no verso da
 %   página no caso de estar no modo twoside. Util para imprimir a Ficha
 %   Bibliografica. Porem, se estiver no modo oneside, a versao sem estrela
 %   é identica.
